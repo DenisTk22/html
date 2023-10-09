@@ -1,0 +1,13 @@
+.title {
+    background-color: grey;
+}
+.heading {
+    color: darkblue;
+}
+.heading-about {
+    color: orange;
+}
+ 
+h1 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
