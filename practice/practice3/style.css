@@ -1,0 +1,41 @@
+/*Обнуление*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/***********/
+
+.top {
+    padding-bottom: 99px;
+}
+
+.header {
+    padding-top: 39px;
+    padding-bottom: 39px;
+    padding-left: 754px;
+}
+
+.top_content {
+    margin: 160px 387px 197px 388px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.info_buttoms {
+    margin-top: 50px;
+}
+
+.button {
+    padding: 15px 30px 15px 30px;
+}
+
+.top_logo{
+    margin-top: 197px;
+    margin-left: 388px;
+}
