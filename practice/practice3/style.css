@@ -7,6 +7,7 @@
 
 .top {
     padding-bottom: 99px;
+    background-color: #020A18;
 }
 
 .header {
@@ -21,10 +22,16 @@
 
 .subtitle {
     margin-bottom: 10px;
+    color: #3A68B8;
 }
 
 .title {
     margin-bottom: 40px;
+    color: white;
+}
+
+.text {
+    color: white;
 }
 
 .info_buttoms {
@@ -38,4 +45,13 @@
 .top_logo{
     margin-top: 197px;
     margin-left: 388px;
+    /* padding-left: 5px; */
+}
+
+.top_logo :first-child {
+    padding-left: 0px;
+}
+
+.top_logo img {
+    padding-left: 30px;
 }
