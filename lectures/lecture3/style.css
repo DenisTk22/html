@@ -3,6 +3,22 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Центрирование1: Объединение всего содержимого в блок и его центрирование не очень подходит, т.к. фон тоже центрируется, а он должен тянуться на всю ширину экрана*/
+/* .container {
+    width: 1280px;
+    margin: 0 auto; /*центрирование
+} */
+
+/*Центрирование2: Созжаем класс и применяем формулу:*/
+.center {
+    padding-left: calc(50% - 580px); /*центрирование контента, 1160px - ширина контентной части*/
+    padding-right: calc(50% - 580px);
+}
+
 a {
     text-decoration: none;
 }
@@ -11,6 +27,8 @@ a {
     padding-top: 30px;
     padding-bottom: 30px;
     background: #2f2e41;
+    display: flex;
+    gap: 32px;
 }
 
 .header_link {
@@ -25,10 +43,17 @@ a {
 .top {
     padding-top: 84px;
     padding-bottom: 84px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
 }
 
 
 .title {
+    width: 578px;
     font-style: normal;
     font-weight: 700;
     font-size: 96px;
@@ -54,11 +79,21 @@ a {
 }
 
 .about__content {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__text {
+    width: 462px;
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
     line-height: 30px;
     color: #7d7987;
     mix-blend-mode: normal;
-    margin-top: 50px;
+    
 }

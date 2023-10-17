@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    /* width: 700px; */
+    display: grid;
+    /* grid-template-columns: 100px 30% auto; создаем три колонки: 1я колонка 100px, 2я колонка 30%, 3я колонка что осталось */
+    grid-template-columns: repeat(4, 200px); /*создать 3 колонки по 200px каждая*/
+    gap: 32px; /*отступ между колонками и столбцами*/
+    justify-content: center;
+    margin-bottom: 128px;
+
+}
+
+.item {
+    border: 1px solid #000; /*Только для отображения сетки*/
+    min-height: 200px; /*Только для отображения сетки*/
+}
+
+.item1 {
+    grid-column: 1 / 3; /*для item1 объединить колонки с 1й по 3ю линии - объединение по горизотали*/
+    grid-row: 1 / 3;
+}
+
+.item3 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+.box {
+    padding-top: 128px;
+    padding-bottom: 128px;
+    position: relative; /*обязательно задать для родителя, если ипользовать для ребенка position:absolute;, чтобы ребенок абсолютно позиционировался относительно родителя*/
+}
+
+.elem {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+}
+
+.elem1 {
+    background-color: #033607;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.elem2 {
+    background-color: #13a73f;
+    left: 75px;
+    top: 75px;
+    z-index: 1;
+}
+
+.elem3 {
+    background-color: #67e290;
+    top: 150px;
+    left: 150px;
+    z-index: 0;
+}
