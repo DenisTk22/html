@@ -94,10 +94,7 @@ body {
 }
 
 .main {
-    padding-bottom: 99px;
-    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) -41.9%, rgba(255, 255, 255, 0.40) 260.24%); */
-
-
+    padding-bottom: 264px;
 }
 
 .main-right {
@@ -107,17 +104,11 @@ body {
 
 .logo {
     margin-top: 200px;
+    margin-bottom: 256px;
 }
 
 .brain {
     padding-bottom: 264px;
-}
-
-.brain-container {
-    padding-top: 157px;
-    margin: 0 auto;
-    width: 1147px;
-
 }
 
 .brain_title {
@@ -151,8 +142,111 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    text-decoration: none;
 }
 
 .brain-right {
     width: 42%;
+    
+}
+
+.grid {
+    display: grid;
+    justify-items: start;
+    align-content: center;
+}
+
+.content {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 362px);
+    justify-content: center;
+    /* padding-top: 264px; */
+    padding-bottom: 243px;
+}
+
+.item {
+    border-radius: 10px;
+    background: #132035;
+    padding: 30px; 
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+}
+
+.item_img {
+    
+}
+
+.heading {
+    color: var(--ffffff, #FFF);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%; /* 31.25px */
+    opacity: 0.7;
+}
+
+.item_text {
+    color: var(--ffffff, #FFF);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 25.6px */
+    opacity: 0.7;
+}
+
+.item_big {
+    grid-column: span 2;
+    grid-row: span 2;
+    gap: 60px;
+}
+
+.what {
+    padding-bottom: 221px;
+}
+
+.what-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 47%;
+}
+
+.what-subtitle {
+    color: var(--ffffff, #FFF);
+    font-family: Open Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 52px */
+    margin-bottom: 40px;
+}
+
+.what-text {
+    color: var(--ffffff, #FFF);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 25.6px */
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.what-left :last-child {
+    margin-bottom: 0;
+}
+
+.footer {
+    padding-top: 48px;
+    padding-bottom: 46px;
+}
+
+.information {
+    
 }
