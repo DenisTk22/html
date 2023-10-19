@@ -250,3 +250,45 @@ body {
 .information {
     
 }
+
+.footer-subtitle {
+    color: var(--ffffff, #FFF);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+}
+
+.footer-info {
+    color: var(--ffffff, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+.size :last-child {
+margin-bottom: 0;
+}
+
+.size {
+    width: 362px;
+}
+
+.footer-text {
+    width: 261px;
+    opacity: 0.6;
+}
+
+.fa-info {
+    margin-right: 10px;
+}
+
+.email-link {
+    margin-right: 24px;
+}
