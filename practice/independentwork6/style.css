@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 1600px;
+    background-color: #FFF;
+}
+.header {
+    background-color: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 859px;
+    padding-top: 18px;
+    padding-bottom: 19px;
+}
+.header_logo {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo_link {
+    /* margin-left: 20px; */
+}
+.header_links {
+    
+}
+
+.link {
+    margin-right: 20px;
+}
+
+.fa {
+    color: white;
+    /* width: 29px; */
+}
+.main {
+}
+.main_img {
+}
+.main_info {
+}
+.body {
+}
+.body_header {
+}
+.body_products {
+}
+.body_browse {
+}
