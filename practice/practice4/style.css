@@ -4,13 +4,19 @@
     block-size: border-box; /*width - будет общей шириной*/
 }
 
+
 body {
     background-color: #020A18;
 }
 
+.center { /*центрирование, нужно для планшета*/
+    padding-left: calc(50% - 573px); /*1146/2, 1146px - ширина сетки*/
+    padding-right: calc(50% - 573px);
+}
+
 .menu-link {
     color: #fff;
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -24,9 +30,11 @@ body {
     justify-content: center;
 }
 
-.container {
-    margin: 0 auto;
-    width: 1147px;
+.main-container {
+    display: flex;
+    gap: 128px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu-link:hover {
@@ -39,7 +47,7 @@ body {
 
 .subtitle {
     color: var(--3-a-68-b-8, #3a68b8);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -50,7 +58,7 @@ body {
 
 .title {
     color: var(--ffffff, #fff);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 55px;
     font-style: normal;
     font-weight: 800;
@@ -60,7 +68,7 @@ body {
 
 .dsc {
     color: var(--ffffff, #fff);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -74,7 +82,7 @@ body {
     background: var(--3-a-68-b-8, #3a68b8);
     padding: 1rem 2rem;
     color: var(--ffffff, #fff);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -87,33 +95,51 @@ body {
 .flex {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.main-left, .main-right {
-    width: 47%;
+.main-left {
+    max-width: 604px;
 }
 
 .main {
     padding-bottom: 264px;
 }
 
-.main-right {
+/* .main-right {
     display: flex;
     justify-content: end;
-}
+} */
 
 .logo {
-    margin-top: 200px;
+    margin-top: 197px;
     margin-bottom: 256px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
 }
 
 .brain {
     padding-bottom: 264px;
 }
 
+.brain-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 68px;
+}
+
 .brain_title {
     color: var(--ffffff, #FFF);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -123,7 +149,7 @@ body {
 
 .brain-dsc {
     color: var(--ffffff, #FFF);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -137,7 +163,7 @@ body {
     background: var(--3-a-68-b-8, #3a68b8);
     padding: 1rem 2rem;
     color: var(--ffffff, #FFF);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -181,7 +207,7 @@ body {
 .heading {
     color: var(--ffffff, #FFF);
     text-align: center;
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     font-style: normal;
     font-weight: 700;
@@ -192,7 +218,7 @@ body {
 .item_text {
     color: var(--ffffff, #FFF);
     text-align: center;
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -210,6 +236,14 @@ body {
     padding-bottom: 221px;
 }
 
+.what-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
 .what-left {
     display: flex;
     flex-direction: column;
@@ -219,7 +253,7 @@ body {
 
 .what-subtitle {
     color: var(--ffffff, #FFF);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -229,7 +263,7 @@ body {
 
 .what-text {
     color: var(--ffffff, #FFF);
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -247,13 +281,21 @@ body {
     padding-bottom: 46px;
 }
 
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: center;
+}
+
 .information {
     
 }
 
 .footer-subtitle {
     color: var(--ffffff, #FFF);
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -264,7 +306,7 @@ body {
 
 .footer-info {
     color: var(--ffffff, #FFF);
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -291,4 +333,39 @@ margin-bottom: 0;
 
 .email-link {
     margin-right: 24px;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 376px);
+        padding-right: calc(50% - 376px);
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .logo-container {
+        /* gap: 32px; */
+        max-width: 650px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .logo {
+        margin-bottom: 277px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .content {
+        grid-template-columns: repeat(1, 362px);
+        gap: 32px;
+    }
 }
