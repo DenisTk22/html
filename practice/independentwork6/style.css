@@ -8,6 +8,12 @@
     width: 1600px;
     background-color: #FFF;
 }
+
+.center { /*центрирование, нужно для планшета*/
+    padding-left: calc(50% - 800px); /*1600/2, 1600px - ширина сетки*/
+    padding-right: calc(50% - 800px);
+}
+
 .header {
     background-color: #222;
     display: flex;
@@ -35,15 +41,121 @@
 }
 
 .fa {
-    color: white;
+    color: #E8E8E8;
     /* width: 29px; */
 }
+
+.fa-magnifying-glass {
+    /* width: 50px; */
+}
+
 .main {
+    background-color: #F1E4E6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 63px;
 }
 .main_img {
 }
 .main_info {
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
 }
+
+.info-title {
+    color: #222;
+    font-family: Lato;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.sub-of {
+    color: #222;
+    font-family: Lato;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.sub-fashion {
+    color: #F16D7F;
+    font-family: Lato;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.women {
+    width: 360px;
+    height: 260px;
+    background-image: url(images/Group\ 36.svg);
+    text-transform: uppercase;
+}
+
+.men {
+    width: 360px;
+    height: 260px;
+    background-image: url(images/Group\ 37.svg);
+    text-transform: uppercase;
+}
+
+.kids {
+    width: 360px;
+    height: 260px;
+    background-image: url(images/Group\ 38.svg);
+    text-transform: uppercase;
+}
+
+.acc {
+    width: 1140px;
+    height: 180px;
+    background-image: url(images/Group\ 39.svg);
+    text-transform: uppercase;
+}
+
+.flex_selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.s_text {
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.s_subtitle {
+    color: #F16D7F;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
 .body {
 }
 .body_header {
