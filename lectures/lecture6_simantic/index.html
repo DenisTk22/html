@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">Шапка сайта</header> <!-- Шапка сайта или раздела, может быть несколько на странице -->
+    <nav class="navigation"></nav> <!-- не для footer, навигационное цепочки, хлебные крошки -->
+    <main class="main"> <!-- уникальный для каждой страницы, не всегда нужен -->
+        <section class="news"></section> <!-- Чаще всего содержит заголовок -->
+        <section class="about">
+            <h2>Обо мне</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iusto in cumque maiores aperiam aut praesentium eaque minima reprehenderit quos illum nostrum eos amet, quis natus minus nam repellat odio.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quisquam sunt praesentium ipsum sequi odio iste, earum quae atque porro.</p>
+        </section>
+        <section class="skills">
+            <h2>Мои навыки</h2>
+            <article> <!-- для по-пунктной информации -->
+                <h3>HTML5</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, dolores?</p>
+            </article>
+            <article>
+                <h3>CSS3</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            </article>
+            <article>
+                <h3>JS</h3>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </article>
+        </section>
+        <section>
+            <h2>Первые шаги в веб-разработке</h2>
+            <figure>
+                <figcaption>Уровень заработной платы</figcaption> <!-- Подпись к картинке -->
+                <img src="#" alt="salary">
+                <div>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <ul>
+                        <li>list-1</li>
+                        <li>list-2</li>
+                        <li>list-3</li>
+                        <li>list-4</li>
+                    </ul>
+                </div>
+            </figure>
+        </section>
+        <section>
+            <h2>История обо мне</h2>
+            <details open> <!-- выпадающая информация -->
+                <summary>История работы в первой компании</summary> <!-- заголовок для выпадающей информации -->
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem magni quidem alias consequatur magnam obcaecati ab labore quibusdam quaerat ipsam illo possimus modi amet distinctio sint nulla non, eligendi quia.</p>
+                <h3>Положительные моменты</h3>
+                <ul>
+                    <li>момент1</li>
+                    <li>момент2</li>
+                    <li>момент3</li>
+                    <li>момент4</li>
+                    <li>момент5</li>
+                </ul>
+            </details>
+            <details> <!-- выпадающая информация -->
+                <summary>Опыт работы</summary> <!-- заголовок для выпадающей информации -->
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione enim alias placeat. Labore, dolore natus excepturi facere architecto fuga exercitationem iure deleniti maiores eligendi aperiam dolor, impedit, quos quam dolorem!</p>
+            </details>
+        </section>
+        <section>
+            <h2>Оставить заявку на проект</h2>
+            <form action="#">
+                Ваше имя <input  autofocus title="обязательное поле ввода" required type="text"><br>
+                Email <input type="email"><br>
+                Дата старта проекта <input type="date"><br>
+                Сколько проектов вы хотите чтобы я создал <input type="number" value="3" min="1" ><br>
+                Какие границы <input type="range" name="" id=""><br>
+                <button type="submit" >оставить заявку</button>
+            </form> <!-- required - обязательное заполнение формы -->
+        </section>
+        <section>
+            <h2>Музыкальный раздел сайта</h2>
+            <audio controls src="audio.mp3"></audio><br>
+        </section>
+        <section class="video_box">
+            <h2 class="video-heading" >Крутое видео</h2>
+            <video class="video" preload="auto" controls src="video.mp4"  ></video>
+        </section>
+    </main> 
+    <footer class="footer"></footer> <!-- Подвал сайта или раздела, может быть несколько на странице. Не может быть внутри main -->
+</body>
+</html>

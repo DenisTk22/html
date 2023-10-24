@@ -1,0 +1,23 @@
+* {
+    margin: 0;padding: 0;
+}
+
+.video_box {
+    width: 30vw;
+    height: 50vh;
+    position: relative;
+}
+
+.video-heading {
+    color: white;
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    z-index: 1;
+}
+
+.video {
+    width: 30vw;
+    height: 50vh;
+    position: absolute;
+}
