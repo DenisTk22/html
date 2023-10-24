@@ -138,6 +138,7 @@ body {
 }
 
 .brain_title {
+    max-width: 484px;
     color: var(--ffffff, #FFF);
     font-family: 'Open Sans', sans-serif;
     font-size: 40px;
@@ -284,8 +285,6 @@ body {
 .footer-flex {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    justify-content: center;
     justify-content: center;
 }
 
@@ -324,6 +323,12 @@ margin-bottom: 0;
 
 .footer-text {
     width: 261px;
+    color: var(--ffffff, #FFF);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: normal;
     opacity: 0.6;
 }
 
@@ -367,5 +372,37 @@ margin-bottom: 0;
     .content {
         grid-template-columns: repeat(1, 362px);
         gap: 32px;
+    }
+
+    .brain-right {
+        width: 484px
+    }
+
+    .brain-dsc {
+        width: 460px
+    }
+
+    .what-left {
+        width: 548px;
+        
+    }
+
+    .what-text {
+        width: 460px
+    }
+
+    .what-flex {
+        gap: 64px;
+    }
+
+    .footer-container {
+        width: 768px;
+    }
+
+    .footer-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px;
     }
 }
