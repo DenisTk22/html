@@ -5,8 +5,11 @@
 }
 
 .wrapper {
-    width: 1600px;
+    max-width: 1600px;
     background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .center { /*центрирование, нужно для планшета*/
@@ -16,12 +19,22 @@
 
 .header {
     background-color: #222;
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 859px;
+    gap: 859px; */
     padding-top: 18px;
     padding-bottom: 19px;
+    width: 100%;
+}
+
+.header_body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 859px; */
+    padding-left: 14%;
+    padding-right: 15%;
 }
 .header_logo {
     display: flex;
@@ -55,9 +68,12 @@
     justify-content: flex-start;
     align-items: center;
     gap: 63px;
+    width: 100%;
 }
 .main_img {
+
 }
+
 .main_info {
     border-left: 12px solid #F16D7F;
     padding-left: 16px;
@@ -98,6 +114,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    margin-bottom: 96px;
 }
 
 .women {
@@ -157,10 +174,111 @@
 }
 
 .body {
+    max-width: 1140px;
+    padding-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.body_header {
+
+.body_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 48px;
 }
+
+.title_header {
+    color: #222;
+    font-family: Lato;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.title_text {
+    color: #9F9F9F;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .body_products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 48px;
 }
+
+.products_card {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_img {
+    /* width: 360px; */
+    height: 420px;
+}
+
+.bg_color_prod2 {
+    background-color: #F7E4E2;
+}
+
+.card_info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 16px;
+    background-color: #F8F8F8;
+}
+
+.info_title {
+    color: #000;
+    font-family: Lato;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.info_disc {
+    color: #5D5D5D;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.info_price {
+    color: #F16D7F;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .body_browse {
+    padding: 15px 39px 14px 39px;
+    border: 1px solid #ff6a6a;
+    margin-bottom: 60px;
 }
+
+.browse_link {
+    color: #F26376;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
