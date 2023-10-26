@@ -14,8 +14,9 @@
 }
 
 .center { /*центрирование, нужно для планшета*/
-    padding-left: calc(50% - 800px); /*1600/2, 1600px - ширина сетки*/
-    padding-right: calc(50% - 800px);
+    /* padding-left: calc(50% - 800px); 1600/2, 1600px - ширина сетки */
+    /* padding-right: calc(50% - 800px); */
+    padding: 0 auto;
 }
 
 .header {
@@ -62,7 +63,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 63px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
 }
 .main_img {
@@ -294,3 +295,10 @@
     text-decoration: none;
 }
 
+@media (max-width: 1024px) {
+    .wrapper {
+        max-width: 1024px;
+
+
+    }
+}
