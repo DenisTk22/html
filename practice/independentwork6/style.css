@@ -62,9 +62,11 @@
     justify-content: flex-start;
     align-items: center;
     gap: 63px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .main_img {
-
+    width: 50%;
 }
 
 .main_info {
