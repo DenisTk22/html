@@ -14,6 +14,10 @@ body {
     padding-right: calc(50% - 573px);
 }
 
+.center_auto {
+    padding: 0 auto;
+}
+
 .menu-link {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
@@ -201,9 +205,9 @@ body {
     gap: 30px;
 }
 
-.item_img {
+/* .item_img {
     
-}
+} */
 
 .heading {
     color: var(--ffffff, #FFF);
@@ -271,6 +275,7 @@ body {
     line-height: 160%; /* 25.6px */
     opacity: 0.7;
     margin-bottom: 20px;
+    gap: 25px;
 }
 
 .what-left :last-child {
@@ -288,9 +293,9 @@ body {
     justify-content: center;
 }
 
-.information {
+/* .information {
     
-}
+} */
 
 .footer-subtitle {
     color: var(--ffffff, #FFF);
