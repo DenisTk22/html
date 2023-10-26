@@ -113,32 +113,39 @@
     margin-bottom: 96px;
 }
 
+.pic_position {
+    position: relative;
+}
+
 .women {
-    width: 360px;
-    height: 260px;
-    background-image: url(images/Group\ 36.svg);
-    text-transform: uppercase;
+   
+    
+}
+
+.img {
+    /* max-width: 100%; */
+}
+
+.z_pos {
+    position: absolute;
+    top: center;
+    left: center;
+    text-align: center;
 }
 
 .men {
-    width: 360px;
-    height: 260px;
-    background-image: url(images/Group\ 37.svg);
-    text-transform: uppercase;
+    
+   
 }
 
 .kids {
-    width: 360px;
-    height: 260px;
-    background-image: url(images/Group\ 38.svg);
-    text-transform: uppercase;
+    
+ 
 }
 
 .acc {
-    width: 1140px;
-    height: 180px;
-    background-image: url(images/Group\ 39.svg);
-    text-transform: uppercase;
+    
+  
 }
 
 .flex_selection {
