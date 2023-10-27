@@ -411,3 +411,65 @@ margin-bottom: 0;
         gap: 30px;
     }
 }
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: calc(50% - 154px);
+        padding-right: calc(50% - 154px);
+    }
+
+    .header {
+        margin-bottom: 64px;
+    }
+
+    .menu-link {
+        font-size: 14px;
+        padding: 39px 8px; /*padding делают область вокруг ссылки кликабельной*/
+    }
+
+    .main-left {
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 64px;
+    }
+
+    .main-link {
+        display: inline-block;
+        margin-bottom: 24px;
+        margin-right: 0px;
+    }
+
+    .dsc {
+        margin-bottom: 39px;
+    }
+
+    .right_img {
+        max-width: 100%;
+    }
+
+    .main-container {
+        gap: 104px;
+    }
+
+    .logo {
+        margin-top: 128px;
+        margin-bottom: 204px;
+    }
+
+    .logo-container {
+        max-width: 343px;
+    }
+
+    .brain_img {
+        max-width: 100%;
+    }
+    
+}
