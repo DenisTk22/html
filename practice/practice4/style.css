@@ -471,5 +471,110 @@ margin-bottom: 0;
     .brain_img {
         max-width: 100%;
     }
-    
+
+    .brain-right {
+        width: 100%;
+
+    }
+
+    .grid {
+        justify-items: center;
+        gap: 16px;
+    }
+
+    .brain_title {
+        font-size: 24px;
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .brain-dsc {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .main {
+        padding-bottom: 96px;
+    }
+
+    .what {
+        padding-bottom: 96px;
+    }
+
+    .what-left {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .what-subtitle {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .what-text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .content {
+        padding-bottom: 96px;
+    }
+
+    .what_picture {
+        width: 100%;
+    }
+
+    .what-flex {
+        gap: 32px;
+    }
+
+    .size {
+        width: 100%;
+    }
+
+    .footer {
+        padding-top: 113px;
+        padding-bottom: 64px;
+    }
+
+    .footer-container {
+        max-width: 100%;
+    }
+
+    .footer-flex {
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+    }
+
+    .footer-subtitle {
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    .email .footer-info {
+        text-align: center;
+    }
+
+    .footer__icon {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .email-link {
+        margin-right: 0;
+    }
+
+    .information {
+        order: 2;
+    }
+
+    .email {
+        order: 3;
+    }
 }
