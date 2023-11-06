@@ -62,10 +62,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 63px;
+    gap: 60px;
     /* flex-wrap: wrap; */
     width: 100%;
 }
+
 .main_img {
     width: 50%;
 }
@@ -114,6 +115,13 @@
     margin-bottom: 96px;
 }
 
+.pic__set {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 100%;
+}
+
 .pic_position {
     position: relative;
 }
@@ -124,7 +132,7 @@
 }
 
 .img {
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 
 .z_pos {
@@ -151,7 +159,7 @@
 
 .flex_selection {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
 }
@@ -183,7 +191,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
 }
 
@@ -217,6 +225,7 @@
     flex-wrap: wrap;
     gap: 30px;
     padding-bottom: 48px;
+    justify-content: center;
 }
 
 .products_card {
@@ -295,10 +304,84 @@
     text-decoration: none;
 }
 
+.orders_qty {
+        display: none;
+    }
+
 @media (max-width: 1024px) {
     .wrapper {
-        max-width: 1024px;
+        max-width: 100%;
+    }
 
+    .header_body {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
 
+    .q-ty {
+        position: relative;
+    }
+
+    .orders_qty {
+        display: block;
+        width: 19px;
+        height: 19px;
+        background-color: #F16D7F;
+        border-radius: 50%;
+        position: absolute;
+        text-align: center;
+        left: 90%;
+        bottom: 70%;
+        color: white;
+        font-family: Lato;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .info-title {
+        font-size: 44px;
+    }
+
+    .sub-of {
+        font-size: 24px;
+    }
+
+    .sub-fashion {
+        font-size: 24px;
+    }
+
+    .main {
+        gap: 39px;
+    }
+
+    .body {
+        padding-left: 16px;
+        padding-right: 16px;
+       
+    }
+
+    .pic__set {
+        gap: 20px;
+    }
+
+    .selection {
+        gap: 20px;
+        margin-bottom: 110px;
+    }
+
+    .body_title {
+        gap: 3px;
+        margin-bottom: 75px;
+    }
+
+    .body_products {
+        gap: 16px;
+        padding-bottom: 32px;
+    }
+
+    .body_browse {
+        margin-bottom: 70px;
     }
 }
