@@ -385,3 +385,72 @@
         margin-bottom: 70px;
     }
 }
+
+@media (max-width: 767px) {
+
+
+    .header_body {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .body {
+        max-width: 100%;
+    }
+
+    .main_info {
+        max-width: 100%;
+        margin: 158px auto;
+    }
+
+    .main_img {
+        display: none;
+    }
+
+
+    .info-title {
+        font-size: 38px;
+    }
+
+    .sub-of {
+        font-size: 20px;
+    }
+
+    .sub-fashion {
+        font-size: 20px;
+    }
+
+    .header_links a:nth-child(2) {
+        display: none;
+    }
+
+    .header_links a:nth-child(3) {
+        display: none;
+    }
+
+    .pic__set {
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .body_title {
+        margin-bottom: 65px;
+    }
+
+    .body_products {
+        padding-bottom: 40px;
+        max-width: 100%;
+    }
+
+    .title_text {
+        text-align: center;
+    }
+
+    .products_card {
+        max-width: 100%;
+    }
+
+    .acc__img {
+        
+    }
+}
