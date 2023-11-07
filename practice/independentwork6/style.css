@@ -450,7 +450,12 @@
         max-width: 100%;
     }
 
+    .selection {
+        overflow: hidden;
+    }
+
     .acc__img {
-        
+        height: 116px;
+        max-width: none;
     }
 }
