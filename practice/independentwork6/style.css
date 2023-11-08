@@ -362,7 +362,7 @@
 
 
 .footer {
-    max-width: 100%;
+    width: 100%;
     position: relative;
 }
 
@@ -581,6 +581,22 @@
 
     .body_browse {
         margin-bottom: 70px;
+    }
+
+    .nav__body {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .footer__subscribe {
+        flex-direction: column;
+    }
+
+    .footer__navigation {
+        display: flex;
+        justify-content: center;
+        padding-top: 48px;
+        padding-bottom: 64px;
     }
 }
 
