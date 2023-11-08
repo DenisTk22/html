@@ -26,7 +26,7 @@
     background-color: #222;
     padding-top: 18px;
     padding-bottom: 19px;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -257,7 +257,7 @@
 
 .product_img {
     height: 420px;
-    
+    max-width: 100%;
 }
 
 .c_text {
@@ -515,6 +515,14 @@
 
     .body_browse {
         margin-bottom: 70px;
+    }
+
+    .nav__body {
+        flex-direction: column;
+    }
+
+    .footer__subscribe {
+        flex-direction: column;
     }
 }
 
