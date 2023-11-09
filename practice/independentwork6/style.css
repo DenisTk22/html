@@ -525,6 +525,10 @@
     color: #000;
 }
 
+.footer__link:hover {
+    background-color: #F16D7F;
+}
+
 
 @media (max-width: 1024px) {
     .wrapper {
@@ -675,5 +679,24 @@
 
     .footer__navigation {
         padding: 48px 0 81px 0;
+    }
+
+    .subscribe__person {
+        text-align: center;
+    }
+
+    .footer__socialnetworks {
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 43px;
+        padding-bottom: 9px;
+    }
+
+    .footer__subscribe {
+        background: url(images/photo\ subscribe.svg) bottom no-repeat;
+        background-color: rgba(244, 244, 244, 1);
+        gap: 59px;
+        padding-top: 64px;
+        padding-bottom: 110px;
     }
 }
