@@ -1,6 +1,5 @@
 /*independent work6*/
 
-
 * {
     margin: 0;
     padding: 0;
@@ -44,9 +43,6 @@
     gap: 40px;
 }
 
-.logo_link {
-
-}
 .header_links {
     display: flex;
     gap: 40px;
@@ -74,14 +70,9 @@
     line-height: normal;
 }
 
-.link {
-
-}
-
 .fa {
     color: #E8E8E8;
 }
-
 
 .main {
     background-color: #F1E4E6;
@@ -151,11 +142,6 @@
     position: relative;
 }
 
-.women {
-   
-    
-}
-
 .img {
     max-width: 100%;
 }
@@ -167,20 +153,6 @@
     text-align: center;
 }
 
-.men {
-    
-   
-}
-
-.kids {
-    
- 
-}
-
-.acc {
-    
-  
-}
 
 .flex_selection {
     display: flex;
