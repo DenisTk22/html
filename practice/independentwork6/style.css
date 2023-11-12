@@ -315,6 +315,7 @@
     padding: 15px 39px 14px 39px;
     border: 1px solid #ff6a6a;
     margin-bottom: 60px;
+    transition-duration: 1s;
 }
 
 .browse_link {
@@ -325,6 +326,17 @@
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
+    transition-duration: 1s;
+}
+
+.body_browse:hover .browse_link{
+    color: #fff;
+    transition-duration: 1s;
+}
+
+.body_browse:hover {
+    background-color: #F26376;
+    transition-duration: 1s;
 }
 
 /* .orders_qty {
