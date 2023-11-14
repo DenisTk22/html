@@ -1,3 +1,5 @@
+/* practice4 */
+
 * {
     margin: 0;
     padding: 0;
@@ -96,6 +98,10 @@ body {
     margin-right: 20px;
 }
 
+.main-link:hover {
+    background-color: orangered;
+}
+
 .flex {
     display: flex;
     justify-content: space-between;
@@ -169,6 +175,10 @@ body {
     font-weight: 600;
     line-height: normal;
     text-decoration: none;
+}
+
+.brain-link:hover {
+    background-color: orangered;
 }
 
 .brain-right {
@@ -327,6 +337,15 @@ margin-bottom: 0;
 
 .email-link {
     margin-right: 24px;
+    color: #fff;
+}
+
+.email-link:hover {
+    color: orangered;
+}
+
+.img__link:hover {
+    transform: scale(1.5);
 }
 
 @media (max-width: 1024px) {
