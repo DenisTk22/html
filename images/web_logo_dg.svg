@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg width="80" height="60" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <g class="dg_logo" id="dg23">
+   <g id="svg_17">
+    <polygon cx="89.8" cy="310" edge="57.63" fill="#ffff00" id="svg_11" orient="x" points="39.99998480081558,0.17280414700508118 79.62764745950699,23.077428817749023 64.49122625589371,60.137882232666016 15.508817732334137,60.137882232666016 0.37237197160720825,23.077428817749023 39.99998480081558,0.17280414700508118 " shape="regularPoly" sides="5" stroke="#ff7f00" stroke-width="0"/>
+    <text fill="#000000" fill-opacity="0" font-family="Serif" font-size="24" id="svg_4" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(0.940656 0 0 0.743145 -251.405 -76.9457)" x="327.49" xml:space="preserve" y="161.2"/>
+    <text fill="#000000" font-family="Sans-serif" font-size="50" id="svg_5" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(0.940656 0 0 0.743145 -251.405 -76.9457)" x="301.49" xml:space="preserve" y="164.2">D</text>
+    <text fill="#000000" font-family="Sans-serif" font-size="48" id="svg_6" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(0.940656 0 0 0.743145 -251.405 -76.9457)" x="315.49" xml:space="preserve" y="174.2">G</text>
+    <rect fill="#ff7f00" height="0" id="svg_15" stroke="#ff7f00" width="0" x="44.42" y="22.78"/>
+   </g>
+  </g>
+ </g>
+</svg>
