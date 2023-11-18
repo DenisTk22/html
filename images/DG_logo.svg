@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <image height="0" id="svg_10" width="0" x="100" xlink:href="./images/logo.svg" y="143"/>
+  <g id="svg_11">
+   <polygon cx="213" cy="133" edge="156.67" fill="#ffff00" id="svg_1" orient="x" points="320.2260169354274,0.45740067958831787 638.4720190888336,162.2941136075878 516.9127889522649,424.1514379026484 123.53917832013462,424.1514379026484 1.9800026416778564,162.2941136075878 320.2260169354274,0.45740067958831787 " shape="regularPoly" sides="5" stroke="#000000" stroke-width="5"/>
+   <text fill="#000000" font-family="Sans-serif" font-size="150" id="svg_5" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(2.5109 0 0 1.75745 -464.996 -202.453)" x="289" xml:space="preserve" y="289">D</text>
+   <text fill="#000000" font-family="Sans-serif" font-size="150" id="svg_6" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(2.36535 0.589656 -0.842453 1.65557 -177.969 -370.568)" x="336.01" xml:space="preserve" y="340.65">G</text>
+   <image height="0" id="svg_9" width="0" x="456.5" xlink:href="./images/logo.svg" y="154.31"/>
+   <image height="0" id="svg_8" width="0" x="506.72" xlink:href="./images/logo.svg" y="180.67"/>
+  </g>
+ </g>
+</svg>
