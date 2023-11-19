@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg width="80" height="60" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <title>dg_logo</title>
+ <g class="layer">
+  <title>Layer 1</title>
+  <image height="0" id="svg_10" width="0" x="100" xlink:href="./images/logo.svg" y="143"/>
+  <g id="svg_11">
+   <polygon cx="213" cy="133" edge="156.67" fill="#ffff00" id="svg_1" orient="x" points="39.72602844238281,2.4573981761932373 77.47206115722656,22.009458540934475 63.05433654785156,53.645358878130764 16.397693634033203,53.645358878130764 1.9799957275390625,22.009458540934475 39.72602844238281,2.4573981761932373 " shape="regularPoly" sides="5" stroke="#000000" stroke-width="5"/>
+   <text fill="#000000" font-family="Sans-serif" font-size="150" id="svg_5" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(0.297808 0 0 0.212323 -252.305 179.978)" x="956.87" xml:space="preserve" y="-662.55">D</text>
+   <text fill="#000000" font-family="Sans-serif" font-size="150" id="svg_6" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(0.280546 0.0712385 -0.0999204 0.200016 -1.63839 5.53916)" x="204.24" xml:space="preserve" y="148.07">G</text>
+   <image height="0" id="svg_9" width="0" x="55.89" xlink:href="./images/logo.svg" y="21.04"/>
+   <image height="0" id="svg_8" width="0" x="61.85" xlink:href="./images/logo.svg" y="24.23"/>
+  </g>
+ </g>
+</svg>
