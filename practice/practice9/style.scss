@@ -1,0 +1,45 @@
+@import "vars";
+
+.container {
+    width: $widthSite;
+}
+
+@mixin flexdisplay ($df, $fww, $jcc, $aic) {
+    display: $df;
+    flex-wrap: $fww;
+    justify-content: $jcc;
+    align-items: $aic;
+}
+
+%font {
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+
+/*цвет заголовка*/
+.title_color {
+    color: $textcolor;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: $gapnav;
+    &__link {
+        text-decoration: none;
+        @extend %font;
+    }
+}
+
+.content {
+    display: flex;
+    gap: $gapnav;
+    @include flexdisplay (flex, wrap, center, center);
+    &__item {
+        width: calc(0.25 * $widthSite);
+        height: 200px;
+        border: $borderStd;
+    }
+    
+}
