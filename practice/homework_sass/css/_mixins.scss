@@ -1,0 +1,7 @@
+@mixin flexcommon ($jc, $ai, $fw, $g) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $fw;
+    gap: $g;
+}
