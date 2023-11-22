@@ -77,7 +77,7 @@
 
 .main {
     // width: 100%;
-
+    margin-bottom: 100px;
     &__brand {
         @include flexcommon (left, center, nowrap, 0px);
         padding-left: 230px;
@@ -98,7 +98,6 @@
 }
 
 .offer_big {
-    // grid-row: span 2;
 }
 
 .offer_man {
@@ -172,21 +171,13 @@
     padding-left: 12px;
 
     .thebrand {
-        font-family: $Lato;
-        font-size: 60px;
-        line-height: 1.2;
-        font-weight: 900;
+        @include textstyle ($Lato, 60px, normal, 900, 1.2, $maintextcolor);
         letter-spacing: 0.025em;
-        color: $maintextcolor;
     }
 
     .luxe {
-        font-family: $Lato;
-        font-size: 40px;
-        line-height: 1.2;
-        font-weight: 900;
+        @include textstyle ($Lato, 40px, normal, 900, 1.2, $maintextcolor);
         letter-spacing: 0.025em;
-        color: $maintextcolor;
     }
 
     span {
@@ -195,40 +186,35 @@
 }
 
 .body_title {
-    display: flex;
+    @include flexcommon (start, center, nowrap, 16px);
     flex-direction: column;
-    align-items: center;
-    gap: 6px;
     margin-bottom: 48px;
 }
 
 .title_header {
-    color: #222;
-    font-family: 'Lato', sans-serif;
+    font-family: $Lato;
     font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    // line-height: 54px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: $maintextcolor;
 }
 
 .title_text {
-    color: #9F9F9F;
-    font-family: 'Lato', sans-serif;
+    font-family: $Lato;
     font-size: 14px;
-    font-style: normal;
+    // line-height: 54px;
     font-weight: 400;
-    line-height: normal;
+    letter-spacing: 0.025em;
+    color: #9f9f9f;
 }
 
 
 .items {
     max-width: 1140px;
     margin: 0 auto;
-    @include flexcommon (none, start, wrap, 30px);
+    @include flexcommon (start, start, wrap, 31.6px);
     display: flex;
-    // flex-wrap: wrap;
-    // gap: 30px;
-    // justify-content: center;
     padding-bottom: 48px;
 }
 
@@ -238,6 +224,11 @@
     flex-direction: column;
     position: relative;
 }
+
+.products_card:hover {
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
 
 .darking {
     line-height: 0;
@@ -254,9 +245,11 @@
     background-color: rgba(58, 56, 56, 0.86);
 }
 
-.darking:hover .zc_pos {
-    display: block;
-    z-index: 1;
+.darking:hover{
+    .zc_pos {
+        display: block;
+        z-index: 1;
+    }
 }
 
 .product_img {
@@ -265,59 +258,36 @@
 }
 
 .c_text {
+    @include textstyle ($Lato, 14px, normal, 400, normal, #FFF);
     display: block;
     text-decoration: none;
-    color: #FFF;
-    font-family: Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     padding: 10px 13px;
 }
 
 .zc_pos {
     display: none;
     position: absolute;
-    top: 47%;
-    left: 35%;
+    top: 123px;
+    left: 72px;
     border: 2px solid white;
 }
 
 .card_info {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 17px;
     padding: 24px 16px;
-    background-color: #F8F8F8;
+    // background-color: #F8F8F8;
 }
 
 .info_title {
-    color: #000;
-    font-family: 'Lato', sans-serif;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 13px, normal, 400, normal, #000);
     text-transform: uppercase;
 }
 
-.info_disc {
-    color: #5D5D5D;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-}
-
 .info_price {
-    color: #F16D7F;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 16px, normal, 700, 1.2, $brandcolor);
+    text-transform: uppercase;
 }
 
 .offer {}
