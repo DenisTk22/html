@@ -83,10 +83,11 @@
 .nav__link {
   font-family: "Lato", sans-serif;
   font-size: 14px;
-  line-height: 26px;
+  font-style: normal;
   font-weight: 700;
-  text-transform: uppercase;
+  line-height: 26px;
   color: #222222;
+  text-transform: uppercase;
 }
 
 .main {
@@ -158,20 +159,22 @@
 .lable__title {
   font-family: "Lato", sans-serif;
   font-size: 18px;
-  line-height: 1.2;
+  font-style: normal;
   font-weight: 900;
+  line-height: 1.2;
+  color: #222222;
   text-transform: uppercase;
   letter-spacing: 0.025em;
-  color: #222222;
 }
 .lable__subtitle {
   font-family: "Lato", sans-serif;
   font-size: 30px;
-  line-height: 1.2;
+  font-style: normal;
   font-weight: 900;
+  line-height: 1.2;
+  color: #f16d7f;
   text-transform: uppercase;
   letter-spacing: 0.025em;
-  color: #f16d7f;
 }
 
 .brand__title {
@@ -230,7 +233,7 @@
   max-width: 1140px;
   margin: 0 auto;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
   flex-wrap: wrap;
   gap: 31.6px;
@@ -319,4 +322,192 @@
   line-height: 1.2;
   color: #f16d7f;
   text-transform: uppercase;
+}
+
+.body_browse {
+  padding: 15px 39px 14px 39px;
+  border: 1px solid #ff6a6a;
+  margin-bottom: 60px;
+  transition-duration: 1s;
+}
+
+.browse_link {
+  color: #F26376;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  transition-duration: 1s;
+}
+
+.body_browse:hover .browse_link {
+  color: #fff;
+  transition-duration: 1s;
+}
+
+.body_browse:hover {
+  background-color: #F26376;
+  transition-duration: 1s;
+}
+
+.nav__body {
+  display: flex;
+  gap: 30px;
+}
+
+.nav__box {
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.icon__form:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.nav__subtitle {
+  color: #FBFBFB;
+  font-family: "Lato", sans-serif;
+  font-size: 19.96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.nav__text {
+  color: #FBFBFB;
+  text-align: center;
+  font-family: Lato;
+  font-size: 13.972px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.footer__subscribe {
+  background: url(images/photo\ subscribe.svg) no-repeat;
+  min-height: 448px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.subscribe__person {
+  max-width: 360px;
+}
+
+.text__first {
+  color: #222224;
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.text__second {
+  color: #222224;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.subscribe__email {
+  display: flex;
+  flex-direction: column;
+}
+
+.email__title {
+  color: #222224;
+  text-align: center;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 167.2%; /* 40.128px */
+  text-transform: uppercase;
+}
+
+.email__subtitle {
+  color: #222224;
+  font-family: Lato;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 167.2%;
+  text-transform: uppercase;
+}
+
+.email__field {
+  display: flex;
+  margin-top: 32px;
+}
+
+.email {
+  width: 256px;
+  height: 49px;
+  background-color: #E1E1E1;
+  border-radius: 24.5px 0 0 24.5px;
+  border: none;
+  padding-left: 25px;
+  color: #222224;
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* opacity: 0.671; */
+}
+
+.footer__button {
+  width: 100px;
+  height: 49px;
+  background-color: #F16D7F;
+  border-radius: 0 24.5px 24.5px 0;
+  border: none;
+}
+
+.footer__socialnetworks {
+  max-width: 100%;
+  min-height: 79px;
+  background-color: #222224;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__rights {
+  color: #FBFBFB;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer__social {
+  display: flex;
+  gap: 7.29px;
+}
+
+.footer__link {
+  width: 31.451px;
+  height: 32px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 32px;
+  color: #000;
+}
+
+.footer__link:hover {
+  background-color: #F16D7F;
 }/*# sourceMappingURL=style.css.map */

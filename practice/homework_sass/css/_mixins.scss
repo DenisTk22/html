@@ -9,8 +9,8 @@
 @mixin textstyle ($ff, $fz, $fs, $fw, $lh, $c) {
     font-family: $ff;
     font-size: $fz;
-    font-style: $fs;
+    font-style: $fs; // по умолчанию normal
     font-weight: $fw;
-    line-height: $lh;
+    line-height: $lh; // по умолчанию normal
     color: $c;
 }
