@@ -326,18 +326,18 @@
 
 .body_browse {
   padding: 15px 39px 14px 39px;
-  border: 1px solid #ff6a6a;
+  border: 1px solid #f16d7f;
   margin-bottom: 60px;
   transition-duration: 1s;
 }
 
 .browse_link {
-  color: #F26376;
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #f16d7f;
   text-decoration: none;
   transition-duration: 1s;
 }
@@ -348,7 +348,7 @@
 }
 
 .body_browse:hover {
-  background-color: #F26376;
+  background-color: #f16d7f;
   transition-duration: 1s;
 }
 
@@ -371,31 +371,43 @@
 }
 
 .nav__subtitle {
-  color: #FBFBFB;
   font-family: "Lato", sans-serif;
-  font-size: 19.96px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #fbfbfb;
 }
 
 .nav__text {
-  color: #FBFBFB;
-  text-align: center;
-  font-family: Lato;
-  font-size: 13.972px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: normal;
+  color: #fbfbfb;
+  text-align: center;
 }
 
+.footer {
+  padding-top: 48px;
+  padding-bottom: 46px;
+}
 .footer__subscribe {
-  background: url(images/photo\ subscribe.svg) no-repeat;
+  background: url(../images/footer_bg.jpg) no-repeat;
   min-height: 448px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: relative;
+}
+.footer__socialnetworks {
+  max-width: 100%;
+  min-height: 79px;
+  background-color: #222222;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .subscribe__person {
@@ -403,22 +415,22 @@
 }
 
 .text__first {
-  color: #222224;
-  text-align: center;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #222222;
+  text-align: center;
 }
 
 .text__second {
-  color: #222224;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
+  color: #222222;
 }
 
 .subscribe__email {
@@ -427,23 +439,23 @@
 }
 
 .email__title {
-  color: #222224;
-  text-align: center;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
-  line-height: 167.2%; /* 40.128px */
+  line-height: 167.2%;
+  color: #222222;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .email__subtitle {
-  color: #222224;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 167.2%;
+  color: #222222;
   text-transform: uppercase;
 }
 
@@ -459,39 +471,30 @@
   border-radius: 24.5px 0 0 24.5px;
   border: none;
   padding-left: 25px;
-  color: #222224;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #222222;
   /* opacity: 0.671; */
 }
 
 .footer__button {
   width: 100px;
   height: 49px;
-  background-color: #F16D7F;
+  background-color: #f16d7f;
   border-radius: 0 24.5px 24.5px 0;
   border: none;
 }
 
-.footer__socialnetworks {
-  max-width: 100%;
-  min-height: 79px;
-  background-color: #222224;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .footer__rights {
-  color: #FBFBFB;
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #fbfbfb;
 }
 
 .footer__social {
@@ -509,5 +512,5 @@
 }
 
 .footer__link:hover {
-  background-color: #F16D7F;
+  background-color: #f16d7f;
 }/*# sourceMappingURL=style.css.map */
