@@ -1,0 +1,16 @@
+@mixin flexcommon ($jc, $ai, $fw, $g) {
+    display: flex;
+    justify-content: $jc; //по умолчанию start
+    align-items: $ai; // по умолчанию stretch
+    flex-wrap: $fw; // по умолчанию nowrap
+    gap: $g;
+}
+
+@mixin textstyle ($ff, $fz, $fs, $fw, $lh, $c) {
+    font-family: $ff;
+    font-size: $fz;
+    font-style: $fs; // по умолчанию normal
+    font-weight: $fw;
+    line-height: $lh; // по умолчанию normal
+    color: $c;
+}
