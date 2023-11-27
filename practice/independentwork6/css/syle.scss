@@ -366,12 +366,13 @@
         }
 
     &__subscribe {
-        background: url(images/photo\ subscribe.svg) no-repeat;
+        background: url(../images/photo_subscribe.svg) no-repeat;
         min-height: 448px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         position: relative;
+
     }
 
         &__button {
