@@ -54,6 +54,7 @@ a {
   padding-bottom: 65px;
   display: flex;
   gap: 320px;
+  position: relative;
 }
 .body-catalog__product-cards {
   display: flex;
@@ -67,6 +68,67 @@ a {
   display: flex;
   justify-content: center;
   padding-bottom: 96px;
+}
+
+.filter-summary {
+  padding-bottom: 16px;
+}
+
+.filter-items {
+  position: absolute;
+  z-index: 10;
+  width: 360px;
+  padding-left: 17px;
+  padding-right: 15.5px;
+}
+.filter-items:last-child {
+  margin-bottom: 16px;
+}
+.filter-items[open] {
+  box-shadow: 0px 0px 1px #000;
+  background-color: #fff;
+}
+.filter-items[open] .filter-title {
+  color: #f16d7f;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.filter-items[open] .filter-ico {
+  color: #f16d7f;
+}
+.filter-items__title {
+  display: block;
+  color: #f16d7f;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-left: 11px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  border-left: 5px solid #f16d7f;
+  border-bottom: 1px solid #EBEBEB;
+}
+.filter-items__box {
+  margin-top: 24px;
+  margin-left: 17px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.filter-items__positions {
+  color: #6F6E6E;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .filter-summary {
@@ -84,9 +146,19 @@ a {
   text-transform: uppercase;
 }
 
+.filter-item {
+  margin-bottom: 18px;
+}
+
 .sort-items {
   display: flex;
   gap: 28px;
+  position: relative;
+  left: 390px;
+  z-index: 10;
+}
+.sort-items__details {
+  position: relative;
 }
 
 .sort-summary {
@@ -102,6 +174,29 @@ a {
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.sort__check {
+  display: flex;
+  gap: 9px;
+  color: #6F6E6E;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.sort__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #fff;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  padding: 7px 30px 11px 9px;
+  position: absolute;
+  left: -9px;
+  top: 22px;
+  width: 79px;
 }
 
 .pages__body {
