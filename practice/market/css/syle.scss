@@ -2,6 +2,7 @@
 @import 'vars';
 @import 'mixins';
 @import 'catalog-style';
+@import 'cart-style';
 
 * {
     margin: 0;
@@ -248,12 +249,20 @@
     line-height: normal;
 }
 
+.product-card__link {
+    display: flex;
+}
 
 .products_card {
     width: 360px;
     display: flex;
     flex-direction: column;
     position: relative;
+    transition-duration: 0.3s;
+
+    &:hover {
+        box-shadow: 1px 1px 3px $footertextcolor;
+    }
 }
 
 .darking {
