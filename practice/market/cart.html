@@ -43,16 +43,62 @@
                             <p class="cart-info__price"><span class="price-letter">Price: </span> <span class="price-digit">$300</span></p>
                             <p class="cart-info__color">Color: Red</p>
                             <p class="cart-info__size">Size: XL</p>
-                            <p class="cart-info__quantity"><span>Quantity:</span> <span>2</span> </p>
+                            <p class="cart-info__quantity">
+                                <span class="q-letter">Quantity:</span> <span class="q-digit">2</span> 
+                            </p>
                         </div>
-                        <button class="close-cart"><img class="close-cart_img" src="images/close-cart.svg" alt="close-cart"></button>
+                        <button class="close-cart">
+                            <img class="close-cart_img" src="images/close-cart.svg" alt="close-cart">
+                        </button>
+                    </div>
+                    <div class="carts-box__cart">
+                        <img src="images/catalog-prod2.svg" alt="product" class="cart-img">
+                        <div class="cart-info">
+                            <p class="cart-info__title">MANGO PEOPLE T-SHIRT</p>
+                            <p class="cart-info__price"><span class="price-letter">Price: </span> <span class="price-digit">$300</span></p>
+                            <p class="cart-info__color">Color: Red</p>
+                            <p class="cart-info__size">Size: XL</p>
+                            <p class="cart-info__quantity">
+                                <span class="q-letter">Quantity:</span> <span class="q-digit">2</span> 
+                            </p>
+                        </div>
+                        <button class="close-cart">
+                            <img class="close-cart_img" src="images/close-cart.svg" alt="close-cart">
+                        </button>
                     </div>
                 </div>
-                <div class="left-buttons"></div>
+                <div class="left-buttons">
+                    <button class="left-buttons__button">
+                        CLEAR SHOPPING CART
+                    </button>
+                    <button class="left-buttons__button">
+                        <a href="catalog.html" target="_blank"   class="button__link">CONTINUE SHOPPING</a>
+                    </button>
+                </div>
             </section>
             <section class="main-cart__right">
-                <div class="shipping"></div>
-                <div class="cost"></div>
+                <div class="shipping">
+                    <p class="shipping__heading">SHIPPING ADRESS</p>
+                    <form class="shipping__form" action="#">
+                        <input class="shipping__input" placeholder="City" type="text">
+                        <input class="shipping__input" placeholder="State" type="text">
+                        <input class="shipping__input" placeholder="Postcode / Zip" type="text">
+                        <button class="button-submit" type="submit">GET A QUOTE</button> 
+                    </form>
+                </div>
+                <div class="cost">
+                    <div class="cost__sub">
+                        <p class="sub_text">SUB TOTAL</p>
+                        <p class="sub_digit">$900</p>
+                    </div>
+                    <div class="cost__grand">
+                        <p class="grand_text">GRAND TOTAL</p>
+                        <p class="grand_digit">$900</p>
+                    </div>
+                    <button class="cost__button" type="submit">
+                        PROCEED TO CHECKOUT
+                    </button> 
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -120,6 +166,6 @@
                 </div>
             </section>
         </footer>
-    </div>
+        
 </body>
 </html>
