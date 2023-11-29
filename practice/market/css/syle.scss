@@ -3,13 +3,15 @@
 @import 'mixins';
 @import 'catalog-style';
 @import 'cart-style';
-@import 'grid-index-style';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
 
 .wrapper {
     max-width: 1600px;
@@ -150,8 +152,8 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-        padding-bottom: 48px;
         justify-content: center;
+        padding-bottom: 48px;
     }
 
     &_browse {
@@ -172,6 +174,16 @@
     }
 }
 
+
+@supports (display: grid) {
+
+    .body_products {
+        display: grid;
+        grid-template-columns: 360px 360px 360px;
+        gap: 30px;
+        padding-bottom: 48px;
+    }
+}
 
 .selection {
     display: flex;
@@ -256,8 +268,8 @@
 
 .products_card {
     width: 360px;
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     position: relative;
     transition-duration: 0.3s;
 
@@ -314,11 +326,9 @@
 }
 
 .card_info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
     padding: 24px 16px;
     background-color: #F8F8F8;
+
 }
 
 .info_title {
@@ -329,6 +339,7 @@
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
 
 .info_disc {
@@ -338,6 +349,7 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    margin-bottom: 16px;
 }
 
 .info_price {
