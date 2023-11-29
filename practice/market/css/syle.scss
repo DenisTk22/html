@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'catalog-style';
 @import 'cart-style';
+@import 'grid-index-style';
 
 * {
     margin: 0;
@@ -263,6 +264,8 @@
     &:hover {
         box-shadow: 1px 1px 3px $footertextcolor;
     }
+
+
 }
 
 .darking {
