@@ -263,3 +263,16 @@ a {
         content: url('../images/to_right-ico.svg');
     }
 }
+
+.page__number {
+    color: #C4C4C4;
+    font-family: $Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.page__number_current {
+    color: $brandcolor;
+}
