@@ -1,0 +1,27 @@
+
+
+.body-product {
+
+    width: 100%;
+
+    &__card {
+        padding-top: 11px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__arrow {
+        padding: 8px;
+        background-color: rgba(42, 42, 42, 0.15);
+        border: none;
+    }
+
+    &__img {
+        
+    }
+
+    &__info {
+        
+    }
+}

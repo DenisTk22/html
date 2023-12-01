@@ -476,6 +476,20 @@ a {
   line-height: normal;
 }
 
+.body-product {
+  width: 100%;
+}
+.body-product__card {
+  padding-top: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.body-product__arrow {
+  padding: 8px;
+  background-color: rgba(42, 42, 42, 0.15);
+  border: none;
+}
 * {
   margin: 0;
   padding: 0;
