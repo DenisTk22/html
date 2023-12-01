@@ -481,6 +481,7 @@ a {
 }
 .body-product__card {
   padding-top: 11px;
+  padding-bottom: 42px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -490,6 +491,18 @@ a {
   background-color: rgba(42, 42, 42, 0.15);
   border: none;
 }
+.body-product__info {
+  padding: 64px 250px;
+}
+.body-product__info-container {
+  max-width: 641px;
+  margin: 0 auto;
+}
+.body-product__sort-items {
+  display: flex;
+  justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;

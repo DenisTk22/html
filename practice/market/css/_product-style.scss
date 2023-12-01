@@ -6,6 +6,7 @@
 
     &__card {
         padding-top: 11px;
+        padding-bottom: 42px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,6 +23,19 @@
     }
 
     &__info {
+        padding: 64px 250px;
         
     }
-}
+
+    &__info-container {
+        max-width: 641px;
+        margin: 0 auto;
+        // display: flex;
+        // flex-direction: column;
+    }
+
+    &__sort-items {
+        display: flex;
+        justify-content: center;
+    }
+    }
