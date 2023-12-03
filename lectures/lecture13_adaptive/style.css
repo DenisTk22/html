@@ -1,0 +1,42 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    background-color: #ccc;
+    min-height:100vh;
+    /* overflow: scroll; */
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    width: 50vw;
+    text-align: center;
+}
+
+.block {
+    position: relative;
+    min-height: 100vh;
+    background-color: #234556;
+}
+
+.block__header {
+    position: sticky;
+    top: 100px;
+    left: 0;
+    width: 250px;
+
+    height: 150px;
+    background-color: #555;
+}
+
+.item {
+    min-height: 100vw;
+    background-color: #654321;
+}
