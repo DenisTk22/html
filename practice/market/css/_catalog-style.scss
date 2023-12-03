@@ -20,11 +20,12 @@ a {
 
     &__arrivals {
         color: $brandcolor;
-        font-family: Lato;
+        font-family: $Lato;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-transform: uppercase;
     }
 
     &__bread-crumbs {
@@ -183,7 +184,7 @@ a {
 
 .filter-title {
     color: #000;
-    font-family: Lato;
+    font-family: $Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
