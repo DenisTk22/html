@@ -512,7 +512,7 @@ a {
 }
 
 .main-reg {
-  max-width: 1140px;
+  width: 1140px;
 }
 .main-reg__container {
   padding-top: 64px;
@@ -547,6 +547,9 @@ a {
   font-weight: 300;
   line-height: normal;
 }
+.main-reg__loyalty {
+  width: 652px;
+}
 .main-reg__ul {
   list-style-type: none;
 }
@@ -576,10 +579,60 @@ a {
 .main-reg__join-arrow {
   margin-left: 20px;
 }
+.main-reg__heading {
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 22px;
+}
+.main-reg__text {
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 21px;
+}
+.main-reg__ul {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.main-reg__li {
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.main-reg__li::before {
+  content: url(../images/galochka.svg);
+  padding-right: 22px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.hover_to_brand-style:hover {
+  transition-duration: 1s;
+  background-color: #f16d7f;
+  color: #fff;
+  border: none;
+}
+
+.hover_to_white-style:hover {
+  transition-duration: 1s;
+  background-color: #fff;
+  color: #f16d7f;
+  border: 1px solid #f16d7f;
 }
 
 .wrapper {

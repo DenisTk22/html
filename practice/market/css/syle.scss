@@ -12,8 +12,23 @@
     box-sizing: border-box;
 }
 
+.hover_to_brand-style {
+    &:hover {
+        transition-duration: 1s;
+        background-color: $brandcolor;
+        color: #fff;
+        border: none;
+    }
+}
 
-
+.hover_to_white-style {
+    &:hover {
+        transition-duration: 1s;
+        background-color: #fff;
+        color: $brandcolor;
+        border: 1px solid $brandcolor;
+    }
+}
 
 .wrapper {
     max-width: 1600px;
