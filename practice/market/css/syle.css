@@ -520,6 +520,62 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.main-reg__user-reg {
+  width: 360px;
+}
+.main-reg__name-heading {
+  color: #222222;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.main-reg__input {
+  margin-top: 20px;
+}
+.main-reg__data {
+  height: 45px;
+  width: 100%;
+}
+.main-reg__radio {
+  margin-top: 31px;
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.main-reg__ul {
+  list-style-type: none;
+}
+.main-reg__name {
+  margin-bottom: 33px;
+}
+.main-reg__data-text {
+  margin-top: 15px;
+  margin-bottom: 39px;
+  color: #B1B1B1;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.main-reg__join {
+  padding: 15px 20px 15px 30px;
+  background-color: #f16d7f;
+  color: #FFF;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main-reg__join-arrow {
+  margin-left: 20px;
+}
 * {
   margin: 0;
   padding: 0;

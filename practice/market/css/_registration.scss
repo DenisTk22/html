@@ -2,22 +2,88 @@
 .main-reg {
     max-width: 1140px;
 
-    &__container {
-        padding-top: 64px;
-        padding-bottom: 96px;
-        display: flex;
-        justify-content: space-between;
-    }
+        &__container {
+            padding-top: 64px;
+            padding-bottom: 96px;
+            display: flex;
+            justify-content: space-between;
+        }
 
-    &__user-reg {
+        &__user-reg {
+            width: 360px;
+        }
 
-    }
+        &__name-heading {
+            color: $maintextcolor;
+            font-family: $Lato;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
 
-    &__name {}
+        &__input {
+            margin-top: 20px;
+        }
 
-    &__details {}
+        &__data {
+            height: 45px;
+            width: 100%;
+        }
 
-    &__join {}
+        &__radio {
+            margin-top: 31px;
+            color: #000;
+            font-family: $Lato;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__sex {
+            
+        }
+
+        &__ul {
+            list-style-type: none;
+        }
+
+        &__user-reg {
+
+        }
+
+        &__name {
+            margin-bottom: 33px;
+        }
+
+        &__details {}
+
+        &__data-text {
+            margin-top: 15px;
+            margin-bottom: 39px;
+            color: #B1B1B1;
+            font-family: $Lato;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__join {
+            padding: 15px 20px 15px 30px;
+            background-color: $brandcolor;
+            color: #FFF;
+            font-family: $Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        &__join-arrow {
+            margin-left: 20px;
+        }
 
     &__loyalty {}
 
