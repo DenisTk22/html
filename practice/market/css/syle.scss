@@ -13,6 +13,7 @@
 }
 
 .hover_to_brand-style {
+    transition-duration: 1s;
     &:hover {
         transition-duration: 1s;
         background-color: $brandcolor;
@@ -22,6 +23,7 @@
 }
 
 .hover_to_white-style {
+    transition-duration: 1s;
     &:hover {
         transition-duration: 1s;
         background-color: #fff;

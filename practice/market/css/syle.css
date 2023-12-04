@@ -621,6 +621,9 @@ a {
   box-sizing: border-box;
 }
 
+.hover_to_brand-style {
+  transition-duration: 1s;
+}
 .hover_to_brand-style:hover {
   transition-duration: 1s;
   background-color: #f16d7f;
@@ -628,6 +631,9 @@ a {
   border: none;
 }
 
+.hover_to_white-style {
+  transition-duration: 1s;
+}
 .hover_to_white-style:hover {
   transition-duration: 1s;
   background-color: #fff;
