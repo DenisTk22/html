@@ -14,12 +14,7 @@
         }
 
         &__name-heading {
-            color: $maintextcolor;
-            font-family: $Lato;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
+            @include textstyle ($Lato, 16px, normal, 300, normal, $maintextcolor);
         }
 
         &__input {
@@ -32,13 +27,8 @@
         }
 
         &__radio {
+            @include textstyle ($Lato, 11px, normal, 300, normal, #000);
             margin-top: 31px;
-            color: #000;
-            font-family: $Lato;
-            font-size: 11px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
         }
 
         &__sex {
@@ -70,25 +60,15 @@
         }
 
         &__data-text {
+            @include textstyle ($Lato, 13px, normal, 300, normal, #B1B1B1);
             margin-top: 15px;
             margin-bottom: 39px;
-            color: #B1B1B1;
-            font-family: $Lato;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
         }
 
         &__join {
+            @include textstyle ($Lato, 14px, normal, 400, normal, #FFF);
             padding: 15px 20px 15px 30px;
             background-color: $brandcolor;
-            color: #FFF;
-            font-family: $Lato;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
         }
 
         &__join-arrow {
@@ -98,12 +78,7 @@
     &__loyalty {}
 
     &__heading {
-        color: #000;
-        font-family: $Lato;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include textstyle ($Lato, 24px, normal, 300, normal, #000);
         margin-bottom: 22px;
     }
 
@@ -112,12 +87,7 @@
     }
 
     &__text {
-        color: #000;
-        font-family: $Lato;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include textstyle ($Lato, 24px, normal, 300, normal, #000);
         margin-bottom: 21px;
     }
 
@@ -128,12 +98,7 @@
     }
 
     &__li {
-        color: #000;
-        font-family: $Lato;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include textstyle ($Lato, 24px, normal, 300, normal, #000);
 
             &::before {
                 content: url(../images/galochka.svg);

@@ -48,12 +48,7 @@
     }
 
     &__heading {
-        color: #F16D7F;
-        font-family: $Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include textstyle ($Lato, 14px, normal, 300, normal, $brandcolor);
 
         &_m-bottom {
             margin-bottom: 12px;
@@ -61,7 +56,7 @@
     }
 
     &__firstline {
-        background-color: #F16D7F;
+        background-color: $brandcolor;
         width: 63px;
         height: 3.025px;
 
@@ -71,12 +66,7 @@
     }
 
     &__sub-heading {
-        color: #4D4D4D;
-        font-family: $Lato;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include textstyle ($Lato, 18px, normal, 300, normal, #4D4D4D);
 
         &_m-bottom {
             margin-bottom: 48px;
@@ -84,14 +74,8 @@
     }
 
     &__text {
+        @include textstyle ($Lato, 14px, normal, 300, normal, #5E5E5E);
         width: 555px;
-        color: #5E5E5E;
-        text-align: center;
-        font-family: $Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
         text-align: center;
 
         &_m-bottom {
@@ -100,12 +84,7 @@
     }
 
     &__price {
-        color: $brandcolor;
-        font-family: $Lato;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
+        @include textstyle ($Lato, 24px, normal, 300, normal, $brandcolor);
 
         &_m-bottom {
             margin-bottom: 65px;
@@ -130,24 +109,9 @@
     }
 
     &_button {
+        @include textstyle ($Lato, 16px, normal, 400, normal, $brandcolor);
         padding: 15px 57px 15px 24px;
-        color: $brandcolor;
-        font-family: $Lato;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         border: 1px solid $brandcolor;
     }
 
 }
-
-// .c_text.body-product_button {
-//     color: #EF5B70;
-// }
-
-.fa {
-    // color: $brandcolor;
-    // margin-right: 23px;
-}
-

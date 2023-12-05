@@ -19,12 +19,7 @@ a {
     }
 
     &__arrivals {
-        color: $brandcolor;
-        font-family: $Lato;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        @include textstyle ($Lato, 24px, normal, 400, normal, $brandcolor);
         text-transform: uppercase;
     }
 
@@ -40,12 +35,7 @@ a {
 
 
 .bread-crumbs__link {
-    color: #636363;
-    font-family: $Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include textstyle ($Lato, 14px, normal, 300, normal, #636363);
     text-transform: uppercase;
 
         &:hover {
@@ -124,12 +114,7 @@ a {
     }
 
     &[open] .filter-title {
-            color: $brandcolor;
-            font-family: $Lato;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
+        @include textstyle ($Lato, 14px, normal, 600, normal, $brandcolor);
         }
 
         &[open] .filter-ico {
@@ -138,13 +123,8 @@ a {
 
 
     &__title{
+        @include textstyle ($Lato, 14px, normal, 600, normal, $brandcolor);
         display: block;
-        color: $brandcolor;
-        font-family: $Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         text-transform: uppercase;
         padding-left: 11px;
         padding-top: 11px;
@@ -163,12 +143,7 @@ a {
     }
 
     &__positions {
-        color: #6F6E6E;
-        font-family: $Lato;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        @include textstyle ($Lato, 14px, normal, 400, normal, #6F6E6E);
     }
 }
 
@@ -183,12 +158,7 @@ a {
 }
 
 .filter-title {
-    color: #000;
-    font-family: $Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    @include textstyle ($Lato, 14px, normal, 600, normal, #000);
     text-transform: uppercase;
 }
 
@@ -215,23 +185,14 @@ a {
 }
 
 .sort-title {
-    color: #6F6E6E;
-    font-family: $Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 14px, normal, 400, normal, #6F6E6E);
     text-transform: uppercase;
 }
 
 .sort__check {
+    @include textstyle ($Lato, 14px, normal, 400, normal, #6F6E6E);
     display: flex;
     gap: 9px;
-    color: #6F6E6E;
-    font-family: $Lato;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
 }
 
 .sort__box {
@@ -266,12 +227,7 @@ a {
 }
 
 .page__number {
-    color: #C4C4C4;
-    font-family: $Lato;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include textstyle ($Lato, 16px, normal, 300, normal, #C4C4C4);
 }
 
 .page__number_current {

@@ -1,16 +1,11 @@
-/*independent work6*/
+/*market*/
+@import 'zerostyle';
 @import 'vars';
 @import 'mixins';
 @import 'catalog-style';
 @import 'cart-style';
 @import 'product-style';
 @import 'registration';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .hover_to_brand-style {
     transition-duration: 1s;
@@ -49,7 +44,7 @@
 }
 
 .header {
-    background-color: #222;
+    background-color: $maintextcolor;
     padding-top: 18px;
     padding-bottom: 19px;
     width: 100%;
@@ -71,7 +66,7 @@
 
     &_links {
         display: flex;
-        gap: 40px;
+        gap: 33px;
     }
 }
 
@@ -80,21 +75,16 @@
 }
 
 .orders_qty {
+    @include textstyle ($Lato, 12px, normal, 400, normal, #fff);
     display: block;
     width: 19px;
     height: 19px;
-    background-color: #F16D7F;
+    background-color: $brandcolor;
     border-radius: 50%;
     position: absolute;
     text-align: center;
     left: 90%;
     bottom: 70%;
-    color: white;
-    font-family: Lato;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .fa_color {
@@ -115,38 +105,23 @@
 
     &_info {
         max-width: 50%;
-        border-left: 12px solid #F16D7F;
+        border-left: 12px solid $brandcolor;
         padding-left: 16px;
     }
 }
 
 .info-title {
-    color: #222;
-    font-family: 'Lato', sans-serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
+    @include textstyle ($Lato, 48px, normal, 900, normal, $maintextcolor);
     text-transform: uppercase;
 }
 
 .sub-of {
-    color: #222;
-    font-family: 'Lato', sans-serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include textstyle ($Lato, 32px, normal, 700, normal, $maintextcolor);
     text-transform: uppercase;
 }
 
 .sub-fashion {
-    color: #F16D7F;
-    font-family: 'Lato', sans-serif;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include textstyle ($Lato, 32px, normal, 700, normal, $brandcolor);
     text-transform: uppercase;
 }
 
@@ -177,7 +152,7 @@
 
     &_browse {
         padding: 15px 39px 14px 39px;
-        border: 1px solid #ff6a6a;
+        border: 1px solid $brandcolor;
         margin-bottom: 60px;
         transition-duration: 1s;
     }
@@ -188,7 +163,7 @@
     }
 
     &_browse:hover {
-        background-color: #F26376;
+        background-color: $brandcolor;
         transition-duration: 1s;
     }
 }
@@ -242,43 +217,23 @@
 }
 
 .s_text {
-    color: #FFF;
+    @include textstyle ($Lato, 16px, normal, 400, normal, #fff);
     text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     text-transform: uppercase;
 }
 
 .s_subtitle {
-    color: #F16D7F;
-    font-family: 'Lato', sans-serif;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include textstyle ($Lato, 24px, normal, 700, normal, $brandcolor);
     text-transform: uppercase;
 }
 
 
 .title_header {
-    color: #222;
-    font-family: 'Lato', sans-serif;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 30px, normal, 400, normal, $maintextcolor);
 }
 
 .title_text {
-    color: #9F9F9F;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 14px, normal, 400, normal, #9F9F9F);
 }
 
 .product-card__link {
@@ -325,14 +280,9 @@
 }
 
 .c_text {
+    @include textstyle ($Lato, 14px, normal, 400, normal, #fff);
     display: block;
     text-decoration: none;
-    color: #fff;
-    font-family: $Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     padding: 10px 13px;
 }
 
@@ -351,52 +301,26 @@
 }
 
 .info_title {
-    color: #000;
-    font-family: 'Lato', sans-serif;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 13px, normal, 400, normal, #000);
     text-transform: uppercase;
     margin-bottom: 16px;
 }
 
 .info_disc {
-    color: #5D5D5D;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include textstyle ($Lato, 14px, normal, 300, normal, #5D5D5D);
     margin-bottom: 16px;
 }
 
 .info_price {
-    color: #F16D7F;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 16px, normal, 400, normal, $brandcolor);
 }
 
 
 .browse_link {
-    color: #F26376;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 16px, normal, 400, normal, $brandcolor);
     text-decoration: none;
     transition-duration: 1s;
 }
-
-
-/* .orders_qty {
-        display: none;
-    } */
-
 
 
 .footer {
@@ -421,7 +345,7 @@
         &__button {
             width: 100px;
             height: 49px;
-            background-color: #F16D7F;
+            background-color: $brandcolor;
             border-radius: 0 24.5px 24.5px 0;
             border: none;
         }
@@ -436,12 +360,7 @@
         }
     
         &__rights {
-            color: #FBFBFB;
-            font-family: Lato;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            @include textstyle ($Lato, 16px, normal, 400, normal, #FBFBFB);
         }
     
         &__social {
@@ -459,7 +378,7 @@
         }
     
         &__link:hover {
-            background-color: #F16D7F;
+            background-color: $brandcolor;
         }
 }
 
@@ -483,22 +402,12 @@
 }
 
 .nav__subtitle {
-    color: #FBFBFB;
-    font-family: 'Lato', sans-serif;
-    font-size: 19.96px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 20px, normal, 400, normal, #FBFBFB);
 }
 
 .nav__text {
-    color: #FBFBFB;
+    @include textstyle ($Lato, 14px, normal, 300, normal, #FBFBFB);
     text-align: center;
-    font-family: Lato;
-    font-size: 13.972px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
 }
 
 .subscribe__person {
@@ -506,22 +415,12 @@
 }
 
 .text__first {
-    color: #222224;
+    @include textstyle ($Lato, 20px, normal, 400, normal, $maintextcolor);
     text-align: center;
-    font-family: Lato;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .text__second {
-    color: #222224;
-    font-family: Lato;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: normal;
+    @include textstyle ($Lato, 20px, italic, 400, normal, $maintextcolor);
 }
 
 .subscribe__email {
@@ -531,24 +430,13 @@
 }
 
 .email__title {
-    color: #222224;
+    @include textstyle ($Lato, 24px, normal, 700, 167.2%, $maintextcolor);
     text-align: center;
-    font-family: Lato;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 167.2%;
-    /* 40.128px */
     text-transform: uppercase;
 }
 
 .email__subtitle {
-    color: #222224;
-    font-family: Lato;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 167.2%;
+    @include textstyle ($Lato, 18px, normal, 400, 167.2%, $maintextcolor);
     text-transform: uppercase;
 }
 
@@ -558,24 +446,14 @@
 }
 
 .email {
+    @include textstyle ($Lato, 14px, normal, 400, normal, $maintextcolor);
     width: 256px;
     height: 49px;
     background-color: #E1E1E1;
     border-radius: 24.5px 0 0 24.5px;
     border: none;
     padding-left: 25px;
-    color: #222224;
-    font-family: Lato;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    /* opacity: 0.671; */
 }
-
-// Каталог
-
-
 
 
 @media (max-width: 1024px) {
