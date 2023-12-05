@@ -17,7 +17,7 @@
     &:hover {
         transition-duration: 1s;
         background-color: $brandcolor;
-        color: #fff;
+        color: #fff !important;
         border: none;
     }
 }
@@ -97,7 +97,7 @@
     line-height: normal;
 }
 
-.fa {
+.fa_color {
     color: #E8E8E8;
 }
 
@@ -327,8 +327,8 @@
 .c_text {
     display: block;
     text-decoration: none;
-    color: #FFF;
-    font-family: Lato;
+    color: #fff;
+    font-family: $Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;

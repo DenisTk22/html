@@ -488,6 +488,7 @@ a {
   width: 100%;
 }
 .body-product__card {
+  background-color: #F7F7F7;
   padding-top: 11px;
   padding-bottom: 42px;
   display: flex;
@@ -500,15 +501,101 @@ a {
   border: none;
 }
 .body-product__info {
-  padding: 64px 250px;
+  background-color: #fff;
+  transform: translateY(-60px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 64px 0px;
+  width: 1141px;
+  margin: 0 auto;
+  border: 1px solid #EAEAEA;
 }
 .body-product__info-container {
-  max-width: 641px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .body-product__sort-items {
   display: flex;
   justify-content: center;
+  gap: 23px;
+}
+.body-product__heading {
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.body-product__heading_m-bottom {
+  margin-bottom: 12px;
+}
+.body-product__firstline {
+  background-color: #F16D7F;
+  width: 63px;
+  height: 3.025px;
+}
+.body-product__firstline_m-bottom {
+  margin-bottom: 12px;
+}
+.body-product__sub-heading {
+  color: #4D4D4D;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.body-product__sub-heading_m-bottom {
+  margin-bottom: 48px;
+}
+.body-product__text {
+  width: 555px;
+  color: #5E5E5E;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+.body-product__text_m-bottom {
+  margin-bottom: 32px;
+}
+.body-product__price {
+  color: #f16d7f;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.body-product__price_m-bottom {
+  margin-bottom: 65px;
+}
+.body-product__secondline {
+  background-color: #EAEAEA;
+  width: 641px;
+  height: 1px;
+}
+.body-product__secondline_m-bottom {
+  margin-bottom: 65px;
+}
+.body-product__sort-items_m-bottom {
+  margin-bottom: 48px;
+}
+.body-product_button {
+  padding: 15px 57px 15px 24px;
+  color: #f16d7f;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid #f16d7f;
 }
 
 .main-reg {
@@ -546,6 +633,12 @@ a {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+.main-reg__sex {
+  margin-right: 10px;
+}
+.main-reg__sex_mleft {
+  margin-left: 20px;
 }
 .main-reg__loyalty {
   width: 652px;
@@ -627,7 +720,7 @@ a {
 .hover_to_brand-style:hover {
   transition-duration: 1s;
   background-color: #f16d7f;
-  color: #fff;
+  color: #fff !important;
   border: none;
 }
 
@@ -703,7 +796,7 @@ a {
   line-height: normal;
 }
 
-.fa {
+.fa_color {
   color: #E8E8E8;
 }
 
@@ -916,8 +1009,8 @@ a {
 .c_text {
   display: block;
   text-decoration: none;
-  color: #FFF;
-  font-family: Lato;
+  color: #fff;
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

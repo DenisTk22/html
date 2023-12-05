@@ -5,6 +5,7 @@
     width: 100%;
 
     &__card {
+        background-color: #F7F7F7;
         padding-top: 11px;
         padding-bottom: 42px;
         display: flex;
@@ -23,19 +24,130 @@
     }
 
     &__info {
-        padding: 64px 250px;
-        
+        background-color: #fff;
+        transform: translateY(-60px);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 64px 0px;
+        width: 1141px;
+        margin: 0 auto;
+        border: 1px solid #EAEAEA;
     }
 
     &__info-container {
-        max-width: 641px;
-        margin: 0 auto;
-        // display: flex;
-        // flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__sort-items {
         display: flex;
         justify-content: center;
+        gap: 23px;
     }
+
+    &__heading {
+        color: #F16D7F;
+        font-family: $Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        &_m-bottom {
+            margin-bottom: 12px;
+        }
     }
+
+    &__firstline {
+        background-color: #F16D7F;
+        width: 63px;
+        height: 3.025px;
+
+        &_m-bottom {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__sub-heading {
+        color: #4D4D4D;
+        font-family: $Lato;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        &_m-bottom {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__text {
+        width: 555px;
+        color: #5E5E5E;
+        text-align: center;
+        font-family: $Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        text-align: center;
+
+        &_m-bottom {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__price {
+        color: $brandcolor;
+        font-family: $Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        &_m-bottom {
+            margin-bottom: 65px;
+        }
+    }
+
+    &__secondline {
+        background-color: #EAEAEA;
+        width: 641px;
+        height: 1px;
+
+        &_m-bottom {
+            margin-bottom: 65px;
+        }
+    }
+
+    &__sort-items {
+    
+        &_m-bottom {
+            margin-bottom: 48px;
+        }   
+    }
+
+    &_button {
+        padding: 15px 57px 15px 24px;
+        color: $brandcolor;
+        font-family: $Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 1px solid $brandcolor;
+    }
+
+}
+
+// .c_text.body-product_button {
+//     color: #EF5B70;
+// }
+
+.fa {
+    // color: $brandcolor;
+    // margin-right: 23px;
+}
+

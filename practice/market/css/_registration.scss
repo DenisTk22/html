@@ -42,7 +42,11 @@
         }
 
         &__sex {
-            
+            margin-right: 10px;
+
+            &_mleft {
+                margin-left: 20px;
+            }
         }
 
         &__loyalty {
