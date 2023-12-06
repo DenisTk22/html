@@ -491,6 +491,14 @@ a {
   color: #f16d7f;
 }
 
+@media (max-width: 1024px) {
+  .nav-catalog {
+    width: 100%;
+  }
+  .nav-catalog__container {
+    padding: 60px 0px 60px 16px;
+  }
+}
 .body-product {
   width: 100%;
 }
@@ -1272,6 +1280,15 @@ a {
     gap: 16px;
     padding-bottom: 32px;
   }
+  @supports (display: grid) {
+    .body_products {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 360px 360px;
+      gap: 16px;
+      padding-bottom: 32px;
+    }
+  }
   .body_browse {
     margin-bottom: 70px;
   }
@@ -1329,6 +1346,15 @@ a {
   .body_products {
     padding-bottom: 40px;
     max-width: 100%;
+  }
+  @supports (display: grid) {
+    .body_products {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 360px;
+      gap: 30px;
+      padding-bottom: 40px;
+    }
   }
   .title_text {
     text-align: center;

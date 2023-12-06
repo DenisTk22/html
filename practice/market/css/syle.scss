@@ -487,7 +487,6 @@
     .body {
         padding-left: 16px;
         padding-right: 16px;
-
     }
 
     .pic__set {
@@ -507,6 +506,17 @@
     .body_products {
         gap: 16px;
         padding-bottom: 32px;
+    }
+
+    @supports (display: grid) {
+
+        .body_products {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 360px 360px;
+            gap: 16px;
+            padding-bottom: 32px;
+        }
     }
 
     .body_browse {
@@ -584,6 +594,17 @@
     .body_products {
         padding-bottom: 40px;
         max-width: 100%;
+    }
+
+    @supports (display: grid) {
+
+        .body_products {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 360px;
+            gap: 30px;
+            padding-bottom: 40px;
+        }
     }
 
     .title_text {
