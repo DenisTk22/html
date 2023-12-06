@@ -47,6 +47,7 @@
     &__price, &__color, &__size, &__quantity {
         @include textstyle ($Lato, 22px, normal, 400, normal, #575757);
     }
+
 }
 
 .price-digit {
@@ -61,6 +62,8 @@
     text-align: center;
     margin-left: 24px;
     padding-left: 16px;
+    margin-left: 15px;
+    padding-left: 0px;
 }
 
 .close-cart {
@@ -76,9 +79,6 @@
         scale: (1.2);
     }
 
-    // &:active .carts-box{
-    //     display: none;
-    // }
 }
 
 .close-cart_img:active .carts-box__cart{
@@ -237,4 +237,93 @@
             gap: 48px;
         }
 
+}
+
+@media (max-width: 768px) { 
+
+    .nav-catalog {
+    
+            &__container {
+                width: 100%;
+                justify-content: center;
+                padding: 60px 0px;
+            }
+        }
+
+    .carts-box {
+        margin-bottom: 30px;
+        &__cart {
+
+            width: 358px;
+            height: 188px;
+        }
+    }
+
+        .cart-info {
+            // max-width: 262px;
+    
+            &__title {
+                font-size: 16px;
+                margin-bottom: 26px;
+            }
+                
+    
+            &__price,
+            &__color,
+            &__size, &__quantity
+            {
+                font-size: 14px;
+            }
+
+    }
+
+    .price-digit {
+        font-size: 14px;
+    }
+
+    .q-digit {
+        font-size: 10px;
+    }
+
+    .close-cart {
+        scale: (0.5);
+        right: 0px;
+        top: 17px;
+    
+        &:hover {
+            scale: (0.7);
+        }
+    
+    }
+
+        .q-digit {
+            margin-left: 15px;
+            padding-left: 0px;
+        }
+
+        .left-buttons {
+            gap: 9px;
+
+            &__button {
+                width: 175px;
+                height: 33px;
+                font-size: 12px;
+                padding: 9px 18px;
+            }
+        }
+
+        .main-cart {
+            padding-bottom: 96px;
+            &__right {
+                flex-direction: column;
+                padding-top: 48px;
+                gap: 48px;
+            }
+    
+        }
+
+        .cost {
+
+            padding: 40px 42px;
+        }
 }
