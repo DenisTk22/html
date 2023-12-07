@@ -15,6 +15,7 @@ a {
         width: 1140px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 60px 0px;
     }
 
@@ -99,9 +100,9 @@ a {
 .filter-items {
     position: absolute;
     z-index: 10;
-    width: 360px;
-    padding-left: 17px;
-    padding-right: 15.5px;
+    // width: 360px;
+    // padding-left: 17px;
+    // padding-right: 15.5px;
     // padding-bottom: 16px;
 
     &:last-child {
@@ -111,6 +112,9 @@ a {
     &[open] {
         box-shadow: 0px 0px 1px #000;
         background-color: #fff;
+        padding-left: 17px;
+        padding-right: 15.5px;
+        width: 360px;
     }
 
     &[open] .filter-title {
@@ -232,4 +236,93 @@ a {
 
 .page__number_current {
     color: $brandcolor;
+}
+
+@media (max-width: 1024px) {
+
+    .body-catalog {
+    
+       &__product-cards {
+            gap: 16px;
+            padding-bottom: 40px;
+        } 
+    
+    
+        @supports (display: grid) {
+            &__product-cards 
+            {
+                grid-template-columns: 360px 360px;
+                gap: 16px;
+                padding-bottom: 40px; 
+            }
+        }
+    }
+
+    .tablet-hidden {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .nav-catalog {
+    
+        &_phone {
+            // width: 100%;
+            // justify-content: center;
+            flex-direction: column;
+            gap: 32px;
+            padding-top: 24px;
+            padding-bottom: 46px;
+        }
+    }
+
+    .body-catalog {
+    
+       &__product-cards {
+            gap: 16px;
+            padding-bottom: 40px;
+        } 
+    
+    
+        @supports (display: grid) {
+            &__product-cards 
+            {
+                grid-template-columns: 360px;
+                // gap: 16px;
+                // padding-bottom: 40px; 
+            }
+        }
+    }
+
+    .tablet-hidden {
+        display: none;
+    }
+
+    .filter-title {
+        display: none;
+    }
+
+    .filter-summary {
+        position: absolute;
+        left: 15px;
+    }
+
+    .sort-items {
+        left: 60px;
+    }
+
+    .filter-ico {
+        scale: (2.5);
+    }
+
+    .filter-items[open] {
+        z-index: 11;
+    }
+
+    .filter-items[open] .filter-ico {
+        position: absolute;
+        top: -25px;
+    }
 }
