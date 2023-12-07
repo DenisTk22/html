@@ -119,6 +119,9 @@
 @media (max-width: 1024px) {
 
     .body-product {
+
+        margin-bottom: 129px;
+
         &__info {
             transform: translateY(0);
             width: 100%; 
@@ -127,5 +130,70 @@
         &__img {
             width: 466px;
         }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .body-product {
+
+        margin-bottom: 129px;
+
+        &__info {
+            transform: translateY(0);
+            width: 100%;
+        }
+
+        &__img {
+            width: 374px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+
+    .body-product {
+
+        margin-bottom: 129px;
+
+        &__info {
+            transform: translateY(0);
+            width: 100%;
+        }
+
+        &__card {
+            position: relative;
+        }
+
+        &__arrow {
+            position: absolute;
+        }
+
+        &__arrow_right {
+            right: 0;
+        }
+
+        &__img {
+            width: 374px;
+        }
+
+        &__sub-heading_m-bottom {
+            margin-bottom: 32px;
+        }
+
+        &__secondline {
+            width: 175px; 
+        }
+
+        
+        .body-product__text {
+            width: 100%;
+            padding: 0 24px;
+        }
+
+    }
+
+    .sort-title {
+        font-size: 10px;
     }
 }

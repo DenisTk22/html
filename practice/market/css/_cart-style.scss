@@ -240,12 +240,13 @@
 
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 767px) { 
 
     .nav-catalog {
     
             &__container {
                 width: 100%;
+                display: flex;
                 justify-content: center;
                 // flex-direction: column;
                 // gap: 32px;
