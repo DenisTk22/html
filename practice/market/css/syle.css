@@ -264,9 +264,6 @@ a {
       padding-bottom: 40px;
     }
   }
-  .tablet-hidden {
-    display: none;
-  }
 }
 @media (max-width: 768px) {
   .nav-catalog_phone {
@@ -752,6 +749,15 @@ a {
   border: 1px solid #f16d7f;
 }
 
+@media (max-width: 1024px) {
+  .body-product__info {
+    transform: translateY(0);
+    width: 100%;
+  }
+  .body-product__img {
+    width: 466px;
+  }
+}
 .main-reg {
   width: 1140px;
 }
@@ -896,6 +902,10 @@ a {
   /* padding-left: calc(50% - 800px); 1600/2, 1600px - ширина сетки */
   /* padding-right: calc(50% - 800px); */
   padding: 0 auto;
+}
+
+.tablet-hidden {
+  display: none;
 }
 
 .header {
