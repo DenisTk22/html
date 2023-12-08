@@ -1,4 +1,3 @@
-
 a {
     text-decoration: none;
 }
@@ -39,9 +38,9 @@ a {
     @include textstyle ($Lato, 14px, normal, 300, normal, #636363);
     text-transform: uppercase;
 
-        &:hover {
-            color: $brandcolor;
-        }
+    &:hover {
+        color: $brandcolor;
+    }
 }
 
 .current-link {
@@ -50,12 +49,12 @@ a {
 }
 
 .body-catalog__product-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding-bottom: 48px;
-        justify-content: center;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 48px;
+    justify-content: center;
+}
 
 @supports (display: grid) {
 
@@ -81,7 +80,7 @@ a {
         position: relative;
     }
 
-    
+
 
     &__pages {
         width: 100%;
@@ -108,7 +107,7 @@ a {
     &:last-child {
         margin-bottom: 16px;
     }
-    
+
     &[open] {
         box-shadow: 0px 0px 1px #000;
         background-color: #fff;
@@ -119,14 +118,14 @@ a {
 
     &[open] .filter-title {
         @include textstyle ($Lato, 14px, normal, 600, normal, $brandcolor);
-        }
+    }
 
-        &[open] .filter-ico {
-            color: $brandcolor;
-        }
+    &[open] .filter-ico {
+        color: $brandcolor;
+    }
 
 
-    &__title{
+    &__title {
         @include textstyle ($Lato, 14px, normal, 600, normal, $brandcolor);
         display: block;
         text-transform: uppercase;
@@ -151,9 +150,7 @@ a {
     }
 }
 
-.category {
-    
-}
+.category {}
 
 
 .filter-summary {
@@ -251,27 +248,26 @@ a {
 @media (max-width: 1024px) {
 
     .nav-catalog {
-            
-            &__container_catalog {
-                    width: 100%;
-                    padding: 60px 16px;
-            }
+
+        &__container_catalog {
+            width: 100%;
+            padding: 60px 16px;
+        }
     }
 
     .body-catalog {
-    
-       &__product-cards {
+
+        &__product-cards {
             gap: 16px;
             padding-bottom: 40px;
-        } 
-    
-    
+        }
+
+
         @supports (display: grid) {
-            &__product-cards 
-            {
+            &__product-cards {
                 grid-template-columns: 360px 360px;
                 gap: 16px;
-                padding-bottom: 40px; 
+                padding-bottom: 40px;
             }
         }
     }
@@ -279,7 +275,7 @@ a {
     .tablet-hidden {
         display: none;
     }
-    
+
 }
 
 
@@ -293,7 +289,7 @@ a {
             padding-top: 24px;
             padding-bottom: 46px;
         }
-    
+
         &_phone {
             // width: 100%;
             // justify-content: center;
@@ -305,16 +301,15 @@ a {
     }
 
     .body-catalog {
-    
-       &__product-cards {
+
+        &__product-cards {
             gap: 16px;
             padding-bottom: 40px;
-        } 
-    
-    
+        }
+
+
         @supports (display: grid) {
-            &__product-cards 
-            {
+            &__product-cards {
                 grid-template-columns: 360px;
                 // gap: 16px;
                 // padding-bottom: 40px; 

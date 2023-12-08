@@ -9,6 +9,7 @@
 
 .hover_to_brand-style {
     transition-duration: 1s;
+
     &:hover {
         transition-duration: 1s;
         background-color: $brandcolor;
@@ -19,6 +20,7 @@
 
 .hover_to_white-style {
     transition-duration: 1s;
+
     &:hover {
         transition-duration: 1s;
         background-color: #fff;
@@ -52,11 +54,11 @@
     justify-content: center;
 
     &_body {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 1140px
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1140px
+    }
 
     &_logo {
         display: flex;
@@ -100,8 +102,8 @@
     width: 100%;
 
     &_img {
-            width: 50%;
-        }
+        width: 50%;
+    }
 
     &_info {
         max-width: 50%;
@@ -328,9 +330,9 @@
     position: relative;
 
     &__navigation {
-            background-color: #222224;
-            padding: 104px 230px;
-        }
+        background-color: #222224;
+        padding: 104px 230px;
+    }
 
     &__subscribe {
         background: url(../images/photo_subscribe.svg) no-repeat;
@@ -342,46 +344,46 @@
 
     }
 
-        &__button {
-            width: 100px;
-            height: 49px;
-            background-color: $brandcolor;
-            border-radius: 0 24.5px 24.5px 0;
-            border: none;
-        }
-    
-        &__socialnetworks {
-            max-width: 100%;
-            min-height: 79px;
-            background-color: #222224;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 32px;
-            padding-right: 32px;
-            align-items: center;
-        }
-    
-        &__rights {
-            @include textstyle ($Lato, 16px, normal, 400, normal, #FBFBFB);
-        }
-    
-        &__social {
-            display: flex;
-            gap: 7.29px;
-        }
-    
-        &__link {
-            width: 31.451px;
-            height: 32px;
-            background-color: #fff;
-            text-align: center;
-            line-height: 32px;
-            color: #000;
-        }
-    
-        &__link:hover {
-            background-color: $brandcolor;
-        }
+    &__button {
+        width: 100px;
+        height: 49px;
+        background-color: $brandcolor;
+        border-radius: 0 24.5px 24.5px 0;
+        border: none;
+    }
+
+    &__socialnetworks {
+        max-width: 100%;
+        min-height: 79px;
+        background-color: #222224;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 32px;
+        padding-right: 32px;
+        align-items: center;
+    }
+
+    &__rights {
+        @include textstyle ($Lato, 16px, normal, 400, normal, #FBFBFB);
+    }
+
+    &__social {
+        display: flex;
+        gap: 7.29px;
+    }
+
+    &__link {
+        width: 31.451px;
+        height: 32px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 32px;
+        color: #000;
+    }
+
+    &__link:hover {
+        background-color: $brandcolor;
+    }
 }
 
 
