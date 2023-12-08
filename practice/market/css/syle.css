@@ -252,6 +252,12 @@ a {
   color: #f16d7f;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 97px;
+}
+
 @media (max-width: 1024px) {
   .nav-catalog__container_catalog {
     width: 100%;
@@ -267,6 +273,9 @@ a {
       gap: 16px;
       padding-bottom: 40px;
     }
+  }
+  .tablet-hidden {
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -765,6 +774,9 @@ a {
   .body-product__img {
     width: 466px;
   }
+  .tablet-hidden {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .body-product {
@@ -982,10 +994,6 @@ a {
   /* padding-left: calc(50% - 800px); 1600/2, 1600px - ширина сетки */
   /* padding-right: calc(50% - 800px); */
   padding: 0 auto;
-}
-
-.tablet-hidden {
-  display: none;
 }
 
 .header {

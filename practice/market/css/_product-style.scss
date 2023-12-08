@@ -131,6 +131,10 @@
             width: 466px;
         }
     }
+
+    .tablet-hidden {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {

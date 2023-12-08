@@ -238,6 +238,12 @@ a {
     color: $brandcolor;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 97px;
+}
+
 @media (max-width: 1024px) {
 
     .nav-catalog {
@@ -266,6 +272,9 @@ a {
         }
     }
 
+    .tablet-hidden {
+        display: none;
+    }
     
 }
 
