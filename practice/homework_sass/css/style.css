@@ -63,6 +63,10 @@
   background-color: #f16d7f;
 }
 
+.filter-summary {
+  display: flex;
+}
+
 .brand__speccolor {
   font-weight: 900;
   color: #f16d7f;
@@ -486,6 +490,8 @@
   justify-content: space-around;
   align-items: center;
   position: relative;
+  filter: opacity(0.5);
+  background-size: cover;
 }
 .footer__socialnetworks {
   max-width: 100%;

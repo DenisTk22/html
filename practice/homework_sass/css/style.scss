@@ -52,6 +52,11 @@
     color: #fff;
     background-color: $brandcolor;
 }
+
+.filter-summary {
+
+    display: flex;
+}
  
 .brand__speccolor{
     font-weight: 900;
@@ -442,6 +447,8 @@
         justify-content: space-around;
         align-items: center;
         position: relative;
+        filter: opacity(0.5);
+        background-size: cover;
     }
 
     &__socialnetworks {
