@@ -258,6 +258,10 @@ a {
   margin-bottom: 97px;
 }
 
+.vert-align {
+  vertical-align: 0.5em;
+}
+
 @media (max-width: 1024px) {
   .nav-catalog__container_catalog {
     width: 100%;
