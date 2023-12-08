@@ -322,6 +322,11 @@ a {
     top: -25px;
   }
 }
+.nav-catalog__container {
+  width: 1140px;
+  padding: 60px 0px;
+}
+
 .main-cart {
   width: 1140px;
   padding-top: 96px;
