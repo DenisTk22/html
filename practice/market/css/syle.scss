@@ -16,7 +16,8 @@
         transition-duration: 1s;
         background-color: $brandcolor;
         color: #fff !important;
-        border: none;
+        // border: none;
+        border: 1px solid #f16d7f;
     }
 }
 
@@ -79,6 +80,10 @@
         gap: 40px;
     }
 
+    &__burger {
+        // position: relative;
+    }
+
     &_links {
         display: flex;
         gap: 33px;
@@ -87,7 +92,7 @@
             position: absolute;
             // right: -150px;
             top: 80px;
-            right: -999999px;
+            right: 0px;
             width: 232px;
             background-color: #fff;
             padding-top: 37px;
@@ -98,10 +103,10 @@
             &_close {
                 position: absolute;
                 right: 17px;
-                top: 16px;
+                top: 95px;
 
+            }
         }
-    }
 
         &_burger-sum {
             display: flex;
@@ -116,11 +121,15 @@
         }
     }
 
-    &__burger {
-        &:hover .header_links_burger {
-            right: 0;
-        }
+    &__burger-summary {
+        display: flex;
     }
+
+    // &__burger {
+    //     &:hover .header_links_burger {
+    //         right: 0;
+    //     }
+    // }
 }
 
 // .link-burger {
