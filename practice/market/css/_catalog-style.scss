@@ -12,10 +12,10 @@ a {
 
     &__container_catalog {
         width: 1140px;
+        padding: 60px 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 60px 0px;
     }
 
     &__arrivals {
@@ -52,8 +52,8 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    padding-bottom: 48px;
     justify-content: center;
+    padding-bottom: 48px;
 }
 
 @supports (display: grid) {

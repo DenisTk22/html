@@ -19,12 +19,58 @@
             <div class="header_body">
                 <div class="header_logo">
                     <a href="index.html" class="logo_link"><img src="images/header_logo.svg" alt="logo"></a>
-                    <a href="#" class="logo_searching"><i class="fa-solid fa-magnifying-glass fa fa-2x fa_color"></i></a>
+                    <a href="#" class="logo_searching"><i class="fa-solid fa-magnifying-glass fa fa-2x fa_color hover_icon"></i></a>
                 </div>
-                <div class="header_links">
-                    <a href="#" class="link"><i class="fa-solid fa-bars fa fa-2x fa_color"></i></a>
-                    <a href="registration.html" target="_blank" class="link"><i class="fa-regular fa-user fa fa-2x fa_color"></i></a>
-                    <a href="cart.html" target="_blank" class="link q-ty"><i class="fa-solid fa-cart-shopping fa fa-2x fa_color"></i><div class="orders_qty">5</div></a>
+                <div class="header_links header__burger">
+                    <a href="#" class="link">
+                        <i class="fa-solid fa-bars fa fa-2x fa_color hover_icon"></i>
+                    </a>
+                    <a href="registration.html" target="_blank" class="link">
+                        <i class="fa-regular fa-user fa fa-2x fa_color hover_icon"></i>
+                    </a>
+                    <a href="cart.html" target="_blank" class="link q-ty">
+                        <i class="fa-solid fa-cart-shopping fa fa-2x fa_color hover_icon"></i>
+                        <div class="orders_qty">5</div>
+                    </a>
+                    <details open class="header_links_burger">
+                        <summary class="header_links_burger-sum">
+                            menu
+                        </summary>
+                        <details open class="burger-item">
+                            <summary class="burger-item__title">man</summary>
+                            <div class="burger-item__box">
+                                <p class="burger-item__position">Accessories</p>
+                                <p class="burger-item__position">Bags</p>
+                                <p class="burger-item__position">Denim</p>
+                                <p class="burger-item__position">T-Shirts</p>
+                            </div>
+                        </details>
+                        <details open class="burger-item">
+                            <summary class="burger-item__title">women</summary>
+                            <div class="burger-item__box">
+                                <p class="burger-item__position">Accessories</p>
+                                <p class="burger-item__position">Jackets & Coats</p>
+                                <p class="burger-item__position">Polos</p>
+                                <p class="burger-item__position">T-Shirts</p>
+                                <p class="burger-item__position">Shirts</p>
+                            </div>
+                        </details>
+                        <details open class="burger-item">
+                            <summary class="burger-item__title">kids</summary>
+                            <div class="burger-item__box mbzero">
+                                <p class="burger-item__position">Accessories</p>
+                                <p class="burger-item__position">Jackets & Coats</p>
+                                <p class="burger-item__position">Polos</p>
+                                <p class="burger-item__position">T-Shirts</p>
+                                <p class="burger-item__position">Shirts</p>
+                                <p class="burger-item__position">Bags</p>
+                            </div>
+                        </details>
+                        <div class="header_links_burger_close">
+                            <img src="images/close-cart.svg" alt="close">
+                        </div>
+                    </details>
+
                 </div>
             </div>
         </header>

@@ -7,6 +7,8 @@
 @import 'product-style';
 @import 'registration';
 
+
+
 .hover_to_brand-style {
     transition-duration: 1s;
 
@@ -16,6 +18,16 @@
         color: #fff !important;
         border: none;
     }
+}
+
+.hover_icon {
+    
+    &:hover {
+        transition-duration: 1s;
+        color: $brandcolor !important;
+    }
+
+    
 }
 
 .hover_to_white-style {
@@ -52,12 +64,13 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 
     &_body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1140px
+        width: 1140px;
     }
 
     &_logo {
@@ -69,7 +82,91 @@
     &_links {
         display: flex;
         gap: 33px;
+
+        &_burger {
+            position: absolute;
+            // right: -150px;
+            top: 80px;
+            right: -999999px;
+            width: 232px;
+            background-color: #fff;
+            padding-top: 37px;
+            padding-bottom: 32px;
+            padding-left: 34px;
+            // position: relative;
+
+            &_close {
+                position: absolute;
+                right: 17px;
+                top: 16px;
+
+        }
     }
+
+        &_burger-sum {
+            display: flex;
+            color: #000;
+            font-family: $Lato;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__burger {
+        &:hover .header_links_burger {
+            right: 0;
+        }
+    }
+}
+
+// .link-burger {
+//     &:hover .header_links_burger {
+//         right: 0;
+//     }
+// }
+
+.burger-item {
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        display: flex;
+        color: #F16D7F;
+        font-family: $Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+
+    &__box {
+        padding-left: 22px;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 11px;
+        flex-direction: column;
+    }
+
+    &__position {
+        color: #6F6E6E;
+        font-family: $Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.mbzero {
+    margin-bottom: 0;
 }
 
 .q-ty {
