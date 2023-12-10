@@ -357,8 +357,8 @@ a {
 }
 
 .cart-img {
-  max-width: 262px;
   margin-right: 31px;
+  max-height: 100%;
 }
 
 .cart-info {
@@ -1501,6 +1501,7 @@ a {
 
 .subscribe__person {
   max-width: 360px;
+  text-align: center;
 }
 
 .text__first {
