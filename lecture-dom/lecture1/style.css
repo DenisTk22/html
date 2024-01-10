@@ -1,0 +1,8 @@
+
+.title {
+    color: red;
+}
+
+.title + p {
+    color: green;
+}
