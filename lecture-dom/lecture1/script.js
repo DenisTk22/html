@@ -45,9 +45,9 @@ const strongElement = document.createElement('strong');
 // console.log(divElement.outerHTML);
 
 //спросить на уроке
-const replaceToSrong = document.querySelectorAll('.text');
+const replaceToSrong = document.querySelector('.text');
 console.log(replaceToSrong);
-// replaceToSrong.replaceWith(spanElement, strongElement);
+replaceToSrong.replaceWith(spanElement, strongElement);
 
 // по клику
 
