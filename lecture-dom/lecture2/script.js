@@ -24,7 +24,7 @@ const h1El = document.createElement('h1');
 h1El.textContent = 'h1 Element';
 h1El.style.backgroundColor = '#ccc'; // inline стиль имеет приоритет над стилями в теге style
 h1El.style.textAlign = 'center';
-h1El.setAttribute('class', 'heading'); // назначение элемнету h1El (зхаголовок h1) атрибутов класса heading
+h1El.setAttribute('class', 'heading'); // назначение элемнету h1El (заголовок h1) атрибутов класса heading
 
 
 const imgEl = document.createElement('img');
