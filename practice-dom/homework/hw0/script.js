@@ -1,5 +1,7 @@
 const mainEl = document.querySelector('.content');
 const navEL = document.querySelector('.navigation__item');
+// console.log(navEL);
+
 const topEl = document.querySelector('.top');
 const navigationEl = document.querySelector('.navigation');
 // parentElement можно вызвать только у одного элемента, нельзя у ListNodes
@@ -10,14 +12,33 @@ console.log(navEL.parentNode);
 //стили для header
 navigationEl.style.display = 'flex';
 navigationEl.style.gap = '10px';
+navigationEl.style.alignItems = 'center';
+
+
 
 //замена тега <p> на тег <a>
 const aTegEL = document.createElement('a');
-aTegEL.textContent = navEL.textContent;
-// aTegEL.classList(navEL);
+aTegEL.textContent = navEL.textContent; // передаем содержимое текста от элемента navEL элементу aTegEL
 
-navEL.parentNode.replaceChild(aTegEL, navEL);
+navEL.parentNode.replaceChild(aTegEL, navEL); //меняем тег элемента navEl(<p>) на тег элемента aTegEL(<a>)
 
+aTegEL.setAttribute('href', '#'); //Добавляем элементу aTegEL атрибут href='#'
+const classNavEL = navEL.getAttribute('class'); // получаем значение класса элемента navEL в переменную classNavEL
+// console.log(classNavEL);
+aTegEL.setAttribute('class', classNavEL); // назначаем значение класса элемента navEL элементу aTegEL
+// console.log(navEL);
+
+// нахождение элемента по текстовому содержанию
+const navEls = document.querySelectorAll('.navigation__item');
+console.log(navEls);
+
+let aboutEL;
+navEls.forEach(element => {
+    if (element.textContent === 'About') {
+        aboutEL = element;
+    }
+});
+console.log(aboutEL);
 
 //Стили для заголовка
 const headingEl = document.querySelector('.heading');
@@ -36,7 +57,7 @@ btnEl.onclick = () => {
     headingEl.style.fontFamily = 'normal';
 }
 
-//Добавить кнопк
+//Добавить кнопку
 const buttonNewEl = document.createElement('button');
 buttonNewEl.textContent = 'Tech_me';
 mainEl.appendChild(buttonNewEl);
