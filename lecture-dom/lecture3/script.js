@@ -1,4 +1,4 @@
-
+////Делигирование событий
 const buttonEl = document.querySelector('.button');
 let count = 0;
 let counter = 0;
@@ -94,9 +94,18 @@ button3El.addEventListener('mouseleave', function (e) {
 });
 
 // отлов нажатой клавиши keydown, keyup, keypress
-window.addEventListener('keydown', function (e) {
+// window.addEventListener('keydown', function (e) {
+//     console.log(e.key);
+// });
+
+window.addEventListener('keyup', function (e) { // Событие keydown происходит при нажатии клавиши, а keyup – при отпускании.
     console.log(e.key);
 });
+
+//Keypress this is similar to the keydown event, except that modifier and non-printing keys such as Shift, Esc, and delete trigger keydown events but not keypress events
+// window.addEventListener('keypress', function (e) {
+//     console.log(e.key);
+// });
 
 // Остановка перехода по ссылке и вывод сообщения
 const linkEl = document.querySelector('.link');
@@ -117,7 +126,7 @@ window.addEventListener('resize', (e) => {
     console.log('resize');
 });
 
-// поле ввода
+// отлов введенного значения в поле ввода
 const inputEl = document.querySelector('input');
 
 // document.querySelector('input').addEventListener('input', (e) => {
@@ -129,15 +138,16 @@ inputEl.addEventListener('input', (e) => {
     }
 });
 
-//отправка submit
-
+//отстановка отправки submit
+const formRun = document.querySelector('form'); // поймаем родительский элемент для прослушки дочерних элементов
 const inputText = document.querySelector('input');
-const formRun = document.querySelector('form');
 const errorEl = document.querySelector('.error');
 
 formRun.addEventListener('submit', (e) => {
     if (inputText.value === '') { // если ничего не введено ...
         e.preventDefault(); // ... останавливаем отправку ...
-        errorEl.textContent = 'Поле не должно быть пустым' // ... и выводим сообщение
+        errorEl.textContent = 'Поле не должно быть пустым'; // ... и выводим сообщение
+    } else {
+        errorEl.textContent = 'Ну хоть что-то';
     }
 });
