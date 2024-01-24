@@ -113,14 +113,17 @@ buttonEl9.addEventListener('click', function (e) {
 Создать кнопку, при клике на которую ей добавляется класс “click” */
 
 const listEls = document.querySelector('.list');
+const listLength =  listEls.children.length;
+let counterNewItem = listLength + 1;
 const buttonEl10 = document.querySelector('.button10');
 const buttonEl11 = document.querySelector('.button11');
 const buttonEl12 = document.querySelector('.button12');
 
 buttonEl10.addEventListener('click', function (e) {
     const newLi = document.createElement('li');
-    newLi.textContent ='новый элемент списка';
+    newLi.textContent = `newList-${counterNewItem}`;
     listEls.append(newLi);
+    counterNewItem++;
     newLi.classList.add('item');
 });
 
