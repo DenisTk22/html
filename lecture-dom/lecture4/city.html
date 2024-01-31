@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="city.html" class="form">
+        <div>
+            <label for="select">Город</label>
+            <select name="select" id="select" class="select">
+                <option value="city" class="option">Выберете город...</option>
+                <option value="Kstovo" class="option">Кстово</option>
+                <option value="Moscow" class="option">Москва</option>
+                <option value="NN" class="option">НН</option>
+                <option value="Sochi" class="option">Сочи</option>
+                <option value="Rostov" class="option">Ростов</option>
+            </select>
+        </div>
+        <button class="button" type="submit">Отправить</button>
+    </form>
+
+    <script>
+        const formEl = document.querySelector('.form');
+        const selectEl = document.querySelector('.select');
+        const buttonEl = document.querySelector('.button');
+
+        document.addEventListener('click', (e) => {
+            console.log(selectEl.value);
+            e.preventDefault();
+            if (selectEl.value === 'city') {
+                selectEl.classList.add('select__error');
+            } else {
+                selectEl.classList.remove('select__error');
+                return;
+            }
+        });
+
+    </script>
+</body>
+</html>
