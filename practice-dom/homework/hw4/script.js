@@ -2,8 +2,8 @@
 const inputEl = document.getElementById('from');
 const spanEl = document.querySelector('.inputSpan');
 
-console.log(inputEl);
-console.log(spanEl);
+// console.log(inputEl);
+// console.log(spanEl);
 
 inputEl.addEventListener('input', e => {
     spanEl.textContent = e.target.value;
@@ -25,13 +25,27 @@ buttonEL.addEventListener('click', ev => {
 - Если поле было чем-либо заполнено, подсветку (класс error) необходимо убрать. */
 
 const formEl = document.querySelector('.form');
+const formCOntrol1El = formEl.querySelector('input.form-control');
+const formCOntrol2El = formEl.querySelector('select.form-control');
+
+// console.log(formEl);
+
+const checkFilling = (e) => {
+        e.preventDefault();
+        if (e.target.value === '') {
+            e.target.classList.add('error');
+        }
+};
 
 const checkInput = (e) => {
-    if (e.target.value = '') {
-        e.classList.add('error');
+    if (e.target.value === '') {
+        e.target.classList.add('error');
     } else {
-        e.classList.remove('error');
+        e.target.classList.remove('error');
     }
 };
 
-formEl.addEventListener('input', checkInput);
+
+formEl.addEventListener('submit', checkFilling);
+formEl.addEventListener('input',checkInput);
+// formEl.addEventListener('select', checkInput);

@@ -52,7 +52,7 @@ const pasEL = document.querySelector('.pas')
 const password = 'пароль';
 
 form3El.addEventListener('submit', e => {
-    e.preventDefault(); // работает со submit, не с click
+    e.preventDefault(); // работает с submit, не с click
     if (passwordEl.value === password) {
         passwordEl.style.backgroundColor = 'green';
         pasEL.textContent = passwordEl.value;
