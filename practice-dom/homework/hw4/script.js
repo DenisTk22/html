@@ -2,8 +2,6 @@
 const inputEl = document.getElementById('from');
 const spanEl = document.querySelector('.inputSpan');
 
-// console.log(inputEl);
-// console.log(spanEl);
 
 inputEl.addEventListener('input', e => {
     spanEl.textContent = e.target.value;
@@ -15,9 +13,11 @@ inputEl.addEventListener('input', e => {
 const buttonEL = document.querySelector('.messageBtn');
 const divEl = document.querySelector('.message');
 
+divEl.style.visibility = 'hidden';
+
 buttonEL.addEventListener('click', ev => {
     divEl.classList.add('animate_animated', 'animate_fadeInLeftBig');
-    divEl.setAttribute('visibility', 'visible');
+    divEl.style.visibility = 'visible';
 });
 
 /*3. Необходимо при отправке формы проверить, заполнены ли все поля в этой форме. Если какое-либо поле не заполнено, форма не должна отправляться, также должны быть подсвечены незаполненные поля (необходимо поставить класс error незаполненным полям). Как только пользователь начинает заполнять какое-либо поле, необходимо, при вводе в данное поле, произвести проверку:
@@ -25,16 +25,18 @@ buttonEL.addEventListener('click', ev => {
 - Если поле было чем-либо заполнено, подсветку (класс error) необходимо убрать. */
 
 const formEl = document.querySelector('.form');
-const formCOntrol1El = formEl.querySelector('input.form-control');
-const formCOntrol2El = formEl.querySelector('select.form-control');
-
-// console.log(formEl);
+const formCOntrolInputEl = formEl.querySelector('input.form-control');
+const formCOntrolSelectEl = formEl.querySelector('select.form-control');
 
 const checkFilling = (e) => {
+    if (formCOntrolInputEl.value === '') {
         e.preventDefault();
-        if (e.target.value === '') {
-            e.target.classList.add('error');
-        }
+        formCOntrolInputEl.classList.add('error');
+    }
+    if (formCOntrolSelectEl.value === '') {
+        e.preventDefault();
+        formCOntrolSelectEl.classList.add('error')
+    }
 };
 
 const checkInput = (e) => {
@@ -45,7 +47,5 @@ const checkInput = (e) => {
     }
 };
 
-
 formEl.addEventListener('submit', checkFilling);
 formEl.addEventListener('input',checkInput);
-// formEl.addEventListener('select', checkInput);
