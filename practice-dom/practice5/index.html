@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>practice5</title>
+    </head>
+    <body>
+        <div class="content"></div>
+
+        <script src="data.js"></script>
+        <script>
+        const data = JSON.parse(dataInfo);
+
+        // console.log(data);
+
+        // data.forEach(element => {
+        //     console.log(element.brand);
+        //     console.log(element.price);
+        // });
+
+        // const contentEl = document.querySelector('.content');
+
+        // const productId = document.createElement('p');
+        // productId.classList.add('product__id');
+    
+
+        // // console.log(data.id);
+
+        // const productTitle = document.createElement('p');
+        // productTitle.classList.add('product__title');
+
+        // const productDescription = document.createElement('p');
+        // productDescription.classList.add('product__description');
+
+        // const productPrice = document.createElement('p');
+        // productPrice.classList.add('product__price');
+
+        // const productDiscountPercentage = document.createElement('p');
+        // productDiscountPercentage.classList.add('product__discountPercentage');
+
+        // const productRating = document.createElement('p');
+        // productRating.classList.add('product__rating');
+
+        // const productStock = document.createElement('p');
+        // productStock.classList.add('product__stock');
+
+
+
+        data.forEach(element => {
+
+            const contentEl = document.querySelector('.content');
+
+        const productId = document.createElement('p');
+        productId.classList.add('product__id');
+    
+
+        // console.log(data.id);
+
+        const productTitle = document.createElement('p');
+        productTitle.classList.add('product__title');
+
+        const productDescription = document.createElement('p');
+        productDescription.classList.add('product__description');
+
+        const productPrice = document.createElement('p');
+        productPrice.classList.add('product__price');
+
+        const productDiscountPercentage = document.createElement('p');
+        productDiscountPercentage.classList.add('product__discountPercentage');
+
+        const productRating = document.createElement('p');
+        productRating.classList.add('product__rating');
+
+        const productStock = document.createElement('p');
+        productStock.classList.add('product__stock');
+            
+            productId.textContent = element.id;
+            productDescription.textContent = element.title;
+            productPrice.textContent = element.price;
+            productDiscountPercentage.textContent = element.discountPercentage;
+            productRating.textContent = element.rating;
+            productStock.textContent = element.stock;
+
+        contentEl.appendChild(productId);
+        contentEl.appendChild(productTitle);
+        contentEl.appendChild(productDescription);
+        contentEl.appendChild(productPrice);
+        contentEl.appendChild(productDiscountPercentage);
+        contentEl.appendChild(productRating);
+        contentEl.appendChild(productStock);
+
+
+        });
+    </script>
+    </body>
+</html>

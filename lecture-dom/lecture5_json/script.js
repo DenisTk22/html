@@ -49,7 +49,7 @@ const data = JSON.parse(s);
 //     price: 21000,
 // }
 
-const productsData = [
+const productsData = [ // эти данные приходят из backend
     {
         scr: 'img.png',
         alt: 'img obj data',
