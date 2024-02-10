@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 25px;
+}
+
+.animal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  width: 200px;
+}
+.animal__img {
+  width: 150px;
+  height: 100px;
+}
+.animal__title {
+  font-size: 20px;
+}
+.animal__text {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
