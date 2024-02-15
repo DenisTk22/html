@@ -37,7 +37,6 @@ const data = JSON.parse(dataProducts);
 data.forEach(dataProduct => {
 
 const contentEl = document.querySelector('.content');
-// console.log(contentEl);
 
 const cardEl = document.createElement('div');
 cardEl.classList.add('card');
@@ -70,7 +69,7 @@ dataEl.classList.add('data');
 
 const priceEl = document.createElement('p');
 priceEl.classList.add('price');
-priceEl.textContent = 'Price:';
+priceEl.textContent = 'Price: ';
 
 const priceTextEl = document.createElement('span');
 priceTextEl.classList.add('price__text');
@@ -78,11 +77,11 @@ priceTextEl.textContent = dataProduct.price;
 
 const colorEl = document.createElement('p');
 colorEl.classList.add('color');
-colorEl.textContent = 'Color:' + dataProduct.color;
+colorEl.textContent = `Color: + ${dataProduct.color}`;
 
 const sizeEl = document.createElement('p');
 sizeEl.classList.add('size');
-sizeEl.textContent = 'Size:' + dataProduct.size;
+sizeEl.textContent = `Size: + ${dataProduct.size}`;
 
 const quantityEl = document.createElement('p');
 quantityEl.classList.add('quantity');
@@ -93,7 +92,6 @@ quantityTextEl.setAttribute('type', 'number');
 quantityTextEl.setAttribute('value', '2');
 quantityTextEl.setAttribute('min', '1');
 quantityTextEl.classList.add('quantity__text');
-// quantityTextEl.textContent = '';
 
 const closeEl = document.createElement('a');
 closeEl.setAttribute('href', '#');
