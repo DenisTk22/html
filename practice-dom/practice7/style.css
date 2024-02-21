@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-content {
+    position: relative;
+}
+
+.video {
+    margin-left: 50px;
+    width: 500px;
+    height: 400px;
+}
+
+.play {
+    position: absolute;
+    left: 250px;
+    top: 150px;
+    display: block;
+}
+
+.pause {
+    position: absolute;
+    left: 250px;
+    top: 150px;
+    display: none;
+}
+
