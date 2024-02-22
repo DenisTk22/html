@@ -72,7 +72,10 @@ productCardEl.addEventListener('click', e => {
 
     if (e.target.classList.contains('c_text'))
     { 
-        const cartToItems =  e.target.closest('.products_card');
-        cartItemsEl.appendChild(cartToItems);
+        // const cartToItems =  e.target.closest('.products_card');
+        // cartItemsEl.appendChild(cartToItems);
+        if (e.target.getAttribute('id') === dataProduct.id) {
+            //to do code
+        }
     }   
 });
