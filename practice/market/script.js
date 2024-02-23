@@ -140,8 +140,11 @@ bodyProductsEl.addEventListener('click', e => {
                     quantityTextEl.setAttribute('min', '1');
                     quantityTextEl.classList.add('quantity__text');
                     
-                    const closeEl = document.createElement('a');
-                    closeEl.setAttribute('href', '#');
+                    const closeEl = document.createElement('button');
+                    // closeEl.setAttribute('href', '#');
+                    closeEl.style.border = 'none';
+                    closeEl.style.background = 'none';
+                    closeEl.style.padding = '5px';
                     closeEl.classList.add('close');
                     closeEl.textContent = 'X';
                     
