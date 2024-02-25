@@ -1716,4 +1716,128 @@ a {
     padding-top: 64px;
     padding-bottom: 110px;
   }
+}
+.cart-items {
+  display: none;
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.cart-items__header {
+  font-family: Lato;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content {
+  padding-left: 25px;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.card {
+  position: relative;
+  width: 652px;
+  height: 306px;
+  display: flex;
+  gap: 32px;
+  border: 1px solid black;
+}
+
+.imgCI {
+  height: 100%;
+}
+
+.head {
+  margin-top: 22px;
+  margin-bottom: 42px;
+}
+
+.title {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.subtitle {
+  color: rgb(34, 34, 34);
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.price {
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(87, 87, 87);
+}
+
+.price__text {
+  color: rgb(239, 91, 112);
+}
+
+.color {
+  color: rgb(87, 87, 87);
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.size {
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(87, 87, 87);
+}
+
+.quantity {
+  /* display: flex; */
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: rgb(87, 87, 87);
+}
+
+.quantity__text {
+  margin-left: 24px;
+  display: inline-block;
+  width: 50px;
+  border: 1px solid rgb(234, 234, 234);
+  padding: 2px;
+  color: rgb(101, 101, 101);
+  font-size: 22px;
+  text-align: center;
+}
+
+.close {
+  font-family: Lato;
+  text-decoration: none;
+  position: absolute;
+  right: 15px;
+  top: 25px;
+  color: rgb(34, 34, 34);
 }/*# sourceMappingURL=syle.css.map */
