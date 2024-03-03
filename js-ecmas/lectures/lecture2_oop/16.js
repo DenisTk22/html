@@ -31,7 +31,7 @@ const Roomba = {
 // Объект Roomba - робот-пылесос. Код самого объекта смотри в листинге 16, с использованием синтаксиса ES2015.
     // Вызов методов объекта.
     Roomba.startCleaning(); // I am cleaning... I have started: NaN
-times.
+//times.
 Roomba.startCleaning.call(Roomba); // I am cleaning... I have started: NaN times.
 Roomba.startCleaning.apply(Roomba); // I am cleaning... I have started: NaN times.
 const bindedMethod = Roomba.startCleaning.bind(Roomba);
