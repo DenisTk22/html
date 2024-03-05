@@ -1,7 +1,7 @@
 //Листинг 1.
-// Объект робот-пылесос.
+// Объект робот-пылесос VacuumCleaner.
 const VacuumCleaner = {
-    Model: "vacuum cleaner",
+    model: "vacuum cleaner",
     counterOfStarts: 0,
     isFull: false,
     isObstacle: false,
