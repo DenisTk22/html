@@ -41,7 +41,7 @@ class Manager extends Employee {
     }
 
     displayInfo() {
-        console.log(`Name: ${this.name}
+        console.log(`Name: ${this.name} 
 Department: ${this.department}
             `)
     }
@@ -115,6 +115,9 @@ order.addProduct(product1);
 const product2 = new Product("Headphones", 100);
 order.addProduct(product2);
 
+// const product3 = new Product("Microhpone", 250);
+// order.addProduct(product3);
+
 console.log(order.products);
 
-console.log(order.getTotalPrice());
+console.log(`Итого: ${order.getTotalPrice()}`);
