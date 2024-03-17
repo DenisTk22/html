@@ -1,0 +1,12 @@
+{
+  "name": "lecture2_npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "npm.js",
+  "scripts": {
+    "start": "node ./npm.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
