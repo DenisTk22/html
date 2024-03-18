@@ -2,4 +2,6 @@ function sayHello() {
     console.log('Hello!');
 }
 
-module.exports = { sayHello };
+const conr = 'hello';
+
+module.exports = { sayHello, conr };

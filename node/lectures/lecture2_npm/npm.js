@@ -56,6 +56,8 @@
 
 const firstModule = require('./hello.js');
 firstModule.sayHello();
+firstModule.conr;
+
 
 ///Подготавливаем проект
 // Чтобы подготовить проект к публикации, необходимо выполнить несколько шагов:
