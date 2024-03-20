@@ -1,0 +1,13 @@
+{
+  "name": "hw2",
+  "version": "1.0.0",
+  "description": "funny project",
+  "main": "script.js",
+  "scripts": {
+    "start": "node ./script.js"
+  },
+  "keywords": ["what can I do"],
+  "repository": "https://github.com/DenisTk22/html/tree/main/node/homeworks/hw2",
+  "author": "Tkachev Denis",
+  "license": "ISC"
+}
