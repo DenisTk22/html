@@ -1,0 +1,25 @@
+{
+  "name": "whatcanido2024",
+  "version": "2.1.1",
+  "description": "funny project to see what can you do right now",
+  "main": "script.js",
+  "scripts": {
+    "start": "node ./script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisTk22/html.git#main"
+  },
+  "keywords": [
+    "what",
+    "can",
+    "I",
+    "do"
+  ],
+  "author": "Denis Tkachev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenisTk22/html/issues"
+  },
+  "homepage": "https://github.com/DenisTk22/html/tree/main#readme"
+}

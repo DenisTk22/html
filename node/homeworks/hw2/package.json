@@ -6,8 +6,13 @@
   "scripts": {
     "start": "node ./script.js"
   },
-  "keywords": ["what can I do"],
+  "keywords": [
+    "what can I do"
+  ],
   "repository": "https://github.com/DenisTk22/html/tree/main/node/homeworks/hw2",
   "author": "Tkachev Denis",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "whatcanido2024": "^2.1.1"
+  }
 }
