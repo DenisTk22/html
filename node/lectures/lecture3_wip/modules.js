@@ -29,7 +29,7 @@ fs.writeFile('./text.txt', 'console.log("Hello!")', (err) => { // приниме
 
 //метод appendFile для дозаписи фала.
 
-fs.appendFile('./text.txt', 'console.log("Hello All!")', (err) => { // принимет путь к файлу, Дданные для записи в файл и callback, который выполнится, когда файл будет записан
+fs.appendFile('./text.txt', '\nconsole.log("Hello All1!")', (err) => { // принимет путь к файлу, Дданные для записи в файл и callback, который выполнится, когда файл будет записан
     if (err) {
         console.log(err);
     }
