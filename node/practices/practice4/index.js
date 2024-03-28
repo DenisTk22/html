@@ -13,14 +13,21 @@ const userScheme = Joi.object({
     city: Joi.string().min(2),
 })
 
-
-let uniqueID = 1;
+let uniqueID;
 
 const userDbPath = path.join(__dirname, 'users.json'); // получение пути к файлу
 
 const app = express();
 
 app.use(express.json());
+
+/**
+ * Присвоение id
+ */
+const usersId = JSON.parse(fs.readFileSync(userDbPath));
+if (usersId) {
+    uniqueID = usersId.length;
+} else { uniqueID = 0; }
 
 /**
  * Вывод всех пользователей
@@ -76,7 +83,7 @@ app.put('/users/:id', (req, res) => {
         fs.writeFileSync(userDbPath, JSON.stringify(users));
         res.send({ user: findUser }); // положили объект {users} или users:users
         } else {
-            res.send({ user: null });
+        res.send({ User: "User is not found!" });
         }
 });
 
@@ -85,10 +92,26 @@ app.put('/users/:id', (req, res) => {
  */
 app.delete('/users/:id', (req, res) => {
     const users = JSON.parse(fs.readFileSync(userDbPath));
-    const findUser = users.findIndex((user) => user.id === Number(req.params.id));
-    users.splice(findUser, 1); // где и сколько элементов удалить
-    fs.writeFileSync(userDbPath, JSON.stringify(users));
-    res.send({ id: req.params.id }); // положили объект {users} или users:users
+    const findUser = users.find((findUser) => findUser.id === Number(req.params.id));
+
+    if (findUser) {
+        const userIndex = users.indexOf(findUser);
+        users.splice(userIndex, 1);
+        fs.writeFileSync(userDbPath, JSON.stringify(users));
+        res.send({ findUser }); // возврат удаленного пользователя
+    } else {
+        res.status(404);
+        res.send({ User: "User is not found!" });
+    }
+});
+
+/**
+ * Обработка введения несуществующих URL
+ */
+app.use((req, res) => {
+    res.status(404).send({
+        message: 'Data is not found!'
+    })
 });
 
 
