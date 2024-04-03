@@ -29,75 +29,48 @@
 
 // Посетитель ресторана.
 class Client {
-  constructor(firstname, lastname) {
-    this.firstname = firstname;
-    this.lastname = lastname;
-  }
+    constructor(firstname, lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
 }
 
 // Вам необходимо реализовать класс, который управляет заказами и поварами.
 class Manager {
-  constructor() {
-    this.cookers = new Map();
-    this.clients = new Set();
-    this.cookers.set("Маргарита", "Олег");
-    this.cookers.set("Пепперони", "Олег");
-    this.cookers.set("Три сыра", "Олег");
-    this.cookers.set("Филадельфия", "Андрей");
-    this.cookers.set("Калифорния", "Андрей");
-    this.cookers.set("Чизмаки", "Андрей");
-    this.cookers.set("Сеякемаки", "Андрей");
-    this.cookers.set("Тирамису", "Анна");
-    this.cookers.set("Чизкейк", "Анна");
-    this.orders = [];
-
-  }
-
-
-
-  newOrder(client, ...order) {
-    console.log(client);
-    // console.log(this.orders);
-    // let clients = new Set(this.orders.client);
-    // this.clients.add(client);
-    console.log(this.clients);
-    console.log(`Клиент ${client.firstname} ${client.lastname} заказал:`);
-    if (this.clients.has(client)) {
-      console.log(`Такой клиент есть ${client}`);
-      [...order].push(this.orders);
-      console.log(this.orders);
-      console.log([...order]);
-      for (const item of order) {
-        this.orders.forEach(el => {
-          if (item.name === el.name) {
-            item.quantity = item.quantity + el.quantity
-          }
-        });
-        console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
-      }
-    } else {
-      for (const item of order) {
-        console.log(
-          `${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
-        this.orders.push({ name: item.name, quantity: item.quantity, type: item.type });
-        // this.orders.push({ client: client, name: item.name, quantity: item.quantity });
-      }
-      this.clients.add(client);
+    constructor() {
+        this.pizza = new Map();
+        this.sushi = new Map();
+        this.dessert = new Map();
+        this.pizza.set("Маргарита", { name: "Маргарита", quantity: 1, type: "Пицца" });
+        this.pizza.set("Пепперони", { name: "Пепперони", quantity: 2, type: "Пицца" });
+        this.pizza.set("Три сыра", { name: "Три сыра", quantity: 3, type: "Пицца" });
+        this.sushi.set("Филадельфия", { name: "Филадельфия", quantity: 5, type: "Суши" });
+        this.sushi.set("Калифорния", { name: "Калифорния", quantity: 3, type: "Суши" });
+    
     }
-  }
-  
 
-};
+// использовать коллекции Map/Set, где это 
+// актуально.Представленный ниже код должен работать.
+
+    newOrder(client, ...order) { 
+        
+    }
+       
+        
+    }
+
+
+
 
 // Можно передать внутрь конструктора что-либо, если необходимо.
 const manager = new Manager();
 
 // Вызовы ниже должны работать верно, менять их нельзя, удалять тоже.
 manager.newOrder(
-  new Client("Иван", "Иванов"),
-  { name: "Маргарита", quantity: 1, type: "Пицца" },
-  { name: "Пепперони", quantity: 2, type: "Пицца" },
-  { name: "Чизкейк", quantity: 1, type: "Десерт" },
+    new Client("Иван", "Иванов"),
+    { name: "Маргарита", quantity: 1, type: "Пицца" },
+    { name: "Пепперони", quantity: 2, type: "Пицца" },
+    { name: "Чизкейк", quantity: 1, type: "Десерт" },
 );
 // Вывод:
 // Клиент Иван заказал: 
@@ -109,9 +82,9 @@ manager.newOrder(
 
 const clientPavel = new Client("Павел", "Павлов");
 manager.newOrder(
-  clientPavel,
-  { name: "Филадельфия", quantity: 5, type: "Суши" },
-  { name: "Калифорния", quantity: 3, type: "Суши" },
+    clientPavel,
+    { name: "Филадельфия", quantity: 5, type: "Суши" },
+    { name: "Калифорния", quantity: 3, type: "Суши" },
 );
 // Вывод:
 // Клиент Павел заказал: 
@@ -119,9 +92,9 @@ manager.newOrder(
 // Суши "Калифорния" - 3; готовит повар Андрей
 
 manager.newOrder(
-  clientPavel,
-  { name: "Калифорния", quantity: 1, type: "Суши" },
-  { name: "Тирамису", quantity: 2, type: "Десерт" },
+    clientPavel,
+    { name: "Калифорния", quantity: 1, type: "Суши" },
+    { name: "Тирамису", quantity: 2, type: "Десерт" },
 );
 // Вывод:
 // Клиент Павел заказал: 
@@ -130,9 +103,9 @@ manager.newOrder(
 // Десерт "Тирамису" - 2; готовит повар Анна
 
 manager.newOrder(
-  clientPavel,
-  { name: "Филадельфия", quantity: 1, type: "Суши" },
-  { name: "Трубочка с вареной сгущенкой", quantity: 1, type: "Десерт" },
+    clientPavel,
+    { name: "Филадельфия", quantity: 1, type: "Суши" },
+    { name: "Трубочка с вареной сгущенкой", quantity: 1, type: "Десерт" },
 );
 
 // Ничего не должно быть добавлено, должна быть выброшена ошибка:
