@@ -8,8 +8,6 @@
 коллекции, не запрещается. Старайтесь использовать коллекции Map/Set, где это 
 актуально. Представленный ниже код должен работать.
 
-В методе newOrder нужно предусмотреть сложение заказа, если клиент дозаказал еще.
-
 Повара и их специализации:
 Олег - специализация: Пицца.
 Андрей - специализация: Суши.
@@ -38,77 +36,47 @@ class Client {
 // Вам необходимо реализовать класс, который управляет заказами и поварами.
 class Manager {
   constructor() {
-    this.cookers = new Map();
-    this.clients = new Set();
-    this.cookers.set("Маргарита", "Олег");
-    this.cookers.set("Пепперони", "Олег");
-    this.cookers.set("Три сыра", "Олег");
-    this.cookers.set("Филадельфия", "Андрей");
-    this.cookers.set("Калифорния", "Андрей");
-    this.cookers.set("Чизмаки", "Андрей");
-    this.cookers.set("Сеякемаки", "Андрей");
-    this.cookers.set("Тирамису", "Анна");
-    this.cookers.set("Чизкейк", "Анна");
-    this.orders = [];
-    this.ordersOfClients = new Map();
-  }
+    this.pizza = new Map();
+    this.sushi = new Map();
+    this.dessert = new Map();
+    this.pizza.set("Маргарита", { name: "Олег", specialization: "Пицца" });
+    this.pizza.set("Пепперони", { name: "Олег", specialization: "Пицца" });
+    this.pizza.set("Три сыра", { name: "Олег", specialization: "Пицца" });
+    this.sushi.set("Филадельфия", { name: "Андрей", specialization: "Суши" });
+    this.sushi.set("Калифорния", { name: "Андрей", specialization: "Суши" });
+    this.sushi.set("Чизмаки", { name: "Андрей", specialization: "Суши" });
+    this.sushi.set("Сеякемаки", { name: "Андрей", specialization: "Суши" });
+    this.dessert.set("Тирамису", { name: "Анна", specialization: "Десерты" });
+    this.dessert.set("Чизкейк", { name: "Анна", specialization: "Десерты" });
+    this.orders = new Map();
+    this.orders.set("Пицца", this.pizza)
+    this.orders.set("Суши", this.sushi)
+    this.orders.set("Десерты", this.dessert)
+    this.orders.set("Суши", this.sushi)
+    this.orders.set("Десерты", this.dessert)
+    this.orders.set("Суши", this.sushi)
+    this.orders.set("Десерты", this.dessert)
+    this.orders.set("Суши", this.sushi)
+    this.orders.set("Десерты", this.dessert)
+  }}
+//использовать коллекции Map/Set в методе newOrder
 
-  newOrder(client, ...order) {
-    // console.log(client);
-    // console.log(...order);
-    // console.log(this.orders);
-    // let clients = new Set(this.orders.client);
-    // this.clients.add(client);
-    // console.log(this.clients);
-    console.log(`Клиент ${client.firstname} ${client.lastname} заказал:`);
-    if (this.ordersOfClients.has(client)) { //if (this.clients.has(client))
-      console.log(`Такой клиент есть ${client}`);
-      // const a = this.ordersOfClients.get(client);
-      // console.log(`Заказ: ${a}`);
-      // [...order].push(this.ordersOfClients.get(client));
-      [...order]=[...order].concat(this.orders);
-      // console.log([...order].push(this.orders));
-      // console.log(...order);
-      console.log(...order);
-      for (const item of order) {
-        // if (item.name === )
-        [...order].forEach(el => { //this.orders.forEach(el)
-          if (item.name === el.name) {
-            item.quantity = item.quantity + el.quantity
-          }
-        });
-        console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
-      }
-    } else {
-      this.orders = [];
-      for (const item of order) {
-        console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
-        this.orders.push({ name: item.name, quantity: item.quantity, type: item.type });
-        // console.log("Был добавлен заказ:" + `${this.orders}`);
-        // this.orders.push({ client: client, name: item.name, quantity: item.quantity });
-        // this.ordersOfClients.push({client:{name: item.name, quantity: item.quantity, type: item.type}});
-        // ● map.set(key, value)
-        
-      }
-      this.ordersOfClients.set(client, this.orders);
-      
-      console.log(this.ordersOfClients.get(client));
-      // this.clients.add(client);
-      // this.ordersOfClients.set(client, {name: item.name, quantity: item.quantity, type: item.type});
-      // this.ordersOfClients.set(client);
-      
-    }
-  }
-  
 
-};
+  newOrder(client, ...items) {
+
+}
 
 // Можно передать внутрь конструктора что-либо, если необходимо.
+// Например, можно передать коллекцию клиентов.
+// const manager = new Manager(clients);
+
+
+
 const manager = new Manager();
 
 // Вызовы ниже должны работать верно, менять их нельзя, удалять тоже.
 manager.newOrder(
-  new Client("Иван", "Иванов"),
+  new Client("Иван", "Иванов"), 
   { name: "Маргарита", quantity: 1, type: "Пицца" },
   { name: "Пепперони", quantity: 2, type: "Пицца" },
   { name: "Чизкейк", quantity: 1, type: "Десерт" },
@@ -123,7 +91,7 @@ manager.newOrder(
 
 const clientPavel = new Client("Павел", "Павлов");
 manager.newOrder(
-  clientPavel,
+  clientPavel, 
   { name: "Филадельфия", quantity: 5, type: "Суши" },
   { name: "Калифорния", quantity: 3, type: "Суши" },
 );
@@ -133,7 +101,7 @@ manager.newOrder(
 // Суши "Калифорния" - 3; готовит повар Андрей
 
 manager.newOrder(
-  clientPavel,
+  clientPavel, 
   { name: "Калифорния", quantity: 1, type: "Суши" },
   { name: "Тирамису", quantity: 2, type: "Десерт" },
 );
@@ -144,29 +112,9 @@ manager.newOrder(
 // Десерт "Тирамису" - 2; готовит повар Анна
 
 manager.newOrder(
-  clientPavel,
+  clientPavel, 
   { name: "Филадельфия", quantity: 1, type: "Суши" },
   { name: "Трубочка с вареной сгущенкой", quantity: 1, type: "Десерт" },
 );
-
 // Ничего не должно быть добавлено, должна быть выброшена ошибка:
-
 // Десерт "Трубочка с вареной сгущенкой" - такого блюда не существует.
-
-
-throw new Error("Десерт " + "Трубочка с вареной сгущенкой" + " - такого блюда не существует.");
-
-
-// const sum = (arr) => {
-//   let obj = {};
-//   for (let i = 0; i < arr.length; i++) {
-//     if (obj[arr[i].name]) {
-//       obj[arr[i].name].quantity += arr[i].quantity;
-//     } else {
-//       obj[arr[i].name] = arr[i];
-//     }
-//   }
-//   return Object.values(obj);
-// };
-
-// console.log(sum(arr));
