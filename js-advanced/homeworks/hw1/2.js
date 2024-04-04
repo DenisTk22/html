@@ -50,25 +50,26 @@ class Manager {
     this.cookers.set("Тирамису", "Анна");
     this.cookers.set("Чизкейк", "Анна");
     this.orders = [];
-
+    this.ordersOfClients = new Map();
   }
 
-
-
   newOrder(client, ...order) {
-    console.log(client);
+    // console.log(client);
+    // console.log(...order);
     // console.log(this.orders);
     // let clients = new Set(this.orders.client);
     // this.clients.add(client);
-    console.log(this.clients);
+    // console.log(this.clients);
     console.log(`Клиент ${client.firstname} ${client.lastname} заказал:`);
-    if (this.clients.has(client)) {
+    if (this.ordersOfClients.has(client)) { //if (this.clients.has(client))
       console.log(`Такой клиент есть ${client}`);
-      [...order].push(this.orders);
-      console.log(this.orders);
-      console.log([...order]);
+      // const a = this.ordersOfClients.get(client);
+      // console.log(`Заказ: ${a}`);
+      [...order].push(this.ordersOfClients.get(client));
+      // console.log(...order);
+      console.log(...order);
       for (const item of order) {
-        this.orders.forEach(el => {
+        this.orders.forEach(el => { //this.orders.forEach(el)
           if (item.name === el.name) {
             item.quantity = item.quantity + el.quantity
           }
@@ -77,12 +78,18 @@ class Manager {
       }
     } else {
       for (const item of order) {
-        console.log(
-          `${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
+        console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
         this.orders.push({ name: item.name, quantity: item.quantity, type: item.type });
+        // console.log("Был добавлен заказ:" + `${this.orders}`);
         // this.orders.push({ client: client, name: item.name, quantity: item.quantity });
+        // this.ordersOfClients.push({client:{name: item.name, quantity: item.quantity, type: item.type}});
+        // ● map.set(key, value)
+        this.ordersOfClients.set(client, {name: item.name, quantity: item.quantity, type: item.type});
       }
-      this.clients.add(client);
+      // this.clients.add(client);
+      // this.ordersOfClients.set(client, {name: item.name, quantity: item.quantity, type: item.type});
+      // this.ordersOfClients.set(client);
+      console.log(this.ordersOfClients.get(client));
     }
   }
   
