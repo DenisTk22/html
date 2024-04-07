@@ -8,8 +8,6 @@
 коллекции, не запрещается. Старайтесь использовать коллекции Map/Set, где это 
 актуально. Представленный ниже код должен работать.
 
-В методе newOrder нужно предусмотреть сложение заказа, если клиент дозаказал еще.
-
 Повара и их специализации:
 Олег - специализация: Пицца.
 Андрей - специализация: Суши.
@@ -39,7 +37,6 @@ class Client {
 class Manager {
   constructor() {
     this.cookers = new Map();
-    this.clients = new Set();
     this.cookers.set("Маргарита", "Олег");
     this.cookers.set("Пепперони", "Олег");
     this.cookers.set("Три сыра", "Олег");
@@ -49,59 +46,41 @@ class Manager {
     this.cookers.set("Сеякемаки", "Андрей");
     this.cookers.set("Тирамису", "Анна");
     this.cookers.set("Чизкейк", "Анна");
-    this.orders = [];
     this.ordersOfClients = new Map();
   }
 
+
   newOrder(client, ...order) {
-    // console.log(client);
-    // console.log(...order);
-    // console.log(this.orders);
-    // let clients = new Set(this.orders.client);
-    // this.clients.add(client);
-    // console.log(this.clients);
     console.log(`Клиент ${client.firstname} ${client.lastname} заказал:`);
-    if (this.ordersOfClients.has(client)) { //if (this.clients.has(client))
-      console.log(`Такой клиент есть ${client}`);
-      // const a = this.ordersOfClients.get(client);
-      // console.log(`Заказ: ${a}`);
-      // [...order].push(this.ordersOfClients.get(client));
-      [...order]=[...order].concat(this.orders);
-      // console.log([...order].push(this.orders));
-      // console.log(...order);
-      console.log(...order);
+    if (this.ordersOfClients.has(client)) {
+      // console.log("Такой клиент есть!");
+      // console.log("Он заказывал:", this.ordersOfClients.get(client));
       for (const item of order) {
-        // if (item.name === )
-        [...order].forEach(el => { //this.orders.forEach(el)
-          if (item.name === el.name) {
-            item.quantity = item.quantity + el.quantity
-          }
-        });
-        console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
+        if (this.cookers.has(item.name)) {
+          this.ordersOfClients.get(client).forEach(el => {
+            if (item.name === el.name) {
+              item.quantity += el.quantity;
+            } 
+          });
+            console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
+        }
+        else {
+          throw new Error(item.name + " - такого блюда не существует.");
+        }
       }
     } else {
-      this.orders = [];
       for (const item of order) {
-        console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
-        this.orders.push({ name: item.name, quantity: item.quantity, type: item.type });
-        // console.log("Был добавлен заказ:" + `${this.orders}`);
-        // this.orders.push({ client: client, name: item.name, quantity: item.quantity });
-        // this.ordersOfClients.push({client:{name: item.name, quantity: item.quantity, type: item.type}});
-        // ● map.set(key, value)
-        
+        if (this.cookers.has(item.name)) {
+          console.log(`${item.type} "${item.name}" - ${item.quantity}; готовит повар ${this.cookers.get(item.name)}`);
+          this.ordersOfClients.set(client, order);
+        } else {
+          throw new Error(item.name + " - такого блюда не существует.");
+        }
       }
-      this.ordersOfClients.set(client, this.orders);
-      
-      console.log(this.ordersOfClients.get(client));
-      // this.clients.add(client);
-      // this.ordersOfClients.set(client, {name: item.name, quantity: item.quantity, type: item.type});
-      // this.ordersOfClients.set(client);
-      
     }
   }
-  
-
 };
+
 
 // Можно передать внутрь конструктора что-либо, если необходимо.
 const manager = new Manager();
@@ -152,21 +131,3 @@ manager.newOrder(
 // Ничего не должно быть добавлено, должна быть выброшена ошибка:
 
 // Десерт "Трубочка с вареной сгущенкой" - такого блюда не существует.
-
-
-throw new Error("Десерт " + "Трубочка с вареной сгущенкой" + " - такого блюда не существует.");
-
-
-// const sum = (arr) => {
-//   let obj = {};
-//   for (let i = 0; i < arr.length; i++) {
-//     if (obj[arr[i].name]) {
-//       obj[arr[i].name].quantity += arr[i].quantity;
-//     } else {
-//       obj[arr[i].name] = arr[i];
-//     }
-//   }
-//   return Object.values(obj);
-// };
-
-// console.log(sum(arr));
