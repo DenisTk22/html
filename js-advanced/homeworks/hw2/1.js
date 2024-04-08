@@ -18,39 +18,49 @@
 библиотеке и возвращать true или false в зависимости от того, есть ли такая 
 книга в списке или нет.
 */
-class Library {
+class Library { // в классах не стоит использовать стрелочные функции просто так, иначе функции будут создаваться для каждого объекта отдельно, будет гораздо больше памяти занимать все это дело.
 
     #books = [];
 
     constructor(books) {
         this.#books = books;
+        const uniqueBooks = new Set(books);
+        if (uniqueBooks.size !== books.length) {
+            throw new Error("Список книг содержит дубликаты!");
+        }
     }
 
-    allBooks = () => {
-        console.log(this.#books);
-    };
+    allBooks() {
+        return this.#books;
+    }
 
-    addBook = (title) => {
+    addBook(title) {
         if (this.#books.includes(title)) {
             throw new Error("Книга уже существует!");
         }
         this.#books.push(title);
     }
-    removeBook = (title) => {
+
+    removeBook(title) {
         if (!this.#books.includes(title)) {
             throw new Error("Книга не найдена!");
         }
         this.#books = this.#books.filter((book) => book !== title);
     }
 
-    hasBook = (title) => console.log(this.#books.includes(title));
+    hasBook(title) {
+        return this.#books.includes(title);
+    }
+
 }
 
 const library = new Library(["Маугли", "Тарзан", "Волшебник изумрудного города"]);
 
-library.allBooks();
+console.log(library.allBooks());
+
 library.removeBook("Тарзан");
 // library.removeBook("Нарзан");
 library.allBooks();
+
 library.hasBook("Волшебник изумрудного города");
 library.addBook("Маугли");

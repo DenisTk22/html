@@ -79,11 +79,13 @@ data.forEach(product => {
 
   const productEl = document.createElement("div");
   productEl.classList.add("product");
+  productEl.setAttribute("id", uid());
 
   const productImageEl = document.createElement("img");
   productImageEl.classList.add("product__image");
   productImageEl.src = product.productImg;
   productImageEl.setAttribute("width", "400px");
+  productImageEl.setAttribute("height", "300px");
   productImageEl.setAttribute("alt", product.product);
   productEl.append(productImageEl);
 
