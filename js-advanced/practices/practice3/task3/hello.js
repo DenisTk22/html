@@ -17,3 +17,7 @@ logoutEl.addEventListener('click', () => {
 });
 
 //eslint - отладчик
+/**
+ * https://learn.javascript.ru/async
+https://learn.javascript.ru/network
+ */
