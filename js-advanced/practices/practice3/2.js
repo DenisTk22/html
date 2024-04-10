@@ -19,17 +19,32 @@ const chairMaterialEl = document.getElementById('chair-material');
 
 localStorageKey = 'settings';
 
+//Сохранение выбора в localStorage
 saveBtnEl.addEventListener('click', () => {
     const tableColor = tableColorEl.value;
-    const chairMaterial = chairMaterialEl.value; 
+    const chairMaterial = chairMaterialEl.value;
     localStorage.setItem(localStorageKey, JSON.stringify({
-        tableColor, 
+        tableColor,
         chairMaterial
     }));
 });
 
-if (localStorage.getItem(localStorageKey)) {
-    const settings = JSON.parse(localStorage.getItem(localStorageKey));
-    tableColorEl.value = settings.tableColor;
-    chairMaterialEl.value = settings.chairMaterial;
+function loadSetting() {
+    if (localStorage.getItem(localStorageKey)) { // если можно получить localStorage.getItem(localStorageKey)
+        const settings = JSON.parse(localStorage.getItem(localStorageKey));
+        tableColorEl.value = settings.tableColor;
+        chairMaterialEl.value = settings.chairMaterial;
+    }
 }
+
+//Загрузка данных из localStorage
+loadBtnEl.addEventListener('click', (e) => {
+    loadSetting();
+});
+
+
+// Очистка данных из localStorage
+clearBtnEl.addEventListener('click', function () {
+    localStorage.removeItem(localStorageKey);
+});
+
