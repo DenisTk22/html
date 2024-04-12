@@ -17,45 +17,24 @@ const prodNameEl = document.querySelector('.product__name');
 const prodFeedbackEl = document.querySelector('.product__feedback');
 const saveFeedbackEl = document.querySelector('.product__saveFeedback');
 
-const feedbackdb = {};
-const feedbackArr = [];
-
-localStorage.clear();
-
 // сохранение данных
 saveFeedbackEl.addEventListener('click', () => {
     const product = prodNameEl.value;
     const feedback = prodFeedbackEl.value;
-    // const arrEx = [];
-
-    // localStorage.setItem(product, JSON.stringify(feedback));
 
     if (localStorage.getItem(product) === null) {
-            const arr = [];
-            console.log(feedback);
-            arr.push(feedback);
-            localStorage.setItem(product, JSON.stringify(arr));
+        const productFbList = [];
+
+        productFbList.push(feedback);
+        localStorage.setItem(product, JSON.stringify(productFbList));
     } else {
-        const arrEx = [];
-        // let arrEx1 = [];
-        // arrEx.push(localStorage.getItem(product));
-        // arrEx1 = arrEx.push(JSON.parse(localStorage.getItem(product)));
-        arrEx.push(JSON.parse(localStorage.getItem(product)));
-        console.log(arrEx);
-        // console.log(arrEx.push(JSON.parse(localStorage.getItem(product))));
-        // product.push(feedback);
-        arrEx.push(feedback);
-        localStorage.setItem(product, JSON.stringify(arrEx));
+        const productFbList = [];
+
+        JSON.parse(localStorage.getItem(product)).forEach(element => {
+            productFbList.push(element);
+        });
+
+        productFbList.push(feedback);
+        localStorage.setItem(product, JSON.stringify(productFbList));
     }
 });
-
-/**
- * (function{
-    var array = localStorage.getItem('id') || [];
-    obj = {};
-    obj.id = 1;
-    array.push(obj);
-
-    localStorage.setItem('id', JSON.stringify(array));
-}();
- */
