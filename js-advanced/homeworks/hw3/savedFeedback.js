@@ -16,27 +16,59 @@
 const feedbackListEl = document.querySelector('.product__list');
 feedbackListEl.style.listStyle = 'none';
 
-const productEl = document.createElement('li');
-feedbackListEl.append(productEl);
-
-const showFeedbackEl = document.createElement('button');
-showFeedbackEl.textContent = "Показать отзыв";
-showFeedbackEl.style.display = 'none';
-productEl.append(showFeedbackEl);
-
-const feedbackTextEl = document.createElement('p');
-productEl.append(feedbackTextEl);
-
-const deleteFeedbackEl = document.createElement('button');
-deleteFeedbackEl.textContent = "Удалить";
-deleteFeedbackEl.style.display = 'none';
-
 if (localStorage.length !== 0) {
     for (let i = 0; i < localStorage.length; i++) {
-        const element = localStorage[i];
-        productEl.textContent = element;
-        showFeedbackEl.style.display = 'block';
+        
+        const key = localStorage.key(i);
+        const feedback = JSON.parse(localStorage.getItem(key));
+
+        const productEl = document.createElement('li');
+        productEl.id = key;
+        feedbackListEl.append(productEl);
+        productEl.textContent = key;
+
+        const showFeedbackEl = document.createElement('button');
+        showFeedbackEl.classList.add('show');
+        showFeedbackEl.textContent = "Показать отзыв";
+        productEl.append(showFeedbackEl);
+
+        const feedbackTextEl = document.createElement('p');
+        productEl.append(feedbackTextEl);
+        feedbackTextEl.textContent = feedback;
+        feedbackTextEl.style.display = 'none';
+
+        const deleteFeedbackEl = document.createElement('button');
+        deleteFeedbackEl.classList.add('remove');
+        deleteFeedbackEl.textContent = "Удалить";
+        feedbackTextEl.append(deleteFeedbackEl);
     }
 } else {
-    productEl.textContent = "Отзывов на продукты нет.";
-}
+    feedbackListEl.textContent = "Отзывов на продукты нет.";
+};
+
+
+let count = 0;
+
+feedbackListEl.addEventListener('click', (e) => {
+    const parent = e.target.parentElement;
+
+    if (e.target.classList.contains('show')){
+        count++;
+        if (count % 2 !== 0) {
+        parent.querySelector('p').style.display = 'block'
+        e.target.textContent = "Скрыть отзыв";
+    } else {
+        e.target.textContent = "Показать отзыв";
+        parent.querySelector('p').style.display = 'none'
+    }
+    }
+    
+    if (e.target.classList.contains('remove')) {
+            const elId = e.target.parentElement.parentElement.id;
+
+            e.target.parentElement.parentElement.style.display = 'none';
+            localStorage.removeItem(elId);
+        }
+});
+
+

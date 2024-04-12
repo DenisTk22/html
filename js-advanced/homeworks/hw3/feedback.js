@@ -19,19 +19,43 @@ const saveFeedbackEl = document.querySelector('.product__saveFeedback');
 
 const feedbackdb = {};
 const feedbackArr = [];
+
 localStorage.clear();
 
 // сохранение данных
 saveFeedbackEl.addEventListener('click', () => {
     const product = prodNameEl.value;
     const feedback = prodFeedbackEl.value;
-    if (localStorage.getItem(product) !== null) {
-        localStorage.setItem(product, JSON.stringify(product.push(feedback)));
-    } else {
-        const product = [];
-        // product.push(feedback);
-        localStorage.setItem(product, JSON.stringify(product.push(feedback)))
-    }
-})
+    // const arrEx = [];
 
-//(localStorage.getItem('myKey') || '') + 'new value'
+    // localStorage.setItem(product, JSON.stringify(feedback));
+
+    if (localStorage.getItem(product) === null) {
+            const arr = [];
+            console.log(feedback);
+            arr.push(feedback);
+            localStorage.setItem(product, JSON.stringify(arr));
+    } else {
+        const arrEx = [];
+        // let arrEx1 = [];
+        // arrEx.push(localStorage.getItem(product));
+        // arrEx1 = arrEx.push(JSON.parse(localStorage.getItem(product)));
+        arrEx.push(JSON.parse(localStorage.getItem(product)));
+        console.log(arrEx);
+        // console.log(arrEx.push(JSON.parse(localStorage.getItem(product))));
+        // product.push(feedback);
+        arrEx.push(feedback);
+        localStorage.setItem(product, JSON.stringify(arrEx));
+    }
+});
+
+/**
+ * (function{
+    var array = localStorage.getItem('id') || [];
+    obj = {};
+    obj.id = 1;
+    array.push(obj);
+
+    localStorage.setItem('id', JSON.stringify(array));
+}();
+ */
