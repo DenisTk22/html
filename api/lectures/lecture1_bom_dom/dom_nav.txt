@@ -1,0 +1,46 @@
+*firstElementChild
+*lastElementChild
+*previousElementSibling
+*nextElementSibling
+*parentElement
+
+
+/// Свойства узлов
+* nodeType – тип узла
+* nodeName – название узла
+* tagName – название элемента
+* nodeValue – данные текстового узла
+* data – содержимое текстового узла
+* outerHTML – содержимое HTML - кода элемента целиком
+* hidden – скрывает элемент
+* style – изменяет стиль элемента
+* className – помогает обращаться к имени класса элемента и изменить его
+* innerHTML – позволяет изменить полностью разметку всего элемента
+* textContent – изменяет содержимое текстового узла
+
+
+/// Поиск элементов
+* По id – getElementById
+* по заданному css - селектору – querySelector и querySelectorAll
+* getElementsByTagName(tag) ищет элементы по заданному тегу и возвращает их коллекцию
+* getElementsByClassName(className) возвращает элементы, которые имеют данный CSS - класс
+* getElementsByName(name) возвращает элементы с заданным атрибутом name
+* matches(css) проверяет, удовлетворяет ли element заданному атрибуту
+* closest(css) проверяет сам элемент и его предков на соответствие CSS - атрибуту
+
+///Создание узла
+* document.createTextNode(‘текст’) – создаёт текстовый узел
+* document.createElement('body') – создаёт элемент
+
+///Вставка
+✱ node.prepend(...узлы или строки) – вставляет узлы или строки в начало node
+✱ node.append(...узлы или строки) – добавляет узлы или строки в конец node
+✱ node.before(...узлы или строки) – вставляет узлы или строки до node
+✱ node.after(...узлы или строки) – вставляет узлы или строки после node
+✱ node.replaceWith(...узлы или строки) – заменяет node заданными узлами или строками
+✱ element.insertAdjacentHTML()
+✱ element.insertAdjacentText() – вставляет текст
+✱ element.insertAdjacentElement() – вставляет элемент Элемент
+
+* node.remove()
+* el.cloneNode()
