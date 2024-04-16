@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="loader">
+        <i class="fas fa-spinner"></i>
+    </div>
+
+    <div class="content hidden">
+        <h1>Заголовок</h1>
+        <p>Содердимое страницы</p>
+        <img src="#" alt="cat">
+    </div>
+
+    <script>
+
+        window.addEventListener('load', function (e) {
+            const contentEl = document.querySelector('.content');
+            contentEl.classList.remove('hidden');
+
+            const loaderEL = document.querySelector('.loader');
+            contentEl.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
