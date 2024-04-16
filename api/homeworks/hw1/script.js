@@ -72,7 +72,7 @@ const schedule = getLsSchedule();
 const scheduleEl = document.querySelector('.schedule');
 
 
-if (!localStorage.getItem(scheduleKey)) {
+if (localStorage.getItem(scheduleKey)) {
     localStorage.setItem(scheduleKey, JSON.stringify(scheduleData));
 };
 
@@ -118,10 +118,10 @@ scheduleEl.addEventListener('click', ({target}) => {
 
         editingLesson.currentParticipants = Number(editingLesson.currentParticipants) + 1;
 
-        if (Number(editingLesson.currentParticipants) > Number(editingLesson.maxParticipants)) {
-            alert("Записаться нельзя!");
-            return;
-        }
+        // if (Number(editingLesson.currentParticipants) > Number(editingLesson.maxParticipants)) {
+        //     alert("Записаться нельзя!");
+        //     return;
+        // }
 
         saveSchedule(schedule);
 
