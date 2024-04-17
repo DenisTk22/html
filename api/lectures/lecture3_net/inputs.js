@@ -44,6 +44,4 @@ form.checkbox.addEventListener('input', () => {
 
 form.email.oncut = form.email.oncopy = form.email.onpaste = (e) => {
     console.log(e.type + ' - ' + e.clipboardData.getData('text/plain'));
-
 }
-
