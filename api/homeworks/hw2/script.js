@@ -31,8 +31,12 @@ const sliderContentEl = document.querySelector('.slider__content');
 //     dotsEl.insertAdjacentHTML('beforeend', dot);
 // }); или:
 
-imgEl.forEach((_, i) => dotsEl.insertAdjacentHTML('beforeend', `<a href="#" id="${i}" class="dot"></a>`));
+addRemoveHidden = (add, remove) => {
+    add.classList.add('hidden');
+    remove.classList.remove('hidden');
+};
 
+imgEl.forEach((_, i) => dotsEl.insertAdjacentHTML('beforeend', `<a href="#" id="${i}" class="dot"></a>`));
 
 sliderContentEl.addEventListener('click', ({target}) => {
     if (target.classList.contains('slider__next')) {
@@ -45,8 +49,8 @@ sliderContentEl.addEventListener('click', ({target}) => {
                 if (!nextEl) nextEl = imgEl[0];
             }
         });
-            currentEL.classList.add('hidden');
-            nextEl.classList.remove('hidden');
+
+        addRemoveHidden(currentEL, nextEl);
 
     } else if (target.classList.contains('slider__previous')) {
         let previousEl = '';
@@ -58,8 +62,8 @@ sliderContentEl.addEventListener('click', ({target}) => {
                 if (!previousEl) previousEl = imgEl[imgEl.length-1];
             }
         });
-            currentEL.classList.add('hidden');
-            previousEl.classList.remove('hidden');
+
+        addRemoveHidden(currentEL, previousEl);
     }       
 });
 
@@ -73,5 +77,4 @@ dotsEl.addEventListener('click', ({target}) => {
         }
     });
     currentEL.classList.remove('hidden');
-})
-
+});

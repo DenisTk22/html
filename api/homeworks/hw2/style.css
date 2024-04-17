@@ -36,3 +36,7 @@
     background: #4716bb;
     border-radius: 50%;
 }
+
+.dot:hover {
+    background: #16b0bb;
+}
