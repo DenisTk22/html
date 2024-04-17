@@ -1,0 +1,38 @@
+
+.scale {
+    transform: scale(2);
+}
+
+.hidden {
+    display: none;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.slider__content {
+    display: flex;
+    gap: 20px;
+}
+
+.slider__picture {
+    width: 300px;
+    height: 300px;
+}
+
+.slider__dots {
+    display: flex;
+    gap: 15px;
+}
+
+.dot {
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    background: #4716bb;
+    border-radius: 50%;
+}
