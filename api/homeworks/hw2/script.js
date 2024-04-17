@@ -19,18 +19,20 @@ c. Навигационные точки (индикаторы) для быст�
 const sliderEl = document.querySelector('.slider');
 const previousEl = sliderEl.querySelector('.slider__previous');
 const nextEl = sliderEl.querySelector('.slider__next');
-// const picturesEl = sliderEl.querySelector('.slider__pictures');
 const dotsEl = sliderEl.querySelector('.slider__dots');
 const imgEl = sliderEl.querySelectorAll('.slider__picture');
 const sliderContentEl = document.querySelector('.slider__content');
 
-imgEl.forEach((el, i) => { //${i+1}
-let dot = '';
-    dot += `
-        <a href="#" id="${i}" class="dot"></a>
-    `;
-    dotsEl.insertAdjacentHTML('beforeend', dot);
-});
+// imgEl.forEach((_, i) => {
+// let dot = '';
+//     dot += `
+//         <a href="#" id="${i}" class="dot"></a>
+//     `;
+//     dotsEl.insertAdjacentHTML('beforeend', dot);
+// }); или:
+
+imgEl.forEach((_, i) => dotsEl.insertAdjacentHTML('beforeend', `<a href="#" id="${i}" class="dot"></a>`));
+
 
 sliderContentEl.addEventListener('click', ({target}) => {
     if (target.classList.contains('slider__next')) {
@@ -39,10 +41,8 @@ sliderContentEl.addEventListener('click', ({target}) => {
         imgEl.forEach((pic, i) => {
             if (!pic.classList.contains('hidden')) {
                 currentEL = pic;
-                nextEl = imgEl[i+1]
-                if (!nextEl) {
-                    nextEl = imgEl[0]
-                }
+                nextEl = imgEl[i+1];
+                if (!nextEl) nextEl = imgEl[0];
             }
         });
             currentEL.classList.add('hidden');
@@ -55,14 +55,11 @@ sliderContentEl.addEventListener('click', ({target}) => {
             if (!pic.classList.contains('hidden')) {
                 currentEL = pic;
                 previousEl = imgEl[i-1]
-                if (!previousEl) {
-                    previousEl = imgEl[imgEl.length-1]
-                }
+                if (!previousEl) previousEl = imgEl[imgEl.length-1];
             }
         });
             currentEL.classList.add('hidden');
             previousEl.classList.remove('hidden');
-
     }       
 });
 
