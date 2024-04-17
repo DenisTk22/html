@@ -25,9 +25,9 @@
         const selectElement = document.querySelector('#country-select');
         const capitalInfoElement = document.querySelector('#capital-info');
 
-        document.addEventListener('change', e => {
+        // document.addEventListener('change', () => {
             
-        })
+        // })
 
         selectElement.onchange = function () {
             const selectedCountry = selectElement.value;
@@ -47,8 +47,9 @@
                 default:
                     capital = 'Выберите страну, чтобы узнать столицу.'
             }
-        }
-
+            //Обновляем информацию о столице на сттранице
+        capitalInfoElement.textContent = capital;
+        };
     </script>
 </body>
 </html>
