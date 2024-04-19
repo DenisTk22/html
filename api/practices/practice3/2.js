@@ -93,15 +93,26 @@ async function getImages(currentPage) {
     }
 }
 
-(async function () { // iife, тогда можно использовать await getImages()
-  try {
-    const result = await getImages(page++); // getImages() возвращает промис, т.к. она async // result нужно перевести из промиса в обычный массив
+// (async function () { // iife, тогда можно использовать await getImages()
+//   try {
+//     const result = await getImages(page++); // getImages() возвращает промис, т.к. она async // result нужно перевести из промиса в обычный массив
+//     renderImages(result);
+//   // page++;
+//   } catch (e) {
+//     alert("Ошибка");
+//   }
+// })();
+
+// если прописать type="module" в <script src="2.js" defer type="module"></script>, то можно не обрачивать в iife
+try {
+  const result = await getImages(page++); // getImages() возвращает промис, т.к. она async // result нужно перевести из промиса в обычный массив
   renderImages(result);
-  // page++;
-  } catch (e) {
-    alert("Ошибка");
-  }
-})();
+// page++;
+} catch (e) {
+  alert("Ошибка");
+}
+
+
 
 //через then
 // getImages(page++).then((result) => {
