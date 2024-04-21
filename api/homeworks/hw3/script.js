@@ -24,7 +24,7 @@
 • Реализовать все с помощью async/await, без цепочем then.
  */
 
-const apiKey = '';
+const apiKey = ''; // !!! добавить ключ из unsplash!!!
 const photosLsKey = 'photos';
 const photos = getLsPhotos();
 const photosLiked = [];
