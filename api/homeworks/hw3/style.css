@@ -1,0 +1,19 @@
+.box__img {
+    width: 300px;
+}
+
+.box__likes-count {
+    font-size: 10px;
+}
+
+.box__photographer {
+    font-size: 8px;
+}
+
+.photo {
+    width: 200px;
+}
+
+.likedPhotoes {
+    width: 50px;
+}
