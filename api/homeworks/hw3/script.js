@@ -39,6 +39,7 @@ let count = 0;
 let gotLike = false;
 
 async function getRandomPhoto() {
+    try {
         const url = 'https://api.unsplash.com/photos/random';
         const response = await fetch(url, { headers:  { Authorization: 'Client-ID ' + apiKey } });
         if (!response.ok) {
@@ -46,14 +47,17 @@ async function getRandomPhoto() {
       } 
       const json = await response.json();
       return json;
-};
+    } catch (error) {
+        alert('Ошибка сети!');
+    }
+}
 
 function renderImages(photo) {
     const imgEl = boxEl.querySelector('.box__img');
     const photographer = boxEl.querySelector('.box__photographer')
     imgEl.src = photo.urls.regular;
     photographer.textContent = `Фотограф: ${photo.user.first_name} ${photo.user.last_name}`;
-};
+}
 
 const result = await getRandomPhoto();
 const photoLocation = result.links.download;
@@ -125,4 +129,4 @@ dislikeEl.addEventListener('click', (e) => {
     });
     localStorage.setItem(photosLsKey, JSON.stringify(allPhotos));
     renderPhotos(allPhotos);
-})
+});
