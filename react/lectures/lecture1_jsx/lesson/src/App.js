@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from './components/counter';
+import Show from './components/visible';
 
 function App() {
   const userName = 'Denis';
@@ -9,20 +11,9 @@ function App() {
         <h1>Hello {userName}!</h1>
         <Article number='1' name='Info' />
         <Article number='2' name='Blog' />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Counter />
+        <Show data='Текст из компонета' />
 
-        {/* вызов компонета  */}
       <Heading />
       </header>
     
