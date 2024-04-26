@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './components/counter';
 import Show from './components/visible';
+import Timer from './components/timer';
+import RefExample from './components/ref';
+import MessagesList from './components/list';
 
 function App() {
   const userName = 'Denis';
@@ -11,9 +14,12 @@ function App() {
         <h1>Hello {userName}!</h1>
         <Article number='1' name='Info' />
         <Article number='2' name='Blog' />
+        <RefExample />
+        <Timer />
         <Counter />
         <Show data='Текст из компонета' />
-
+        <MessagesList />
+      
       <Heading />
       </header>
     
