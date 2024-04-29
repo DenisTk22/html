@@ -10,7 +10,7 @@ const TodoList = () => {
     //Обработчик добавления нового дела в список
     const addTodo = (e) => {
         e.preventDefault(); // предотвращаем перезагрузку формы
-        if (!currentTodo.trim()) return; //ишнорируем пустые строки
+        if (!currentTodo.trim()) return; //игнорируем пустые строки
         setTodos([...todos, currentTodo]) //Добавдяем текущее дело в список
         setCurrentTodo(''); //очищаем текстовое поле
     };
