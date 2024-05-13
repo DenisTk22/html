@@ -1,23 +1,21 @@
 import logo from './logo.svg';
+import ParentCounter from './components/parent';
+import InputForm from './components/form';
+import Nav from './components/menu';
+import HoverRating from './components/rating';
+import NestedList from './components/list';
+import Student from './components/propType';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <HoverRating/>
+      <Nav/>
+      <ParentCounter/>
+      <InputForm />
+      <NestedList/>
+      <Student name="Дима" age={30} isStudent={true}/>
     </div>
   );
 }
