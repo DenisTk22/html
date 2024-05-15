@@ -6,7 +6,7 @@ export default function Nav() {
     const label = { inputProps: { 'aria-label': 'Switch demo' } };
     return (
         <>
-                <ButtonGroup variant="contained" aria-label="Basic button group">
+            <ButtonGroup variant="contained" aria-label="Basic button group">
             <Button>Главная</Button>
             <Button>Католог</Button>
             <Button>Контакты</Button>
