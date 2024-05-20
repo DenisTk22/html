@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 
 const products = [
-  {id: 1, name: "Товар 1", description: "Описание товара 1", proce: "100 руб"},
-  {id: 2, name: "Товар 2", description: "Описание товара 2", proce: "200 руб"},
-  {id: 3, name: "Товар 3", description: "Описание товара 3", proce: "300 руб"},
-  {id: 4, name: "Товар 4", description: "Описание товара 4", proce: "400 руб"},
-  {id: 5, name: "Товар 5", description: "Описание товара 5", proce: "500 руб"},
-  {id: 6, name: "Товар 6", description: "Описание товара 6", proce: "600 руб"},
-  {id: 7, name: "Товар 7", description: "Описание товара 7", proce: "600 руб"}
+  {id: 1, name: "Товар 1", description: "Описание товара 1", price: "100 руб"},
+  {id: 2, name: "Товар 2", description: "Описание товара 2", price: "200 руб"},
+  {id: 3, name: "Товар 3", description: "Описание товара 3", price: "300 руб"},
+  {id: 4, name: "Товар 4", description: "Описание товара 4", price: "400 руб"},
+  {id: 5, name: "Товар 5", description: "Описание товара 5", price: "500 руб"},
+  {id: 6, name: "Товар 6", description: "Описание товара 6", price: "600 руб"},
+  {id: 7, name: "Товар 7", description: "Описание товара 7", price: "600 руб"}
 ];
 
 
