@@ -97,3 +97,46 @@ button3.onclick = () => {
         nextParent = nextParent.parentElement;
     }
 }
+/**задача 1 */
+const j = 'ab';
+const s = 'aabbcd';
+let count = 0;
+
+for (let i = 0; i < j.length; i++) {
+    const e = j[i];
+    for (let i = 0; i < s.length; i++) {
+        const el = s[i];
+        if (e === el) {
+            count++;
+        }
+    }
+}
+
+console.log(count);
+
+/**Задача 2 найтит самую длинную последовательность из 1*/
+const arr = [5, 1, 1, 0, 1, 1, 1, 0];
+let count1 = 0;
+const oneLength = [];
+
+arr.forEach((value, i) => {
+    if (value === 1) {
+        count1++;
+    } else {
+        oneLength.push(count1);
+        count1 = 0;
+    }
+});
+
+const max = Math.max.apply(null, oneLength)
+
+console.log(max);
+
+/**Задача 3 выбрать уникальные значения и выставить по возрастанию, желательно использовать лишь константный объем памяти в работе */
+const arr2 = [5, 2, 4, 8, 8, 8]
+
+const arr3 = [... new Set(arr2)];
+
+const arr4 = arr3.sort((a, b) => a - b);
+
+console.log(arr4)
