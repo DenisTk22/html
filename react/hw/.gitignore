@@ -6,6 +6,10 @@
 /.pnp
 .pnp.js
 
+/lecture*/node_modules
+/practice*/node_modules
+/hw*/node_modules
+
 # testing
 /coverage
 
