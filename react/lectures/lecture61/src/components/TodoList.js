@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { useSelector } from "react-redux"
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { toggleTodo } from '../actions/todoActions';
 import { FilterContext } from '../contexts/FilterContext';
 import withFilter from '../hoc/withFilter';
@@ -23,11 +22,12 @@ const TodoList = () => {
     return (
         <ul>
             {filteredTodos.map(todo => (
-                <li key={todo.id}
+                <li 
+                    key={todo.id}
                     onClick={() => handleToggleTodo(todo.id)}
                     style={{ textDecoration: todo.completed ? 'line-through' : 'none' }} // стиль для выполнено или не выполнено
                 >
-                    {todo.title}
+                    {todo.text}
                 </li>
             ))}
         </ul>
