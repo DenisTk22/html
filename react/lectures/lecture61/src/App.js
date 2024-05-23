@@ -1,29 +1,14 @@
 import './App.css';
 import React from 'react';
-// import { Provider } from 'react-redux';
-// import store from './store';
-// import CounterComponent from './components/CounterComponent';
-// import ButtonComponent from './components/ButtonComponent';
-// import ButtonComponentMinus from './components/ButtonComponentMinus';
-import AddTodo from './components2/AddTodo';
-import TodoList from './components2/TodoList';
-import TodoFilter from './components2/TodoFilter';
-import { FilterProvider } from './contexts2/FilterContext';
+import AddTodo from './components/AddTodo';
+import TodoList from './components/TodoList';
+import TodoFilter from './components/TodoFilter';
+import { FilterProvider } from './contexts/FilterContext';
 
 // npm install react-redux
 // npm install @reduxjs/toolkit
 
 const App = () => {
-  //Задание 1 Счетчик
-  // return (
-  //   <Provider store={store}>
-  //     <>
-  //       <CounterComponent />
-  //       <ButtonComponent />
-  //       <ButtonComponentMinus />
-  //     </>
-  //   </Provider>
-  // );
 
   //Задание 2
   //При загрузке приложения, пользователь видит три  основных компонента: список задач (TodoList), поле для добавления новой задачи (AddTodo) и фильтр для выбора видимых задач (TodoFilter).
@@ -48,9 +33,9 @@ const App = () => {
 
   return (
     <FilterProvider>
-      <AddTodo/>
-      <TodoList/>
-      <TodoFilter/>
+      <AddTodo />
+      <TodoList />
+      <TodoFilter />
     </FilterProvider>
   );
 };
