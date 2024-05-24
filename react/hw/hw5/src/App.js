@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import { useSelector } from "react-redux";
+import {Provider} from 'react-redux';
+import store from './reducers/store';
+
 /**
  * Приложение для переключения темы сайта
   Создать приложение, позволяющее пользователю переключать между светлой и темной темой сайта.
@@ -16,8 +19,7 @@ import { useSelector } from "react-redux";
  */
 
 function App() {
-  const theme = useSelector((state) => state.theme); // Получаем текущую тему из Redux
-
+  const theme = useSelector((state) => state.theme);
   return (
     <div className={`App ${theme}-theme`}>
       <header className="App-header">
