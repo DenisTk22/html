@@ -1,4 +1,3 @@
-import './App.css';
 /**
 Разработать приложение для управления каталогом продуктов, позволяющее добавлять, удалять, отображать и редактировать продукты.
 
@@ -18,10 +17,19 @@ import './App.css';
 Компонент для редактирования продукта:
 Опционально, предоставьте возможность редактирования существующих продуктов, чтобы можно было изменять их имя, описание, цену и доступность.
  */
+import React from "react";
+import { AddProduct } from "./components/AddProduct";
+import { ProductsList } from "./components/ProductsList";
+import { EditProduct } from "./components/EditProduct";
+
 function App() {
   return (
-    <div className="App">
-
+    <div>
+      <h2>Catalog of products</h2>
+      <h3>Add new product:</h3>
+      <AddProduct />
+      <ProductsList />
+      <EditProduct />
     </div>
   );
 }

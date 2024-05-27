@@ -1,12 +1,8 @@
-//Хранилище - это объект, который содержит состояние приложения и представляет методы для его изменения 
 import { configureStore } from "@reduxjs/toolkit";
-import productsReducer from "../reducers/reducers";
+import productsReducer from "../reducers/productsSlice";
 
-//Настройка Redux хранилища с использованием productsReducer
-const store = configureStore({
+export const store = configureStore({
     reducer: {
-        reducer: productsReducer,
+        products: productsReducer,
     },
 });
-
-export default store;
