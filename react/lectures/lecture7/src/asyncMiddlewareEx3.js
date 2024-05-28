@@ -1,7 +1,7 @@
 const asyncMiddleware = store => next => action => {
     if (action.type === 'FETCH_DATA_REQUEST') {
         //делаем запрос к API
-        fetch('https://..')
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
         .then(response => response.json())
         .then(data => {store.dispatch({type: 'FETCH_DATA_SUCCESS', payload: data})})
         .catch(error => store.dispatch({type: 'FETCH_DATA_ERROR', payload: error.toString()}));

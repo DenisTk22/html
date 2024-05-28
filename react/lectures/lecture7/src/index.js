@@ -8,75 +8,73 @@ import {Provider} from 'react-redux';
 import rootReducer from './reducers';
 import {PersistGate} from 'redux-persist/integration/react';
 import {persistStore, persistReducer} from 'redux-persist';
-import thunk from 'redux-thunk';
+import thunk from 'redux-thunk'; // npm install redux-thunk
 import storage from 'redux-persist/lib/storage';
-import createSagaMiddleware from 'redux-saga';
+import createSagaMiddleware from 'redux-saga'; // npm install redux-saga
 import mySaga from './sagas';
 import asyncMiddlewareEx3 from './asyncMiddlewareEx3';
-import dataReducer from './reducers/dataReducer';
+import dataReducer from './dataReducer';
 
 //Ex1
 //Это промежуточное ПО для демонстрации доп эффектов
-const middleware = store => next => action => {
-  console.log('middleware');
+// const middleware = store => next => action => {
+//   console.log('middleware');
 
-  setTimeout(() => {
-    console.log('middleware1000');
-  }, 1000);
+//   setTimeout(() => {
+//     console.log('middleware1000');
+//   }, 1000);
 
-  return next(action);
-};
+//   return next(action);
+// };
 
-//Ex2
-//Это logger middleware, который выводит действия, отрпавленные в store.
-const loggerMiddleware = store => next => action => {
+// //Ex2
+// //Это logger middleware, который выводит действия, отрпавленные в store.
+// const loggerMiddleware = store => next => action => {
+//   console.log('dispatching', action);
+//   return next(action);
+// };
 
-  console.log('action', action);
-
-  return next(action);
-};
-
-//Ex3 Saga
-// СЩздаем middleware для Redux-Saga
+// //Ex3 Saga
+// // СЩздаем middleware для Redux-Saga
 // const sagaMiddleware = createSagaMiddleware();
 
-// Конфигурация для Redux-Persist
-const persistConfig = {
-    key: 'root', // Ключ, по которому хранится состояние в storage
-    storage, // Объект storage для хранения
-};
+// // Конфигурация для Redux-Persist
+// const persistConfig = {
+//     key: 'root', // Ключ, по которому хранится состояние в storage
+//     storage, // Объект storage для хранения
+// };
 
-// Создаем "персистентный" редьюсер с использованием presistReducer  и конфигурации.
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+// // Создаем "персистентный" редьюсер с использованием presistReducer  и конфигурации.
+// const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// Настраиваем store с "персистентный" редьюсером и всеми middleware
-const store = configureStore({
-  reducer: persistedReducer, // используем "персистентный" редьюсер
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: {
-            ignoredActions: ['persist/PERSIST'], // Игнорируем действие persist/PERSIST, т.к. оно не сериализуемо
-            },
-        }).concat(middleware, loggerMiddleware, asyncMiddlewareEx3, thunk, sagaMiddleware),
-});
+// // Настраиваем store с "персистентный" редьюсером и всеми middleware
+// const store1 = configureStore({
+//   reducer: persistedReducer, // используем "персистентный" редьюсер
+//     middleware: (getDefaultMiddleware) =>
+//         getDefaultMiddleware({
+//             serializableCheck: {
+//             ignoredActions: ['persist/PERSIST'], // Игнорируем действие persist/PERSIST, т.к. оно не сериализуемо
+//             },
+//         }).concat(middleware, loggerMiddleware, asyncMiddlewareEx3, thunk, sagaMiddleware),
+// });
 
-// запускаем нашу сагу
-sagaMiddleware.run(mySaga);
+// // запускаем нашу сагу
+// sagaMiddleware.run(mySaga);
 
-//Инициализируем presistor, который будет использоваться для сохранения/ восстановления состояния
-let persistor = persistStore(store);
+// //Инициализируем presistor, который будет использоваться для сохранения/ восстановления состояния
+// let persistor = persistStore(store1);
 
-//Оборачиваем наше приложение в Provider и PersistGate для предоставления store и persistor
-ReactDOM.render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}> {/**Подключаем  PersistGate с persistor*/}
-      <App />
-    </PersistGate>
-  </Provider>,
-  document.getElementById('root')
-);
+// //Оборачиваем наше приложение в Provider и PersistGate для предоставления store и persistor
+// ReactDOM.render(
+//   <Provider store={store1}>
+//     <PersistGate loading={null} persistor={persistor}> {/**Подключаем  PersistGate с persistor*/}
+//       <App />
+//     </PersistGate>
+//   </Provider>,
+//   document.getElementById('root')
+// );
 
-///Ex Saga
+//Ex Saga
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
@@ -98,12 +96,12 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
