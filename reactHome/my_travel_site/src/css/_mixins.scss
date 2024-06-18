@@ -1,0 +1,18 @@
+@mixin textStyle ($color, $ffamily, $lspacing, $fsize, $fweight, $lheight) {
+    color: $color;
+    font-family: $ffamily;
+    letter-spacing: $lspacing; // по умолчанию normal
+    font-size: $fsize;
+    font-weight: $fweight;
+    line-height: $lheight; // по умолчанию normal
+}
+
+@mixin textStyleA ($color, $family, $lspacing, $size, $weight, $lheight, $align) {
+    color: $color;
+    font-family: $family;
+    letter-spacing: $lspacing; // по умолчанию normal
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lheight; // по умолчанию normal
+    text-align: $align; // по умолчанию start
+}

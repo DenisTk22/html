@@ -1,0 +1,1136 @@
+@import 'zerostyle';
+@import 'vars';
+@import 'mixins';
+@import 'extands';
+@import 'altai';
+@import 'karelia';
+@import 'solovki';
+@import 'feedbacks';
+
+.currentActive {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 500px;
+    z-index: 10;
+    background: #fff;
+
+    &__photo {
+        width: 100%;
+    }
+
+    &__description {
+        color: #000;
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    &__close {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border: 2px solid #fff;
+        padding: 5px;
+        color: #000;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__hidden {
+        display: none;
+    }
+
+    &__dark {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background: rgba($color: #000000, $alpha: 0.5) !important;
+    }
+}
+
+.widthBox {
+    max-width: 250px;
+}
+
+.center {
+    /*центрирование, нужно для планшета*/
+    /* padding-left: calc(50% - 800px); 1600/2, 1600px - ширина сетки */
+    /* padding-right: calc(50% - 800px); */
+    margin: 0 auto;
+}
+
+.container {
+    width: 1440px;
+}
+
+.content {
+    width: 100%;
+}
+
+.burgerMenu {
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    background: none;
+}
+
+.burgerMenuList {
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+.burgerClose {
+        z-index: 5;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        border: 2px solid #000;
+        padding: 5px;
+        color: #000;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+//карусель картинок на главной странице
+.pic-size {
+    width: 100%;
+    height: 250px;
+}
+
+.carousel {
+    position: relative;
+    position: absolute;
+    right: 0;
+    bottom: 65px;
+    width: 400px;
+    margin-right: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-indicators {
+    margin-bottom: 0.5rem; //переопределение свойства
+}
+
+.carousel-caption {
+    padding-bottom: 0.25rem; //переопределение свойства
+    bottom: 1.25rem; //переопределение свойства
+}
+
+.toMainPage {
+    @include textStyle (rgb(49, 49, 49), $LinkFont, 1px, 16px, 400, normal);
+    // color: rgb(49, 49, 49);
+    // font-family: $LinkFont;
+    // letter-spacing: 1px;
+    // font-size: 16px;
+    // font-weight: 400;
+}
+
+.upMainPage {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 2px solid #000;
+    padding: 5px;
+    color: #000;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toMainPage:hover {
+    color: $linkColorHover;
+}
+
+//Главная страница
+.main {
+    position: relative;
+    width: 100%;
+    background: url(../images/myMain.JPG) no-repeat;
+
+    &__burger {
+        display: none;
+    }
+
+    &__navigation {
+        padding-top: 45px;
+        padding-bottom: 55px;
+
+        &_list {
+            display: flex;
+            gap: 50px;
+            padding-right: 150px;
+            justify-content: flex-end;
+            margin-bottom: 0;
+        }
+
+        &_item {
+            @include textStyle ($linkColor, $LinkFont, normal, 16px, 400, 19px);
+            // color: $linkColor;
+            // font-family: $LinkFont;
+            // font-size: 16px;
+            // font-weight: 400;
+            // line-height: 19px;
+            padding: 5px;
+        }
+
+        &_item:hover {
+            color: $linkColorHover;
+        }
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        max-width: 900px;
+        padding-left: $MainPaddingLeft;
+
+        &_quote {
+            @include textStyle (rgb(9, 129, 123), $MainFont, normal, 64px, 900, 64px);
+            // color: rgb(9, 129, 123);
+            // font-family: $MainFont;
+            // font-size: 64px;
+            // font-weight: 900;
+            // line-height: 64px;
+            text-align: left;
+        }
+
+        &_quote-auther {
+            @include textStyle (rgb(39, 85, 83), $MainFont, normal, 48px, 900, 64px);
+            // color: rgb(39, 85, 83);
+            // font-family: $MainFont;
+            // font-size: 48px;
+            // font-weight: 900;
+            // line-height: 64px;
+            text-align: right;
+            margin-bottom: 135px;
+        }
+
+        &_sentence {
+            max-width: 385px;
+            @include textStyle (rgb(255, 255, 255), $LinkFont, normal, 20px, 400, 28px);
+            // color: rgb(255, 255, 255);
+            // font-family: $LinkFont;
+            // font-size: 20px;
+            // font-weight: 400;
+            // line-height: 28px;
+            text-align: left;
+            margin-bottom: 256px;
+        }
+    }
+
+    &__list {
+        padding-right: 50px;
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &_item {
+            @include textStyle ($linkColor, $LinkFont, normal, 18px, 500, 24px);
+            // color: $linkColor;
+            // font-family: $LinkFont;
+            // font-size: 18px;
+            // font-weight: 500;
+            // line-height: 24px;
+
+            &_hover {
+                padding: 5px;
+            }
+
+            &_hover:hover {
+                color: $linkColorHover;
+            }
+        }
+    }
+}
+
+//Страница Обо мне (about)
+.about {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    background: $backgroundMain;
+
+    &__info {
+        padding-top: $MainPaddingTop;
+        padding-left: $MainPaddingLeft;
+        padding-right: 5px;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 83px;
+    }
+
+    &__title {
+        @include textStyle (rgb(18, 18, 18), $InfoFont, 1px, 48px, 700, 56px);
+        text-align: left;
+        margin-bottom: 0px;
+    }
+
+    &__preview {
+        @include textStyle (rgb(49, 49, 49), $LinkFont, 1px, 24px, 400, 32px);
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        @include textStyle (rgb(49, 49, 49), $LinkFont, 1px, 24px, 400, 24px);
+        text-align: left;
+    }
+}
+
+//Страница Мативация (motivation)
+.motivation {
+    padding-top: $MainPaddingTop;
+    padding-left: $MainPaddingLeft;
+    padding-right: 5px;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 83px;
+    }
+
+    &__title {
+        @include textStyle (rgb(33, 27, 27), $MainFont, 1px, 40px, 700, 50px);
+        text-align: left;
+    }
+
+    &__subtitle {
+        width: 90%;
+        @include textStyle (rgb(49, 49, 49), $MainFont, 1px, 24px, 400, 32px);
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    &__point {
+        width: 90%;
+        margin-bottom: 32px;
+        @include textStyle (rgb(49, 49, 49), $MainFont, 1px, 16px, 400, 24px);
+        text-align: left;
+
+        &_bold {
+            font-weight: 700;
+        }
+    }
+}
+
+//Footer
+.footer {
+    width: 100%;
+    background: #000;
+    padding: 20px 50px 10px $MainPaddingLeft;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+
+        &_links {
+            margin-bottom: 0;
+        }
+
+        &_link {
+            color: $linkColor;
+        }
+
+        &_link:hover {
+            color: $linkColorHover;
+        }
+
+        &_contacts {
+            margin-bottom: 0;
+        }
+
+        &_contact {
+            color: $linkColor;
+        }
+
+        &_contact:hover {
+            color: $linkColorHover;
+        }
+
+        &_email {
+            color: $linkColor;
+        }
+    }
+
+    &__createdBy {
+        @include textStyle (rgb(49, 49, 49), $MainFont, 1px, 16px, 400, 32px);
+        text-align: left;
+        text-align: right;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+    .carousel {
+        max-width: 100%;
+        left: 50%;
+        bottom: 22px;
+        transform: translate(-50%);
+    }
+
+    .main {
+
+        &__navigation {
+            padding-top: 35px;
+            padding-bottom: 45px;
+        }
+
+        &__text {
+
+            &_quote {
+                font-size: 32px;
+                line-height: 32px;
+            }
+
+            &_quote-auther {
+                font-size: 22px;
+                line-height: 22px;
+                margin-bottom: 420px;
+            }
+
+            &_sentence {
+                display: none;
+            }
+        }
+    }
+
+    .about {
+
+        &__info {
+            padding-top: 20px;
+            padding-left: 30px;
+            width: 50%;
+        }
+
+        &__nav {
+            margin-bottom: 0;
+        }
+
+        &__title {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
+        &__preview {
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+
+        &__photobox {
+            width: 50%;
+        }
+
+        &__photo {
+            width: 100%;
+        }
+    }
+
+    .motivation {
+        padding-left: 20px;
+
+        &__nav {
+            margin-bottom: 0;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
+
+    .altai {
+
+        &__main {
+            padding-left: 20px;
+        }
+
+        &__nav {
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            // width: 80%;
+        }
+
+        &__my-travels {
+            margin-top: 100px;
+            padding-left: 0;
+        }
+
+        &__horseTravel-days {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &__horseTravel {
+        
+            &_title {
+                padding-left: 20px;
+            }
+        
+            &_text {
+                padding-left: 20px;
+                width: 95%;
+            }
+        }
+
+        &__raftingKatun-places {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        &__raftingKatun_title {
+            padding-left: 20px;
+        }
+
+        &__raftingKatun_text {
+            padding-left: 20px;
+            width: 95%;
+        }
+    }
+
+    .karelia {
+
+        &__main {
+            padding-left: 20px;
+        }
+
+        &__nav {
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+        }
+
+        &__my-travels {
+            padding-left: 0px;
+        }
+
+        &__splavChirkaKem-days {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &__splavChirkaKem_title {
+            padding-left: 20px;
+        }
+
+        &__splavChirkaKem_text {
+            padding-left: 20px;
+            width: 95%;
+        }
+
+        &__kem-places {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        &__kem_title {
+            padding-left: 20px;
+        }
+
+        &__kem_text {
+            padding-left: 20px;
+            width: 95%;
+        }
+    }
+
+    .solovki {
+
+        &__main {
+            padding-left: 20px;
+        }
+
+        &__nav {
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+        }
+
+        &__my-travels {
+            padding-left: 0px;
+        }
+
+        &__trip2023-places {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        &__trip2023_title {
+            padding-left: 20px;
+        }
+
+        &__trip2023_text {
+            padding-left: 20px;
+            width: 95%;
+        }
+    }
+
+    .nizhobl {
+
+        &__main {
+            padding-left: 20px;
+        }
+
+        &__nav {
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+        }
+
+        &__my-travels {
+            padding-left: 0px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .main {
+
+        &__burger {
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+
+        &__navigation {
+            display: none;
+        }
+
+        &__text {
+            display: none;
+        }
+
+        &__block {
+            padding-top: 30px;
+            padding-bottom: 340px;
+        }
+    }
+
+    .about {
+
+        &__info {
+            padding-left: 20px;
+        }
+
+        &__title {
+            font-size: 28px;
+            line-height: 28px;
+            margin-bottom: 5px;
+        }
+
+        &__preview {
+            line-height: 18px;
+            text-align: justify;
+            font-size: 16px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    .motivation {
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .altai {
+
+        &__main {
+            padding-top: 20px;
+            height: 100%;
+            padding-bottom: 110px;
+        }
+
+        &__title {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            width: 95%;
+            padding-left: 20px;
+        }
+
+        &__horseTravel {
+
+            &_title {
+                font-size: 32px;
+                line-height: 38px;
+                padding-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            &_text {
+                padding-left: 20px;
+                text-align: justify;
+            }
+        }
+
+        &__horseTravel-days {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__raftingKatun {
+
+            &_title {
+                font-size: 32px;
+                line-height: 38px;
+                padding-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            &_text {
+                padding-left: 20px;
+                text-align: justify;
+            }
+        }
+    }
+
+    .karelia {
+
+        &__main {
+            padding-top: 20px;
+            height: 100%;
+            padding-bottom: 110px;
+        }
+
+        &__title {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            width: 95%;
+            padding-left: 20px;
+        }
+
+        &__splavChirkaKem {
+
+            &_title {
+                font-size: 32px;
+                line-height: 38px;
+                padding-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            &_text {
+                padding-left: 20px;
+                text-align: justify;
+            }
+        }
+
+        &__splavChirkaKem-days {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__kem {
+
+            &_title {
+                font-size: 32px;
+                line-height: 38px;
+                padding-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            &_text {
+                padding-left: 20px;
+                text-align: justify;
+            }
+        }
+    }
+
+    .solovki {
+
+        &__main {
+            padding-top: 20px;
+            height: 100%;
+            padding-bottom: 110px;
+        }
+
+        &__title {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            width: 95%;
+            padding-left: 20px;
+        }
+
+        &__trip2023 {
+
+            &_title {
+                font-size: 32px;
+                line-height: 38px;
+                padding-left: 20px;
+                margin-bottom: 20px;
+            }
+
+            &_text {
+                padding-left: 20px;
+                text-align: justify;
+            }
+        }
+    }
+
+    .nizhobl {
+
+        &__main {
+            padding-top: 20px;
+            height: 100%;
+            padding-bottom: 110px;
+        }
+
+        &__title {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            width: 95%;
+            padding-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+
+    .feedbackTravel {
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+
+        &__info {
+            width: 100%;
+            padding-left: 5px;
+        }
+
+        &__title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            text-align: justify;
+        }
+
+        &__photobox {
+            width: 100%;
+        }
+    }
+
+    .motivation {
+        padding-left: 5px;
+
+        &__title {
+            width: 100%;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &__subtitle {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &__point {
+            width: 100%;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+    }
+
+    .altai {
+
+        &__main {
+            padding-right: 5px;
+        }
+
+        &__title {
+            width: 100%;
+            padding-left: 5px;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        &__text {
+            width: 100%;
+            padding-left: 5px;
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__my-travels {
+            margin-top: 50px;
+            padding-left: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__horseTravel {
+            padding-top: 20px;
+            padding-right: 5px;
+
+            &_title {
+                padding-left: 5px;
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            &_text {
+                width: 100%;
+                padding-left: 5px;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__horseTravel-days {
+            grid-template-columns: 1fr;
+        }
+
+        &__raftingKatun {
+            padding-top: 20px;
+            padding-right: 5px;
+
+            &_title {
+                padding-left: 5px;
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            &_text {
+                width: 100%;
+                padding-left: 5px;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__raftingKatun-places {
+            justify-content: center;
+        }
+    }
+
+    .karelia {
+
+        &__main {
+            padding-right: 5px;
+            padding-bottom: 11px;
+        }
+
+        &__title {
+            width: 100%;
+            padding-left: 5px;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            width: 100%;
+            padding-left: 5px;
+            text-align: justify;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__my-travels {
+            padding-left: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__splavChirkaKem {
+            padding-top: 20px;
+            padding-right: 5px;
+
+            &_title {
+                padding-left: 5px;
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            &_text {
+                width: 100%;
+                padding-left: 5px;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__splavChirkaKem-days {
+            grid-template-columns: 1fr;
+        }
+
+        &__kem {
+            padding-top: 20px;
+            padding-right: 5px;
+
+            &_title {
+                padding-left: 5px;
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            &_text {
+                width: 100%;
+                padding-left: 5px;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__kem-places {
+            justify-content: center;
+        }
+    }
+
+    .solovki {
+
+        &__main {
+            padding-right: 5px;
+            padding-bottom: 11px;
+        }
+
+        &__title {
+            width: 100%;
+            padding-left: 5px;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            width: 100%;
+            padding-left: 5px;
+            text-align: justify;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__my-travels {
+            padding-left: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__trip2023 {
+            padding-top: 20px;
+            padding-right: 5px;
+
+            &_title {
+                padding-left: 5px;
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            &_text {
+                width: 100%;
+                padding-left: 5px;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__trip2023-places {
+            justify-content: center;
+        }
+
+    }
+
+    .nizhobl {
+
+        &__main {
+            padding-right: 5px;
+            padding-bottom: 11px;
+        }
+
+        &__title {
+            width: 100%;
+            padding-left: 5px;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            width: 100%;
+            padding-left: 5px;
+            text-align: justify;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__my-travels {
+            padding-left: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    .footer {
+        padding: 10px 5px 10px 5px;
+    }
+}

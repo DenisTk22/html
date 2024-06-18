@@ -1,0 +1,183 @@
+//Страница Путешествия на Алтай
+.altai {
+
+    &__main {
+        padding: $MainPaddingTop $MainPaddingRight $MainPaddingBottom $MainPaddingLeft;
+        background: url(../images/altai.jpg) no-repeat;
+        background-size: contain;
+        background-size: cover;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 83px;
+    }
+
+    &__title {
+        @include textStyleA (rgb(33, 33, 33), $MainFont, 1px, 40px, 700, 50px, left);
+    }
+
+    &__text {
+        width: 80%;
+        margin-bottom: 32px;
+        @include textStyleA ($textColor, $MainFont, 1px, 16px, 700, 24px, left);
+        @extend .testBackGround;
+    }
+
+    &__my-travels {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__travel {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_name {
+            z-index: 1;
+            margin-bottom: -25px;
+            @include textStyle (rgb(194, 183, 183), $MainFont, 1px, 16px, 400, 24px, start);
+        }
+
+        &_photo {
+            width: 100%;
+            border: 2px solid $linkColor;
+            border-radius: 0 0 50% 50%;
+        }
+
+        &_photo:hover {
+            border: 2px solid $linkColorHover;
+        }
+
+        &_shortDescription {
+            width: 95%;
+            @include textStyleA (rgb(194, 183, 183), $MainFont, 1px, 16px, 400, 24px, center);
+        }
+    }
+
+    &__horseTravel {
+        padding-top: $MainPaddingTop;
+
+        &_title {
+            padding-left: $MainPaddingLeft;
+            padding-bottom: $MainPaddingBottom;
+            padding-right: $MainPaddingRight;
+            margin-bottom: 0;
+
+            @include textStyleA (rgb(33, 33, 33), $MainFont, 1px, 40px, 700, 50px, center);
+        }
+
+        &_text {
+            padding-left: $MainPaddingLeft;
+            padding-right: $MainPaddingRight;
+            margin-bottom: 30px;
+
+            @include textStyleA (rgb(33, 33, 33), $MainFont, 1px, 16px, 400, 24px, justify);
+        }
+    }
+
+    &__horseTravel-days {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        justify-items: center;
+        background: $backgroundMain;
+    }
+
+    &__horseTravel-day {
+        border-radius: 5px;
+        box-shadow: 0 0 5px #888;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+
+        @include textStyleA (rgb(49, 49, 49), $MainFont, 1px, 16px, 400, 24px, center);
+
+        &_photo {
+            width: 100%;
+        }
+
+        &_photo:hover {
+            transform: scale(1.2);
+            transition-duration: 500ms;
+        }
+
+        &_location {
+            padding: 5px;
+        }
+
+        &_shortDescription {
+            padding: 5px;
+        }
+    }
+
+    &__raftingKatun {
+        padding-top: $MainPaddingTop;
+
+        &_title {
+            padding-left: $MainPaddingLeft;
+            padding-bottom: $MainPaddingBottom;
+            padding-right: $MainPaddingRight;
+            margin-bottom: 0;
+
+            @include textStyleA (rgb(33, 33, 33), $MainFont, 1px, 40px, 700, 50px, center);
+        }
+
+        &_text {
+            padding-left: $MainPaddingLeft;
+            padding-right: $MainPaddingRight;
+            margin-bottom: 30px;
+
+            @include textStyleA (rgb(33, 33, 33), $MainFont, 1px, 16px, 400, 24px, justify);
+        }
+
+        &_videos {
+            background: $backgroundMain;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        &_video1 {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__raftingKatun-places {
+        position: relative;
+        display: flex;
+        padding: 25px 30px;
+        justify-content: space-between;
+        background: $backgroundMain;
+    }
+
+    &__raftingKatun-place {
+        border-radius: 5px;
+        box-shadow: 0 0 5px #888;
+
+        &_photo {
+            width: 100%;
+            height: 155px;
+        }
+
+        &_photo:hover {
+            transform: scale(1.13);
+            transition-duration: 500ms;
+        }
+
+        &_shortDescription {
+            text-align: center;
+            padding: 5px;
+
+            @include textStyleA (rgb(49, 49, 49), $MainFont, 1px, 16px, 400, 24px, start);
+        }
+    }
+}

@@ -1,0 +1,117 @@
+//Страница Путешествие на остров Соловки
+.solovki {
+
+    &__main {
+        padding: $MainPaddingTop $MainPaddingRight $MainPaddingBottom $MainPaddingLeft;
+        background: url(../images/solovkiMain.jpg) no-repeat;
+        background-size: contain;
+        background-size: cover;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 83px;
+    }
+
+    &__title {
+        @include textStyle (rgb(33, 33, 33), $MainFont, 1px, 40px, 700, 50px);
+        text-align: left;
+    }
+
+    &__text {
+        width: 80%;
+        margin-bottom: 32px;
+        @include textStyle ($textColor, $MainFont, 1px, 16px, 700, 24px);
+        text-align: left;
+        @extend .testBackGround;
+    }
+
+    &__my-travels {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__travel {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_name {
+            z-index: 1;
+            margin-bottom: -25px;
+            @include textStyle (rgb(194, 183, 183), $MainFont, 1px, 16px, 400, 24px);
+        }
+
+        &_photo {
+            width: 100%;
+            border: 2px solid $linkColor;
+            border-radius: 0 0 50% 50%;
+        }
+
+        &_photo:hover {
+            border: 2px solid $linkColorHover;
+        }
+
+        &_shortDescription {
+            width: 95%;
+            text-align: center;
+            @include textStyle (rgb(194, 183, 183), $MainFont, 1px, 16px, 400, 24px);
+        }
+    }
+
+    &__trip2023 {
+        padding-top: $MainPaddingTop;
+
+        &_title {
+            padding-left: $MainPaddingLeft;
+            padding-bottom: $MainPaddingBottom;
+            padding-right: $MainPaddingRight;
+            margin-bottom: 0;
+
+            @include textStyle (rgb(33, 33, 33), $MainFont, 1px, 40px, 700, 50px);
+            text-align: center;
+        }
+
+        &_text {
+            padding-left: $MainPaddingLeft;
+            padding-right: $MainPaddingRight;
+            margin-bottom: 30px;
+
+            @include textStyle (rgb(33, 33, 33), $MainFont, 1px, 16px, 400, 24px);
+            text-align: justify;
+        }
+    }
+
+    &__trip2023-places {
+        position: relative;
+        display: flex;
+        padding: 25px 30px;
+        justify-content: space-between;
+        background: $backgroundMain;
+    }
+
+    &__trip2023-place {
+        // width: 250px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #888;
+
+        &_photo {
+            width: 100%;
+            height: 155px;
+        }
+
+        &_photo:hover {
+            transform: scale(1.13);
+            transition-duration: 500ms;
+        }
+
+        &_shortDescription {
+            text-align: center;
+            padding: 5px;
+
+            @include textStyle (rgb(49, 49, 49), $MainFont, 1px, 16px, 400, 24px);
+        }
+    }
+}
