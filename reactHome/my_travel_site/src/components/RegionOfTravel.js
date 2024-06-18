@@ -1,6 +1,6 @@
 
 
-export default function RegionOfTravel({ id, title }) { //altai
+export default function RegionOfTravel({ id, title, text1, text2 }) { //altai
     return (
         <section id={id} className={id}>
             <div className={`${id}__main`}>
@@ -11,13 +11,10 @@ export default function RegionOfTravel({ id, title }) { //altai
                     </a>
                 </div>
                 <p className={`${id}__text`}>
-                    {/* {text1} */}
+                    {text1}
                 </p>
                 <p className={`${id}__text`}>
-                    Одна из самых удивительных достопримечательностей Алтая - река Катунь.
-                    Быстрая и холодная, она может одновременно и манить тебя своим очарованием
-                    и в тоже время быть опасной и непредсказуемой. К Катуне во все времена
-                    относились с глубочайшим уважением и почтением.
+                    {text2}
                 </p>
                 <div className={`${id}__my-travels`}>
                     {/* блок формируется файлом altai.js, altaiTravels */}
