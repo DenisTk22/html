@@ -1,5 +1,9 @@
 import './App.css';
-import './css/style.css'
+import './css/fontawesome/css/all.min.css'
+import './css/style.css';
+
+
+
 import MainPage from './components/MainPage';
 import AboutPage from './components/AboutPage';
 import MotivationPage from './components/MotivationPage';
@@ -11,11 +15,12 @@ import {AltaiText2} from './texts/RegionOfTravelText';
 import {KareliaText} from './texts/RegionOfTravelText';
 import {SolovkiText} from './texts/RegionOfTravelText';
 
-import AltaiHorseTravelText from './texts/AltaiHorseTravelText';
-import AltaiRaftingKatunText from './texts/AltaiRaftingKatunText';
-import KareliaSplavChirkaKemText from './texts/KareliaSplavChirkaKemText';
-import KareliaKemText from './texts/KareliaKemText';
-import Solovki23Text from './texts/Solovki23Text';
+import {AltaiHorseTravelText} from './texts/LocalTravelText';
+import {AltaiRaftingKatunText} from './texts/LocalTravelText';
+import {KareliaSplavChirkaKemText} from './texts/LocalTravelText';
+import {KareliaKemText} from './texts/LocalTravelText';
+import {Solovki23Text} from './texts/LocalTravelText';
+
 import LocalTravel from './components/LocalTravel';
 
 
@@ -28,6 +33,22 @@ function App() {
   const kareliaId = 'karelia';
   const solovkiId = 'solovki';
 
+  const altaiTitle = 'Алтай';
+  const kareliaTitle = 'Карелия';
+  const solovkiTitle = 'Соловки';
+
+  const horseId = 'altai__horseTravel';
+  const raftKatunId = 'altai__raftingKatun';
+  const splavKemId = 'karelia__splavChirkaKem';
+  const kemId = 'karelia__kem';
+  const solovki23Id = 'solovki__trip2023';
+
+  const horseTitle = 'Конный поход, Алтай, июль - август 2022 год';
+  const raftKatunTitle = 'Сплав на рафтах, река Катунь, август 2022 год';
+  const splavKemTitle = 'Сплав на байдарках, река Чирка-Кемь, август 2023 год';
+  const kemTitle = 'городок Кемь, август 2023 год';
+  const solovki23Title = 'Остров Соловки, 2023 год';  
+
   const altaiText1 = <AltaiText1 id={altaiId} />
   const altaiText2 = <AltaiText2 id={altaiId}/>
   const kareliaText = <KareliaText id={kareliaId} />
@@ -38,13 +59,13 @@ function App() {
   const kareliaKemText = <KareliaKemText />
   const solovki23Text = <Solovki23Text/>
 
-  const altaiHorseTravel = <LocalTravel id='altai__horseTravel' title='Конный поход, Алтай, июль - август 2022 год' text={altaiHorseTravelText}/>
-  const altaiRaftingKatunTravel = <LocalTravel id='altai__raftingKatun' title='Сплав на рафтах, река Катунь, август 2022 год' text={altaiRaftingKatunText}/>
+  const altaiHorseTravel = <LocalTravel id={horseId} title={horseTitle} text={altaiHorseTravelText}/>
+  const altaiRaftingKatunTravel = <LocalTravel id={raftKatunId} title={raftKatunTitle} text={altaiRaftingKatunText}/>
 
-  const splavChirkaKem = <LocalTravel id='karelia__splavChirkaKem' title='Сплав на байдарках, река Чирка-Кемь, август 2023 год' text={kareliaSplavChirkaKemText}/>
-  const kareliaKem = <LocalTravel id='karelia__kem' title='городок Кемь, август 2023 год' text={kareliaKemText} />
+  const splavChirkaKem = <LocalTravel id={splavKemId} title={splavKemTitle} text={kareliaSplavChirkaKemText}/>
+  const kareliaKem = <LocalTravel id={kemId} title={kemTitle} text={kareliaKemText} />
 
-  const solovki23 = <LocalTravel id='solovki__trip2023' title='Остров Соловки, 2023 год' text={solovki23Text} />
+  const solovki23 = <LocalTravel id={solovki23Id} title={solovki23Title} text={solovki23Text} />
  
   return (
     <div className="container center">
@@ -52,9 +73,9 @@ function App() {
         <MainPage id={mainId} />
         <AboutPage id={aboutId} />
         <MotivationPage id={motivationId} />
-        <RegionOfTravel id={altaiId} title='Алтай' text={[altaiText1, altaiText2]} local_travel={[altaiHorseTravel, altaiRaftingKatunTravel]} />
-        <RegionOfTravel id={kareliaId} title='Карелия' text={[kareliaText]} local_travel={[splavChirkaKem, kareliaKem]}/>
-        <RegionOfTravel id={solovkiId} title='Соловки' text={[solovkiText]} local_travel={[solovki23]} />
+        <RegionOfTravel id={altaiId} title={altaiTitle} text={[altaiText1, altaiText2]} local_travel={[altaiHorseTravel, altaiRaftingKatunTravel]} />
+        <RegionOfTravel id={kareliaId} title={kareliaTitle} text={[kareliaText]} local_travel={[splavChirkaKem, kareliaKem]}/>
+        <RegionOfTravel id={solovkiId} title={solovkiTitle} text={[solovkiText]} local_travel={[solovki23]} />
         <Footer id={footerId} />
       </div>
     </div>

@@ -1,3 +1,4 @@
+// @import '~bootstrap/scss/bootstrap';
 @import 'zerostyle';
 @import 'vars';
 @import 'mixins';
@@ -486,9 +487,9 @@
             margin-bottom: 20px;
         }
 
-        &__text {
-            // width: 80%;
-        }
+        // &__text {
+        //     // width: 80%;
+        // }
 
         &__my-travels {
             margin-top: 100px;

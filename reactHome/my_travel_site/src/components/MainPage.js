@@ -1,4 +1,4 @@
-import Carousel from "./Carousel";
+import CarouselR from "./CarouselBootstrapReact";
 
 export default function MainPage({ id }) { // id = 'main'
     return (
@@ -34,7 +34,7 @@ export default function MainPage({ id }) { // id = 'main'
                 </ul>
             </div>
             {/* <!-- Слайдер карусель --> */}
-            <Carousel />
+            <CarouselR />
         </main>
     )
 }
