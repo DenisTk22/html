@@ -1,6 +1,6 @@
 export default function Footer({id}) { //footer
     return (
-        <footer id={id} class={id}>
+        <footer id={id} className={id}>
             <nav className={`${id}__nav`}>
                 <ul className={`${id}__nav_links`}>
                     <li>
@@ -29,7 +29,7 @@ export default function Footer({id}) { //footer
                     <li className={`${id}__nav_email`}>Моя почта: allpost-s@ya.ru</li>
                 </ul>
             </nav>
-            <p class={`${id}__createdBy`}>2024 год</p>
+            <p className={`${id}__createdBy`}>2024 год</p>
         </footer>
     );
 }

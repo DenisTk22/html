@@ -1,7 +1,5 @@
 
-
-export default function RegionOfTravel({ id, title, text1, text2, local_travel }) { //altai
-
+export default function RegionOfTravel({ id, title, text, local_travel }) { //altai
     return (
         <section id={id} className={id}>
             <div className={`${id}__main`}>
@@ -11,22 +9,12 @@ export default function RegionOfTravel({ id, title, text1, text2, local_travel }
                         На главную страницу
                     </a>
                 </div>
-                <p className={`${id}__text`}>
-                    {text1}
-                </p>
-                <p className={`${id}__text`}>
-                    {text2}
-                </p>
+                {text}
                 <div className={`${id}__my-travels`}>
                     {/* блок формируется файлом altai.js, altaiTravels */}
                 </div>
             </div>
-            <>
-               {local_travel.forEach((el) => {
-                    return el;
-                })}
-            </>
-
+            {local_travel}
         </section>
 
     )
