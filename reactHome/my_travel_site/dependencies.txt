@@ -1,0 +1,5 @@
+npx create-react-app .  - создание react приложения
+npm start  - запуск проекта
+npm install react-scripts --save-dev  - если проблема со скриптами
+npm install -g react-devtools  - установка devtools
+npm install react-bootstrap bootstrap  - установка bootstrap

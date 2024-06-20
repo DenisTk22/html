@@ -1,4 +1,3 @@
-// @import '~bootstrap/scss/bootstrap';
 @import 'zerostyle';
 @import 'vars';
 @import 'mixins';
@@ -116,7 +115,7 @@
 }
 
 .carousel {
-    position: relative;
+    // position: relative;
     position: absolute;
     right: 0;
     bottom: 65px;
@@ -131,7 +130,7 @@
 }
 
 .carousel-caption {
-    padding-bottom: 0.25rem; //переопределение свойства
+    padding-bottom: 0rem; //переопределение свойства
     bottom: 1.25rem; //переопределение свойства
 }
 
