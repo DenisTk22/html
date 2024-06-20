@@ -2,8 +2,6 @@ import './App.css';
 import './css/fontawesome/css/all.min.css'
 import './css/style.css';
 
-
-
 import MainPage from './components/MainPage';
 import AboutPage from './components/AboutPage';
 import MotivationPage from './components/MotivationPage';
@@ -22,7 +20,6 @@ import {KareliaKemText} from './texts/LocalTravelText';
 import {Solovki23Text} from './texts/LocalTravelText';
 
 import LocalTravel from './components/LocalTravel';
-
 
 function App() {
   const mainId = 'main';
