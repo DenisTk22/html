@@ -19,8 +19,8 @@ import {KareliaSplavChirkaKemText} from './texts/LocalTravelText';
 import {KareliaKemText} from './texts/LocalTravelText';
 import {Solovki23Text} from './texts/LocalTravelText';
 
-import Medal from './components/Medal';
-import solovkiTravels from './json/solovkiTravels';
+// import Medal from './components/Medal';
+// import solovkiTravels from './json/solovkiTravels.json';
 
 import LocalTravel from './components/LocalTravel';
 
@@ -59,7 +59,7 @@ function App() {
   const kareliaKemText = <KareliaKemText />
   const solovki23Text = <Solovki23Text/>
 
-  const solovkiMedalA = <Medal id={solovkiId} travels={solovkiTravels}/>
+  // const solovkiMedalA = <Medal id={solovkiId} travels={solovkiTravels}/>
 
   const altaiHorseTravel = <LocalTravel id={horseId} title={horseTitle} text={altaiHorseTravelText}/>
   const altaiRaftingKatunTravel = <LocalTravel id={raftKatunId} title={raftKatunTitle} text={altaiRaftingKatunText}/>
@@ -77,7 +77,7 @@ function App() {
         <MotivationPage id={motivationId} />
         <RegionOfTravel id={altaiId} title={altaiTitle} text={[altaiText1, altaiText2]} medal={[]} local_travel={[altaiHorseTravel, altaiRaftingKatunTravel]} />
         <RegionOfTravel id={kareliaId} title={kareliaTitle} text={[kareliaText]} medal={[]} local_travel={[splavChirkaKem, kareliaKem]}/>
-        <RegionOfTravel id={solovkiId} title={solovkiTitle} text={[solovkiText]} medal={[solovkiMedalA]} local_travel={[solovki23]} />
+        <RegionOfTravel id={solovkiId} title={solovkiTitle} text={[solovkiText]} medal={[]} local_travel={[solovki23]} />
         <Footer id={footerId} />
       </div>
     </div>

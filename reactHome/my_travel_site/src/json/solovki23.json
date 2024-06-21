@@ -1,5 +1,4 @@
-// Остров Соловки 2023, solovki
-const solovki23 = `[
+[
     {
         "id": "1",
         "Photo": "./images/solovkiBut1.jpg",
@@ -24,6 +23,4 @@ const solovki23 = `[
         "ShortDescription": "Хоть это и остров, но и там есть бескрайние леса и озера",
         "Description": "Смотря в даль и видя этот уходящий в горизонт лес совсем забываешь что находишься на острове."
     }
-]`
-
-export default solovki23;
+]

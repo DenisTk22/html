@@ -12,7 +12,7 @@ export default function RegionOfTravel({ id, title, text, medal, local_travel })
                 {text}
                 
                 <div className={`${id}__my-travels`}>
-                    {medal}
+                    {/* {medal} */}
                     {/* блок формируется файлом altai.js, altaiTravels */}
                 </div>
             </div>
