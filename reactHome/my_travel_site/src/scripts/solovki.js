@@ -1,5 +1,4 @@
 //Путешествия на Соловки
-
 import solovkiTravels from '../json/solovkiTravels';
 import solovki23 from '../json/solovki23';
 

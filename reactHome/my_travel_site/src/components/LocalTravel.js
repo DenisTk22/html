@@ -1,6 +1,5 @@
 
-
-export default function LocalTravel({ id, title, text}) { //altai__horseTravel Конный поход, Алтай, июль - август 2022 год
+export default function LocalTravel({ id, title, text, points}) {
     return (
         <div id={id} className= {`${id} stayYourFeedback`}>
         <h2 className={`${id}_title`}>
@@ -9,9 +8,7 @@ export default function LocalTravel({ id, title, text}) { //altai__horseTravel �
         <p className={`${id}_text`}>
             {text}
         </p>
-        <div id={`${id}-days`} className={`${id}-days`}>
-            {/* блок формируется файлом altai.js, horseTravel */}
-        </div>
+        {points}
         <form action="#" className="feedbackTravel">
             <input
                 name={id}
