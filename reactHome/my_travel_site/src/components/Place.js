@@ -10,8 +10,8 @@ export default function Place({ id, places, photo }) {
         </div>
     )
     return (
-        <>
+        <div id={`${id}-places`} class={`${id}-places`}>
             {TravelPlaces}
-        </>
+        </div>
     )
 }

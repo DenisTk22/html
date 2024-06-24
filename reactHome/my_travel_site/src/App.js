@@ -1,5 +1,4 @@
-import './App.css';
-import './css/fontawesome/css/all.min.css'
+import './css/fontawesome/css/all.min.css';
 import './css/style.css';
 
 import MainPage from './components/MainPage';
@@ -10,18 +9,11 @@ import Footer from './components/Footer';
 import Day from './components/Day';
 import Place from './components/Place';
 
-import {AltaiText1} from './texts/RegionOfTravelText';
-import {AltaiText2} from './texts/RegionOfTravelText';
-import {KareliaText} from './texts/RegionOfTravelText';
-import {SolovkiText} from './texts/RegionOfTravelText';
-
-import {AltaiHorseTravelText} from './texts/LocalTravelText';
-import {AltaiRaftingKatunText} from './texts/LocalTravelText';
-import {KareliaSplavChirkaKemText} from './texts/LocalTravelText';
-import {KareliaKemText} from './texts/LocalTravelText';
-import {Solovki23Text} from './texts/LocalTravelText';
+import * as regionOfTravelText from './texts/RegionOfTravelText';
+import * as localTravelText from './texts/LocalTravelText';
 
 import Medal from './components/Medal';
+
 import solovkiTravels from './json/solovkiTravels.json';
 import altaiTravels from './json/altaiTravels.json';
 import kareliaTravels from './json/kareliaTravels.json';
@@ -40,15 +32,7 @@ import photoAltaiRaftingKatun from "./images/8taezhnik.jpg";
 import photoKareliaSplavChirkaKem from "./images/kareliaSplav.jpg";
 import photoKareliaKem from "./images/kem1.jpg";
 
-import altaiHorseTravelDay1 from "./images/1suguina.JPG";
-import altaiHorseTravelDay2 from "./images/2muehta.JPG";
-import altaiHorseTravelDay3 from "./images/3waterfall.JPG";
-import altaiHorseTravelDay4 from "./images/4baioukskiy.JPG";
-import altaiHorseTravelDay5 from "./images/5veronica.JPG";
-import altaiHorseTravelDay6 from "./images/6karakolskie.png";
-import altaiHorseTravelDay7 from "./images/7kedrovaya.JPG";
-import altaiHorseTravelDay8 from "./images/8taezhnik.jpg";
-
+import * as points from "./photos/points";
 
 function App() {
   const mainId = 'main';
@@ -75,33 +59,33 @@ function App() {
   const kemTitle = 'городок Кемь, август 2023 год';
   const solovki23Title = 'Остров Соловки, 2023 год';  
 
-  const altaiText1 = <AltaiText1 id={altaiId} />
-  const altaiText2 = <AltaiText2 id={altaiId}/>
-  const kareliaText = <KareliaText id={kareliaId} />
-  const solovkiText = <SolovkiText id={solovkiId} />
-  const altaiHorseTravelText = <AltaiHorseTravelText/>
-  const altaiRaftingKatunText = <AltaiRaftingKatunText/>
-  const kareliaSplavChirkaKemText = <KareliaSplavChirkaKemText/>
-  const kareliaKemText = <KareliaKemText />
-  const solovki23Text = <Solovki23Text/>
+  const altaiText1 = <regionOfTravelText.AltaiText1 id={altaiId} />
+  const altaiText2 = <regionOfTravelText.AltaiText2 id={altaiId}/>
+  const kareliaText = <regionOfTravelText.KareliaText id={kareliaId} />
+  const solovkiText = <regionOfTravelText.SolovkiText id={solovkiId} />
 
-  const altaiHorseTravelDaysRender = <Day id={horseId} days={altaiHorseTravelDays} photo={[altaiHorseTravelDay1, altaiHorseTravelDay2, altaiHorseTravelDay3, altaiHorseTravelDay4, altaiHorseTravelDay5, altaiHorseTravelDay6, altaiHorseTravelDay7, altaiHorseTravelDay8]} />
+  const altaiHorseTravelText = <localTravelText.AltaiHorseTravelText/>
+  const altaiRaftingKatunText = <localTravelText.AltaiRaftingKatunText/>
+  const kareliaSplavChirkaKemText = <localTravelText.KareliaSplavChirkaKemText/>
+  const kareliaKemText = <localTravelText.KareliaKemText />
+  const solovki23Text = <localTravelText.Solovki23Text/>
+
+  const altaiHorseTravelDaysRender = <Day id={horseId} days={altaiHorseTravelDays} photo={[points.altaiHorseTravelDay1, points.altaiHorseTravelDay2, points.altaiHorseTravelDay3, points.altaiHorseTravelDay4, points.altaiHorseTravelDay5, points.altaiHorseTravelDay6, points.altaiHorseTravelDay7, points.altaiHorseTravelDay8]} />
+  const altaiRaftingKatunPlacesRender = <Place id={raftKatunId} places={altaiRaftingKatunPlaces} photo={[points.altaiRaftingKatunPlace1, points.altaiRaftingKatunPlace2, points.altaiRaftingKatunPlace3, points.altaiRaftingKatunPlace4]} />
+  const kareliaKemPlacesRender = <Place id={kemId} places={kareliaKemPlaces} photo={[points.kareliaKemPlace1, points.kareliaKemPlace2, points.kareliaKemPlace3]} />
+  const kareliaSplavChirkaKemDaysRender = <Day id={splavKemId} days={kareliaSplavChirkaKemDays} photo={[points.kareliaSplavChirkaKemDay1, points.kareliaSplavChirkaKemDay2, points.kareliaSplavChirkaKemDay3, points.kareliaSplavChirkaKemDay4, points.kareliaSplavChirkaKemDay5, points.kareliaSplavChirkaKemDay6, points.kareliaSplavChirkaKemDay7]} />
+  const solovki23PlacesRender = <Place id={solovki23Id} places={solovki23Places} photo={[points.solovki23Place1, points.solovki23Place2, points.solovki23Place3, points.solovki23Place4]} />
 
   const altaiMedals = <Medal id={altaiId} travels={altaiTravels} photo={[photoAltaiHorseTravel, photoAltaiRaftingKatun]} />
-
   const solovkiMedals = <Medal id={solovkiId} travels={solovkiTravels} photo={[photoSolovki2023]}/>
-
   const kareliaMedals = <Medal id={kareliaId} travels={kareliaTravels} photo={[photoKareliaSplavChirkaKem, photoKareliaKem]} />
 
   const altaiHorseTravel = <LocalTravel id={horseId} title={horseTitle} text={altaiHorseTravelText} points={altaiHorseTravelDaysRender}/>
-  const altaiRaftingKatunTravel = <LocalTravel id={raftKatunId} title={raftKatunTitle} text={altaiRaftingKatunText}/>
+  const altaiRaftingKatunTravel = <LocalTravel id={raftKatunId} title={raftKatunTitle} text={altaiRaftingKatunText} points={altaiRaftingKatunPlacesRender}/>
+  const splavChirkaKem = <LocalTravel id={splavKemId} title={splavKemTitle} text={kareliaSplavChirkaKemText} points={kareliaSplavChirkaKemDaysRender}/>
+  const kareliaKem = <LocalTravel id={kemId} title={kemTitle} text={kareliaKemText} points={kareliaKemPlacesRender}/>
+  const solovki23 = <LocalTravel id={solovki23Id} title={solovki23Title} text={solovki23Text} points={solovki23PlacesRender}/>
 
-  const splavChirkaKem = <LocalTravel id={splavKemId} title={splavKemTitle} text={kareliaSplavChirkaKemText}/>
-  const kareliaKem = <LocalTravel id={kemId} title={kemTitle} text={kareliaKemText} />
-
-  const solovki23 = <LocalTravel id={solovki23Id} title={solovki23Title} text={solovki23Text} />
-
- 
   return (
     <div className="container center">
       <div className="content">
