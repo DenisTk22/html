@@ -5,7 +5,7 @@ export default function MainPage({ id }) { // id = 'main'
         <main id={id} className={id}>
             <nav className={`${id}__navigation`}>
                 <ul className={`${id}__navigation_list`}>
-                    <li><a className={`${id}__navigation_item`} href="#about">Обо
+                    <li ><a className={`${id}__navigation_item`} href="#about">Обо
                         мне</a></li>
                     <li><a className={`${id}__navigation_item`}
                         href="#footer">Контакты</a></li>

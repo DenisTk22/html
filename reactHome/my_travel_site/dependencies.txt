@@ -3,3 +3,5 @@ npm start  - запуск проекта
 npm install react-scripts --save-dev  - если проблема со скриптами
 npm install -g react-devtools  - установка devtools
 npm install react-bootstrap bootstrap  - установка bootstrap
+npm install react-dom
+npm install react-router-dom

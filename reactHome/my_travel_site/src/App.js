@@ -1,6 +1,10 @@
 import './css/fontawesome/css/all.min.css';
 import './css/style.css';
 
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { HashRouter, Route, Routes, Link } from "react-router-dom";
+
 import MainPage from './components/MainPage';
 import AboutPage from './components/AboutPage';
 import MotivationPage from './components/MotivationPage';
@@ -87,10 +91,13 @@ function App() {
   const solovki23 = <LocalTravel id={solovki23Id} title={solovki23Title} text={solovki23Text} points={solovki23PlacesRender}/>
 
   return (
-    <div className="container center">
+    <HashRouter>
+      <div className="container center">
       <div className="content">
+          {/* <Link to={`/${mainId}`}><MainPage id={mainId} /></Link> */}
         <MainPage id={mainId} />
-        <AboutPage id={aboutId} />
+          <Link to={`/${aboutId}`}><AboutPage id={aboutId} /></Link>
+        {/* <AboutPage id={aboutId} /> */}
         <MotivationPage id={motivationId} />
         <RegionOfTravel id={altaiId} title={altaiTitle} text={[altaiText1, altaiText2]} medal={[altaiMedals]} local_travel={[altaiHorseTravel, altaiRaftingKatunTravel]} />
         <RegionOfTravel id={kareliaId} title={kareliaTitle} text={[kareliaText]} medal={[kareliaMedals]} local_travel={[splavChirkaKem, kareliaKem]}/>
@@ -98,7 +105,39 @@ function App() {
         <Footer id={footerId} />
       </div>
     </div>
+    <Routes>
+        {/* <Route path={`/${mainId}`} element={<MainPage />} /> */}
+        <Route path={`/${aboutId}`} element={<AboutPage />} />
+    </Routes>
+  </HashRouter>
+
   );
 }
 
 export default App;
+
+// import React from "react";
+// import { HashRouter, Route, Routes, Link } from "react-router-dom";
+// import Home from "./pages/Home";
+// import About from "./pages/About";
+
+// const App = () => {
+//   return (
+//     <HashRouter>
+//       <nav>
+//         <ul>
+//           <li>
+//             <Link to="/home">Home</Link>
+//           </li>
+//           <li>
+//             <Link to="/about">About</Link>
+//           </li>
+//         </ul>
+//       </nav>
+//       <Routes>
+//         <Route path="/home" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//       </Routes>
+//     </HashRouter>
+//   );
+// };
