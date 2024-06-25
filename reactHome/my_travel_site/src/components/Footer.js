@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 // import { HashLink as Link } from 'react-router-hash-link';
 
-import * as ID from "../id/idOfPages";
+import * as pageId from "../id/idOfPages";
 
 export default function Footer({id}) { //footer
     return (
@@ -10,13 +10,13 @@ export default function Footer({id}) { //footer
             <nav className={`${id}__nav`}>
                 <ul className={`${id}__nav_links`}>
                     <li>
-                        <Link className={`${id}__nav_link`} to={`/${ID.mainId}`}>На главную</Link>
+                        <Link className={`${id}__nav_link`} to={`/${pageId.mainId}`}>На главную</Link>
                     </li>
                     <li>
-                        <Link className={`${id}__nav_link`} to={`/${ID.aboutId}`}>Обо мне</Link>
+                        <Link className={`${id}__nav_link`} to={`/${pageId.aboutId}`}>Обо мне</Link>
                     </li>
                     <li>
-                        <Link className={`${id}__nav_link`} to={`/${ID.motivationId}`}>Мотивация</Link>
+                        <Link className={`${id}__nav_link`} to={`/${pageId.motivationId}`}>Мотивация</Link>
                     </li>
                 </ul>
                 <ul className={`${id}__nav_contacts`}>

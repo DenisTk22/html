@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 // import { HashLink as Link } from 'react-router-hash-link';
 
 import CarouselTravel from "./CarouselBootstrapReact";
-import * as ID from "../id/idOfPages";
+import * as pageId from "../id/idOfPages";
 
 export default function MainPage({ id }) { // id = 'main'
     return (
         <main id={id} className={id}>
             <nav className={`${id}__navigation`}>
                 <ul className={`${id}__navigation_list`}>
-                    <li ><Link to={`/${ID.aboutId}` } className={`${id}__navigation_item`}  >Обо
+                    <li ><Link to={`/${pageId.aboutId}` } className={`${id}__navigation_item`}  >Обо
                         мне</Link></li>
-                    <li ><Link to={`/${ID.footerId}`} className={`${id}__navigation_item`}
+                    <li ><Link to={`/${pageId.footerId}`} className={`${id}__navigation_item`}
                         >Контакты</Link></li>
-                    <li ><Link to={`/${ID.motivationId}`} className={`${id}__navigation_item`}
+                    <li ><Link to={`/${pageId.motivationId}`} className={`${id}__navigation_item`}
                         >Мотивация</Link></li>
                 </ul>
             </nav>
@@ -31,11 +31,11 @@ export default function MainPage({ id }) { // id = 'main'
                 <ul className={`${id}__list`}>
                     <li className={`${id}__list_item`}>Мои путешествия:</li>
                     <li><Link className={`${id}__list_item ${id}__list_item_hover`}
-                        to={`/${ID.altaiId}`}>Алтай</Link></li>
+                        to={`/${pageId.altaiId}`}>Алтай</Link></li>
                     <li><Link className={`${id}__list_item ${id}__list_item_hover`}
-                        to={`/${ID.kareliaId}`}>Карелия</Link></li>
+                        to={`/${pageId.kareliaId}`}>Карелия</Link></li>
                     <li><Link className={`${id}__list_item ${id}__list_item_hover`}
-                        to={`/${ID.solovkiId}`}>Соловки</Link></li>
+                        to={`/${pageId.solovkiId}`}>Соловки</Link></li>
                 </ul>
             </div>
             {/* <!-- Слайдер карусель --> */}

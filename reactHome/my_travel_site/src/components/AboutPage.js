@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-import * as ID from "../id/idOfPages";
+import * as pageId from "../id/idOfPages";
 
 export default function AboutPage({ id }) { //about
     return (
@@ -9,7 +9,7 @@ export default function AboutPage({ id }) { //about
             <div className={`${id}__info`}>
                 <div className={`${id}__nav`}>
                     <h1 className={`${id}__title`}>Обо мне</h1>
-                    <Link className="toMainPage" to={`/${ID.mainId}`}>
+                    <Link className="toMainPage" to={`/${pageId.mainId}`}>
                         На главную страницу
                     </Link>
                 </div>

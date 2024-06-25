@@ -1,14 +1,14 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 
-import * as ID from "../id/idOfPages";
+import * as pageId from "../id/idOfPages";
 
 export default function MotivationPage({ id }) { // motivation
     return (
         <section id={id} className={id}>
             <div className={`${id}__nav`}>
                 <p className={`${id}__title`}>Мотивация</p>
-                <Link className="toMainPage" to={`/${ID.mainId}`}>
+                <Link className="toMainPage" to={`/${pageId.mainId}`}>
                     На главную страницу
                 </Link>
             </div>
