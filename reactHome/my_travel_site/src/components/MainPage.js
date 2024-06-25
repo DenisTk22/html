@@ -1,3 +1,6 @@
+import * as React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
 import CarouselTravel from "./CarouselBootstrapReact";
 
 export default function MainPage({ id }) { // id = 'main'

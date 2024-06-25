@@ -3,7 +3,7 @@ import './css/style.css';
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { HashRouter, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import MainPage from './components/MainPage';
 import AboutPage from './components/AboutPage';
@@ -91,13 +91,13 @@ function App() {
   const solovki23 = <LocalTravel id={solovki23Id} title={solovki23Title} text={solovki23Text} points={solovki23PlacesRender}/>
 
   return (
-    <HashRouter>
+    <Router>
       <div className="container center">
       <div className="content">
           {/* <Link to={`/${mainId}`}><MainPage id={mainId} /></Link> */}
         <MainPage id={mainId} />
-          <Link to={`/${aboutId}`}><AboutPage id={aboutId} /></Link>
-        {/* <AboutPage id={aboutId} /> */}
+          {/* <Link to={`/${aboutId}`}><AboutPage id={aboutId} /></Link> */}
+        <AboutPage id={aboutId} />
         <MotivationPage id={motivationId} />
         <RegionOfTravel id={altaiId} title={altaiTitle} text={[altaiText1, altaiText2]} medal={[altaiMedals]} local_travel={[altaiHorseTravel, altaiRaftingKatunTravel]} />
         <RegionOfTravel id={kareliaId} title={kareliaTitle} text={[kareliaText]} medal={[kareliaMedals]} local_travel={[splavChirkaKem, kareliaKem]}/>
@@ -106,10 +106,10 @@ function App() {
       </div>
     </div>
     <Routes>
-        {/* <Route path={`/${mainId}`} element={<MainPage />} /> */}
+        <Route path={`/${mainId}`} element={<MainPage />} />
         <Route path={`/${aboutId}`} element={<AboutPage />} />
     </Routes>
-  </HashRouter>
+  </Router>
 
   );
 }
