@@ -3,7 +3,7 @@ import './css/style.css';
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 import MainPage from './components/MainPage';
 import AboutPage from './components/AboutPage';
@@ -37,25 +37,14 @@ import photoKareliaSplavChirkaKem from "./images/kareliaSplav.jpg";
 import photoKareliaKem from "./images/kem1.jpg";
 
 import * as points from "./photos/points";
+import * as pageId from "./id/idOfPages";
+import * as travelId from "./id/idOfTravels";
 
 function App() {
-  const mainId = 'main';
-  const aboutId = 'about';
-  const motivationId = 'motivation';
-  const footerId = 'footer';
-  const altaiId = 'altai';
-  const kareliaId = 'karelia';
-  const solovkiId = 'solovki';
 
   const altaiTitle = 'Алтай';
   const kareliaTitle = 'Карелия';
   const solovkiTitle = 'Соловки';
-
-  const horseId = 'altai__horseTravel';
-  const raftKatunId = 'altai__raftingKatun';
-  const splavKemId = 'karelia__splavChirkaKem';
-  const kemId = 'karelia__kem';
-  const solovki23Id = 'solovki__trip2023';
 
   const horseTitle = 'Конный поход, Алтай, июль - август 2022 год';
   const raftKatunTitle = 'Сплав на рафтах, река Катунь, август 2022 год';
@@ -63,10 +52,10 @@ function App() {
   const kemTitle = 'городок Кемь, август 2023 год';
   const solovki23Title = 'Остров Соловки, 2023 год';  
 
-  const altaiText1 = <regionOfTravelText.AltaiText1 id={altaiId} />
-  const altaiText2 = <regionOfTravelText.AltaiText2 id={altaiId}/>
-  const kareliaText = <regionOfTravelText.KareliaText id={kareliaId} />
-  const solovkiText = <regionOfTravelText.SolovkiText id={solovkiId} />
+  const altaiText1 = <regionOfTravelText.AltaiText1 id={pageId.altaiId} />
+  const altaiText2 = <regionOfTravelText.AltaiText2 id={pageId.altaiId}/>
+  const kareliaText = <regionOfTravelText.KareliaText id={pageId.kareliaId} />
+  const solovkiText = <regionOfTravelText.SolovkiText id={pageId.solovkiId} />
 
   const altaiHorseTravelText = <localTravelText.AltaiHorseTravelText/>
   const altaiRaftingKatunText = <localTravelText.AltaiRaftingKatunText/>
@@ -74,70 +63,46 @@ function App() {
   const kareliaKemText = <localTravelText.KareliaKemText />
   const solovki23Text = <localTravelText.Solovki23Text/>
 
-  const altaiHorseTravelDaysRender = <Day id={horseId} days={altaiHorseTravelDays} photo={[points.altaiHorseTravelDay1, points.altaiHorseTravelDay2, points.altaiHorseTravelDay3, points.altaiHorseTravelDay4, points.altaiHorseTravelDay5, points.altaiHorseTravelDay6, points.altaiHorseTravelDay7, points.altaiHorseTravelDay8]} />
-  const altaiRaftingKatunPlacesRender = <Place id={raftKatunId} places={altaiRaftingKatunPlaces} photo={[points.altaiRaftingKatunPlace1, points.altaiRaftingKatunPlace2, points.altaiRaftingKatunPlace3, points.altaiRaftingKatunPlace4]} />
-  const kareliaKemPlacesRender = <Place id={kemId} places={kareliaKemPlaces} photo={[points.kareliaKemPlace1, points.kareliaKemPlace2, points.kareliaKemPlace3]} />
-  const kareliaSplavChirkaKemDaysRender = <Day id={splavKemId} days={kareliaSplavChirkaKemDays} photo={[points.kareliaSplavChirkaKemDay1, points.kareliaSplavChirkaKemDay2, points.kareliaSplavChirkaKemDay3, points.kareliaSplavChirkaKemDay4, points.kareliaSplavChirkaKemDay5, points.kareliaSplavChirkaKemDay6, points.kareliaSplavChirkaKemDay7]} />
-  const solovki23PlacesRender = <Place id={solovki23Id} places={solovki23Places} photo={[points.solovki23Place1, points.solovki23Place2, points.solovki23Place3, points.solovki23Place4]} />
+  const altaiHorseTravelDaysRender = <Day id={travelId.horseId} days={altaiHorseTravelDays} photo={[points.altaiHorseTravelDay1, points.altaiHorseTravelDay2, points.altaiHorseTravelDay3, points.altaiHorseTravelDay4, points.altaiHorseTravelDay5, points.altaiHorseTravelDay6, points.altaiHorseTravelDay7, points.altaiHorseTravelDay8]} />
+  const altaiRaftingKatunPlacesRender = <Place id={travelId.raftKatunId} places={altaiRaftingKatunPlaces} photo={[points.altaiRaftingKatunPlace1, points.altaiRaftingKatunPlace2, points.altaiRaftingKatunPlace3, points.altaiRaftingKatunPlace4]} />
+  const kareliaKemPlacesRender = <Place id={travelId.kemId} places={kareliaKemPlaces} photo={[points.kareliaKemPlace1, points.kareliaKemPlace2, points.kareliaKemPlace3]} />
+  const kareliaSplavChirkaKemDaysRender = <Day id={travelId.splavKemId} days={kareliaSplavChirkaKemDays} photo={[points.kareliaSplavChirkaKemDay1, points.kareliaSplavChirkaKemDay2, points.kareliaSplavChirkaKemDay3, points.kareliaSplavChirkaKemDay4, points.kareliaSplavChirkaKemDay5, points.kareliaSplavChirkaKemDay6, points.kareliaSplavChirkaKemDay7]} />
+  const solovki23PlacesRender = <Place id={travelId.solovki23Id} places={solovki23Places} photo={[points.solovki23Place1, points.solovki23Place2, points.solovki23Place3, points.solovki23Place4]} />
 
-  const altaiMedals = <Medal id={altaiId} travels={altaiTravels} photo={[photoAltaiHorseTravel, photoAltaiRaftingKatun]} />
-  const solovkiMedals = <Medal id={solovkiId} travels={solovkiTravels} photo={[photoSolovki2023]}/>
-  const kareliaMedals = <Medal id={kareliaId} travels={kareliaTravels} photo={[photoKareliaSplavChirkaKem, photoKareliaKem]} />
+  const altaiMedals = <Medal id={pageId.altaiId} travels={altaiTravels} photo={[photoAltaiHorseTravel, photoAltaiRaftingKatun]} />
+  const solovkiMedals = <Medal id={pageId.solovkiId} travels={solovkiTravels} photo={[photoSolovki2023]}/>
+  const kareliaMedals = <Medal id={pageId.kareliaId} travels={kareliaTravels} photo={[photoKareliaSplavChirkaKem, photoKareliaKem]} />
 
-  const altaiHorseTravel = <LocalTravel id={horseId} title={horseTitle} text={altaiHorseTravelText} points={altaiHorseTravelDaysRender}/>
-  const altaiRaftingKatunTravel = <LocalTravel id={raftKatunId} title={raftKatunTitle} text={altaiRaftingKatunText} points={altaiRaftingKatunPlacesRender}/>
-  const splavChirkaKem = <LocalTravel id={splavKemId} title={splavKemTitle} text={kareliaSplavChirkaKemText} points={kareliaSplavChirkaKemDaysRender}/>
-  const kareliaKem = <LocalTravel id={kemId} title={kemTitle} text={kareliaKemText} points={kareliaKemPlacesRender}/>
-  const solovki23 = <LocalTravel id={solovki23Id} title={solovki23Title} text={solovki23Text} points={solovki23PlacesRender}/>
+  const altaiHorseTravel = <LocalTravel id={travelId.horseId} title={horseTitle} text={altaiHorseTravelText} points={altaiHorseTravelDaysRender}/>
+  const altaiRaftingKatunTravel = <LocalTravel id={travelId.raftKatunId} title={raftKatunTitle} text={altaiRaftingKatunText} points={altaiRaftingKatunPlacesRender}/>
+  const splavChirkaKem = <LocalTravel id={travelId.splavKemId} title={splavKemTitle} text={kareliaSplavChirkaKemText} points={kareliaSplavChirkaKemDaysRender}/>
+  const kareliaKem = <LocalTravel id={travelId.kemId} title={kemTitle} text={kareliaKemText} points={kareliaKemPlacesRender}/>
+  const solovki23 = <LocalTravel id={travelId.solovki23Id} title={solovki23Title} text={solovki23Text} points={solovki23PlacesRender}/>
 
   return (
     <Router>
       <div className="container center">
       <div className="content">
-          {/* <Link to={`/${mainId}`}><MainPage id={mainId} /></Link> */}
-        <MainPage id={mainId} />
-          {/* <Link to={`/${aboutId}`}><AboutPage id={aboutId} /></Link> */}
-        <AboutPage id={aboutId} />
-        <MotivationPage id={motivationId} />
-        <RegionOfTravel id={altaiId} title={altaiTitle} text={[altaiText1, altaiText2]} medal={[altaiMedals]} local_travel={[altaiHorseTravel, altaiRaftingKatunTravel]} />
-        <RegionOfTravel id={kareliaId} title={kareliaTitle} text={[kareliaText]} medal={[kareliaMedals]} local_travel={[splavChirkaKem, kareliaKem]}/>
-        <RegionOfTravel id={solovkiId} title={solovkiTitle} text={[solovkiText]} medal={[solovkiMedals]} local_travel={[solovki23]} />
-        <Footer id={footerId} />
+      <Routes>  
+            <Route path={`/${pageId.mainId}`} element={<MainPage id={pageId.mainId} />} />
+            <Route path={`/${pageId.aboutId}`} element={<AboutPage id={pageId.aboutId} />} />
+            <Route path={`/${pageId.motivationId}`} element={<MotivationPage id={pageId.motivationId} />} />
+
+            <Route path={`/${pageId.altaiId}`} element={<RegionOfTravel id={pageId.altaiId} title={altaiTitle} text={[altaiText1, altaiText2]} medal={[altaiMedals]} local_travel={[altaiHorseTravel, altaiRaftingKatunTravel]} />} />
+
+        {/* <RegionOfTravel id={id.kareliaId} title={kareliaTitle} text={[kareliaText]} medal={[kareliaMedals]} local_travel={[splavChirkaKem, kareliaKem]}/> */}
+            <Route path={`/${pageId.kareliaId}`} element={<RegionOfTravel id={pageId.kareliaId} title={kareliaTitle} text={[kareliaText]} medal={[kareliaMedals]} local_travel={[splavChirkaKem, kareliaKem]} />} />
+
+        {/* <RegionOfTravel id={id.solovkiId} title={solovkiTitle} text={[solovkiText]} medal={[solovkiMedals]} local_travel={[solovki23]} /> */}
+            <Route path={`/${pageId.solovkiId}`} element={<RegionOfTravel id={pageId.solovkiId} title={solovkiTitle} text={[solovkiText]} medal={[solovkiMedals]} local_travel={[solovki23]} />} />
+
+            <Route path={`/${pageId.footerId}`} element={<Footer id={pageId.footerId} />} />
+      </Routes>  
       </div>
     </div>
-    <Routes>
-        <Route path={`/${mainId}`} element={<MainPage />} />
-        <Route path={`/${aboutId}`} element={<AboutPage />} />
-    </Routes>
   </Router>
 
   );
 }
 
 export default App;
-
-// import React from "react";
-// import { HashRouter, Route, Routes, Link } from "react-router-dom";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-
-// const App = () => {
-//   return (
-//     <HashRouter>
-//       <nav>
-//         <ul>
-//           <li>
-//             <Link to="/home">Home</Link>
-//           </li>
-//           <li>
-//             <Link to="/about">About</Link>
-//           </li>
-//         </ul>
-//       </nav>
-//       <Routes>
-//         <Route path="/home" element={<Home />} />
-//         <Route path="/about" element={<About />} />
-//       </Routes>
-//     </HashRouter>
-//   );
-// };

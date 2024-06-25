@@ -1,19 +1,21 @@
 import * as React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import { HashLink as Link } from 'react-router-hash-link';
 
 import CarouselTravel from "./CarouselBootstrapReact";
+import * as ID from "../id/idOfPages";
 
 export default function MainPage({ id }) { // id = 'main'
     return (
         <main id={id} className={id}>
             <nav className={`${id}__navigation`}>
                 <ul className={`${id}__navigation_list`}>
-                    <li ><a className={`${id}__navigation_item`} href="#about">Обо
-                        мне</a></li>
-                    <li><a className={`${id}__navigation_item`}
-                        href="#footer">Контакты</a></li>
-                    <li><a className={`${id}__navigation_item`}
-                        href="#motivation">Мотивация</a></li>
+                    <li ><Link to={`/${ID.aboutId}` } className={`${id}__navigation_item`}  >Обо
+                        мне</Link></li>
+                    <li ><Link to={`/${ID.footerId}`} className={`${id}__navigation_item`}
+                        >Контакты</Link></li>
+                    <li ><Link to={`/${ID.motivationId}`} className={`${id}__navigation_item`}
+                        >Мотивация</Link></li>
                 </ul>
             </nav>
             <div className={`${id}__burger`}><i
@@ -28,12 +30,12 @@ export default function MainPage({ id }) { // id = 'main'
                 </div>
                 <ul className={`${id}__list`}>
                     <li className={`${id}__list_item`}>Мои путешествия:</li>
-                    <li><a className={`${id}__list_item ${id}__list_item_hover`}
-                        href="#altai">Алтай</a></li>
-                    <li><a className={`${id}__list_item ${id}__list_item_hover`}
-                        href="#karelia">Карелия</a></li>
-                    <li><a className={`${id}__list_item ${id}__list_item_hover`}
-                        href="#solovki">Соловки</a></li>
+                    <li><Link className={`${id}__list_item ${id}__list_item_hover`}
+                        to={`/${ID.altaiId}`}>Алтай</Link></li>
+                    <li><Link className={`${id}__list_item ${id}__list_item_hover`}
+                        to={`/${ID.kareliaId}`}>Карелия</Link></li>
+                    <li><Link className={`${id}__list_item ${id}__list_item_hover`}
+                        to={`/${ID.solovkiId}`}>Соловки</Link></li>
                 </ul>
             </div>
             {/* <!-- Слайдер карусель --> */}

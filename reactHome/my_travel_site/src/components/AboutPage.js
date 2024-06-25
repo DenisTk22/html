@@ -1,4 +1,7 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
 
+import * as ID from "../id/idOfPages";
 
 export default function AboutPage({ id }) { //about
     return (
@@ -6,9 +9,9 @@ export default function AboutPage({ id }) { //about
             <div className={`${id}__info`}>
                 <div className={`${id}__nav`}>
                     <h1 className={`${id}__title`}>Обо мне</h1>
-                    <a className="toMainPage" href="#main">
+                    <Link className="toMainPage" to={`/${ID.mainId}`}>
                         На главную страницу
-                    </a>
+                    </Link>
                 </div>
                 <h4 className={`${id}__preview`}>
                     Меня зовут Денис Ткачёв, я живу в Нижнем Новгороде. Я люблю

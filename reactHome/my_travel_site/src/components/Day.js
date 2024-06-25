@@ -1,3 +1,7 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
+
+import * as ID from "../id/idOfPages";
 
 export default function Day({id, days, photo}) {
 

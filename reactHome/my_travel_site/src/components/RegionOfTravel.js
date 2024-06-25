@@ -1,3 +1,7 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
+
+import * as ID from "../id/idOfPages";
 
 export default function RegionOfTravel({ id, title, text, medal, local_travel }) {
     return (
@@ -5,9 +9,9 @@ export default function RegionOfTravel({ id, title, text, medal, local_travel })
             <div className={`${id}__main`}>
                 <div className={`${id}__nav`}>
                     <p className={`${id}__title`}>{title}</p>
-                    <a className="toMainPage" href="#main">
+                    <Link className="toMainPage" to={`/${ID.mainId}`}>
                         На главную страницу
-                    </a>
+                    </Link>
                 </div>
                 {text}
                 {medal}
