@@ -1,7 +1,4 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
-
-import * as ID from "../id/idOfPages";
 
 export default function Medal({ id, travels, photo}) {
 
@@ -9,9 +6,9 @@ export default function Medal({ id, travels, photo}) {
         
         <div class={`${id}__travel`}>
             <p class={`${id}__travel_name`}>{travel.TravelName}</p>
-            <Link class={`${id}__travel_link`} to={travel.Link}>
+            <a class={`${id}__travel_link`} href={travel.Link}>
                 <img class={`${id}__travel_photo`} src={photo[i]} alt={travel.TravelName} />
-            </Link>
+            </a>
             <p class={`${id}__travel_shortDescription`}>{travel.ShortDescription}</p>
         </div>
     )

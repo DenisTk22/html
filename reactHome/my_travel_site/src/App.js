@@ -3,7 +3,9 @@ import './css/style.css';
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+
+import { BrowserRouter as Router, Route, Routes, Redirect} from "react-router-dom";
+// import {  Redirect } from 'react-router';
 
 import MainPage from './components/MainPage';
 import AboutPage from './components/AboutPage';
@@ -84,7 +86,8 @@ function App() {
       <div className="container center">
       <div className="content">
       <Routes>  
-            <Route path={`/${pageId.mainId}`} element={<MainPage id={pageId.mainId} />} />
+      {/* <Redirect from="/" to={`/${pageId.mainId}`} /> */}
+            <Route exact path={`/${pageId.mainId}`} element={<MainPage id={pageId.mainId} />} />
             <Route path={`/${pageId.aboutId}`} element={<AboutPage id={pageId.aboutId} />} />
             <Route path={`/${pageId.motivationId}`} element={<MotivationPage id={pageId.motivationId} />} />
 

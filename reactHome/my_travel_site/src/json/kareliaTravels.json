@@ -3,14 +3,14 @@
         "id": "1",
         "TravelName": "Сплав на байдарках",
         "Photo": "./images/kareliaSplav.jpg",
-        "Link": "karelia__splavChirkaKem",
+        "Link": "#karelia__splavChirkaKem",
         "ShortDescription": "Река Чирка-Кемь, 250 км до полярного круга."
     },
     {
         "id": "2",
         "TravelName": "город Кемь",
         "Photo": "./images/kem1.jpg",
-        "Link": "karelia__kem",
+        "Link": "#karelia__kem",
         "ShortDescription": "Небольшой городок Кемь расположен на берегу Белого моря."
     }
 ]

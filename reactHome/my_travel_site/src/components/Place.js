@@ -1,11 +1,13 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
 
 export default function Place({ id, places, photo }) {
 
     const TravelPlaces = places.map((place, i) =>
         <div class={`${id}-place widthBox`}>
-            <a class={`${id}-place_link`} href={`#${id}-places`}>
+            <Link class={`${id}-place_link`} to={`/${id}-places`}>
                 <img class={`${id}-place_photo`} src={photo[i]} alt={`photo-place${place.id}`} />
-            </a>
+            </Link>
             <p class={`${id}-place_shortDescription`}>{place.ShortDescription}</p>
         </div>
     )
