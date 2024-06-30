@@ -6,8 +6,22 @@ import * as ID from "../id/idOfPages";
 export default function Day({id, days, photo}) {
 
     // Функция получения модального окна
-    const getActivePhoto = (photo, events) => {
-        const blockEvents = photo.parentElement.parentElement.parentElement;
+    const getActivePhoto = (photo, description, number) => {
+
+        return (
+            <>
+                <div class="currentActive">
+                    <img class="currentActive__photo" src={photo} alt={`photo-day${number}`}/>
+                    <p class="currentActive__description">{description}</p>
+                    <button class="currentActive__close">X</button>
+                </div>
+                <div class="currentActive__dark"></div>
+            </>
+        )
+
+
+
+       {/* const blockEvents = photo.parentElement.parentElement.parentElement;
         events.forEach(day => {
             if (Number(day.id) === Number(photo.alt.at(-1))) {
                 const activeEl = document.createElement('div');
@@ -34,8 +48,10 @@ export default function Day({id, days, photo}) {
                 darkingFeeld.classList.add('currentActive__dark');
                 blockEvents.append(darkingFeeld);
             }
-        });
+        }); */}
     };
+
+
 
     // Функция закрытия модального окна
     const closeActivePhoto = (close) => {
@@ -49,9 +65,9 @@ export default function Day({id, days, photo}) {
     const TravelDays = days.map((day, i) =>
             <div className={`${id}-day widthBox`}>
                 <p className={`${id}-day_number`}>{`День ${day.DayNumber}`}</p>
-                <Link className={`${id}-day_link`} to={`/${id}-days`}>
-                <img className={`${id}-day_photo`} onClick={getActivePhoto(photo[i], days)} src={photo[i]} alt={`photo-day${day.DayNumber}`} />
-                </Link>
+                {/* <Link className={`${id}-day_link`} to={`/${id}-days`}> */}
+            <img className={`${id}-day_photo`} onClick={getActivePhoto(photo[i], day.Description, day.DayNumber)} src={photo[i]} alt={`photo-day${day.DayNumber}`} /> {/** onClick={getActivePhoto(photo[i], days)}*/}
+                {/* </Link> */}
                 <p className={`${id}-day_location`}>{day.Location}</p>
                 <p className={`${id}-day_shortDescription`}>{day.ShortDescription}</p>
             </div>
@@ -60,6 +76,7 @@ export default function Day({id, days, photo}) {
     return (
         <div id={`${id}-days`} className={`${id}-days`}>
             {TravelDays}
+            {getActivePhoto}
         </div>
     )
 }
