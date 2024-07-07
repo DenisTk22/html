@@ -1,0 +1,3 @@
+npm create vite@latest  - создание react приложения на vite
+npm i - установка зависимостей
+npm run dev - запуск проекта
