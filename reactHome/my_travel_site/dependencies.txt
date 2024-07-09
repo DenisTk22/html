@@ -6,3 +6,4 @@ npm i react-bootstrap bootstrap  - установка bootstrap
 npm i react-dom
 npm i react-router-dom
 npm i --save react-router-hash-link
+npm i node-sass --save - позволяет импортировать sass

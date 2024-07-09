@@ -1,7 +1,10 @@
 export default function MotivationPointRender({ title, description, id }) {
+
+    const thisIs = 'Это';
+
     return (
         <li className={`${id}__point`}>
-            Это <strong className={`${id}__point_bold`}>{title}</strong> {description}
+            {thisIs} <strong className={`${id}__point_bold`}>{title}</strong> {description}
         </li>
     )
 }

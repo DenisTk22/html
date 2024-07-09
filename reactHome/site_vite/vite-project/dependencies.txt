@@ -1,4 +1,4 @@
 npm create vite@latest  - создание react приложения на vite
 npm i - установка зависимостей
 npm run dev - запуск проекта
-npm i styled-components
+npm i styled-components - позводяет создавать коспоненты со стилями

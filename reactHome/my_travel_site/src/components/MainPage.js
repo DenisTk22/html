@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import CarouselTravel from "./CarouselBootstrapReact";
 import * as pageId from "../id/idOfPages";
+import Button from "./Button/Button";
 
 export default function MainPage({ id }) { // id = 'main'
     return (
@@ -28,6 +29,7 @@ export default function MainPage({ id }) { // id = 'main'
                     <p className={`${id}__text_sentence`}>Отправляясь в путешествие, вы
                         открываете новую главу в своей жизни.</p>
                 </div>
+
                 <ul className={`${id}__list`}>
                     <li className={`${id}__list_item`}>Мои путешествия:</li>
                     <li><Link className={`${id}__list_item ${id}__list_item_hover`}
@@ -37,7 +39,9 @@ export default function MainPage({ id }) { // id = 'main'
                     <li><Link className={`${id}__list_item ${id}__list_item_hover`}
                         to={`/${pageId.solovkiId}`}>Соловки</Link></li>
                 </ul>
+
             </div>
+            <Button>Хочу в поход!</Button>
             {/* <!-- Слайдер карусель --> */}
             <CarouselTravel />
         </main>
