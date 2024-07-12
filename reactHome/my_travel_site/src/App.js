@@ -9,7 +9,6 @@ import AboutPage from './components/AboutPage';
 import MotivationPage from './components/Motivation/MotivationPage';
 import RegionOfTravel from './components/RegionOfTravel';
 import Footer from './components/Footer';
-
 import * as regionOfTravelText from './texts/RegionOfTravelText';
 import * as localTravelText from './texts/LocalTravelText';
 

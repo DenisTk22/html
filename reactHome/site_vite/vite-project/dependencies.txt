@@ -2,3 +2,8 @@ npm create vite@latest  - создание react приложения на vite
 npm i - установка зависимостей
 npm run dev - запуск проекта
 npm i styled-components - позводяет создавать коспоненты со стилями
+
+npm i uniqid - создание уникальных id
+npm i react-loader-spinner - установка loader spinner
+
+npm i redux react-redux --save

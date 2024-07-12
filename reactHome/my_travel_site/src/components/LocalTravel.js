@@ -1,5 +1,7 @@
+import Likes from '../components/Likes/Likes';
+import Title from './Title';
 
-export default function LocalTravel({ id, title, text, points}) {
+export default function LocalTravel({ id, title, text, points }) {
     return (
         <div id={id} className= {`${id} stayYourFeedback`}>
         <h2 className={`${id}_title`}>
@@ -9,6 +11,8 @@ export default function LocalTravel({ id, title, text, points}) {
             {text}
         </p>
         {points}
+        <Title/>
+        <Likes />
         <form action="#" className="feedbackTravel">
             <input
                 name={id}
