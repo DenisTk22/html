@@ -1,5 +1,6 @@
 import Likes from '../components/Likes/Likes';
 import Title from './Title';
+import Comments from './Comments/Comments';
 
 export default function LocalTravel({ id, title, text, points }) {
     return (
@@ -13,7 +14,8 @@ export default function LocalTravel({ id, title, text, points }) {
         {points}
         <Title/>
         <Likes />
-        <form action="#" className="feedbackTravel">
+        <Comments/>
+        {/* <form action="#" className="feedbackTravel">
             <input
                 name={id}
                 className="feedbackTravel__feedback"
@@ -26,6 +28,6 @@ export default function LocalTravel({ id, title, text, points }) {
                 Скрыть отзывы
             </button>
         </form>
-        <ul className="feedbackTravel__listFeedback" />
+        <ul className="feedbackTravel__listFeedback" /> */}
     </div>
 )}

@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {createStore} from 'redux';
+import {thunk} from 'redux-thunk';
+import { createStore, compose, applyMiddleware } from 'redux'; //compose позволит объединить Middleware и redux devtools
 import { rootReducer } from './redux/rootRedicer';
 import { Provider } from 'react-redux'; // свяжет redux и наше приложение
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, compose(
+  applyMiddleware(
+    thunk
+  ),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // можем dispatch ассинхронные события
+))
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

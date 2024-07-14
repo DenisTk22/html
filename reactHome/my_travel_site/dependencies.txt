@@ -12,3 +12,7 @@ npm i uniqid - создание уникальных id
 npm i react-loader-spinner - установка loader spinner
 
 npm i redux react-redux --save
+
+npm i redux-thunk --save - работает как middleware для хранилища
+
+window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() - скопировано в index.js
