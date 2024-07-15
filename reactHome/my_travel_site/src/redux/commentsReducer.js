@@ -10,7 +10,7 @@ const initialState = {
 }
 
 export const commentsReducer = (state = initialState, action) => { // reducer принимает state и actionб а на выходе дает state
-console.log('comments reduser >>>', action);
+// console.log('comments reduser >>>', action);
     switch (action.type) { //ловим тип экшина
 
         case COMMENT_CREATE:
