@@ -22,9 +22,9 @@ export default function Comments(props) {
         dispatch(commentCreate(textComment, id))
     }
 
-    useEffect(() => {
-        dispatch(commentsLoad());
-    }, []);
+    // useEffect(() => {
+    //     dispatch(commentsLoad());
+    // }, []);
 
     return (
         <div className="card-comments">

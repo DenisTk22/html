@@ -8,13 +8,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const store = createStore(rootReducer, 
-  compose(
-    applyMiddleware (
-      thunk
-    ),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // можем dispatch ассинхронные события
-  )
+const store = createStore(rootReducer
+  // , compose(
+  //   applyMiddleware(
+  //     thunk
+  //   ),
+  //   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // можем dispatch ассинхронные события
+  // )
 )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
